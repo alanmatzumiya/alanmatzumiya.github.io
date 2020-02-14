@@ -150,7 +150,6 @@ var load = function(url, callback) {
 		emailBody	= document.getElementById('body').value;
 
 		window.open('mailto:'+emailTo+'?subject='+emailSub+'&body='+emailBody);
-		return false;
 	});
 })();
 
