@@ -18,5 +18,5 @@
 <html lang="en-US">
 <head>
 	<script>alert("Gracias por contactar conmigo. Te responderé lo más rápido posible".);</script>
-	<meta HTTP-EQUIV="REFRESH" content="0; url=http://antoniopg.esy.es">
+	<meta HTTP-EQUIV="REFRESH" content="0; url=https://alanmatzumiya.github.io">
 </head>
