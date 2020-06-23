@@ -20,8 +20,8 @@ hr{
 	height: 0;
 }
 #me{
-	background: url('../img/Foto.jpeg') left/15% auto no-repeat;
-	padding-left: 18%;
+	background: url('../img/Foto.jpeg') left/20% auto no-repeat;
+	padding-left: 24%;
 }
 #header{
 	color: #222;
@@ -369,8 +369,8 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 			margin: 3.5rem auto 1rem;
 		}
 		#me{
-			background: none;
-			padding-left: 0;
+			background: url('../img/Foto.jpeg') left/20% auto no-repeat;
+			padding-left: 24;
 			padding-top: 0;
 		}
 		#expertise{
