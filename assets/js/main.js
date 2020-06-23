@@ -153,5 +153,10 @@ var load = function(url, callback) {
 		
 		return false;
 	});
+	// Initi AOS
+    	AOS.init({
+        duration: 1000,
+        easing: "ease-in-out-back"
+    	});
 })();
 
