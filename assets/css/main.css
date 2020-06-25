@@ -5,7 +5,7 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #272829;
-    background: #dff;
+    background: #ffd;
 }
 }
 
@@ -305,72 +305,62 @@ section {
 # Experience
 --------------------------------------------------------------*/
 
-#experience .section-title {
+.experience .experience-title {
     font-size: 26px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
     color: #050d18;
 }
-.experience table{border: 1px dotted #ccc;margin-bottom: 2rem;width: 100%;
-}
-.experience table td,
-.experience table th{
-	border: 1px dotted #ccc;
-	padding: .5em;
-}
-.experience table th{
-	text-transform: uppercase;
-	background-color: #f1f1f1;
-}
-.experience table tr:nth-child(even) {
-	background: #f7f7f7;
-}
-.experience .expertise tbody tr:hover{
-	background-color: #f4f4f4;
-	transition: background-color .5s;
-	cursor: pointer;
-}
-.experience .expertise td:nth-child(3),
-.experience .expertise td:nth-child(4){
-	text-align: center;
-}
-.experience .expertise content strong{
-	font-weight: 400;
-}
-.experience .expertise.btn{
-	background-color: #FF9800;
-	color: white;
-	text-decoration: none;
-	padding: .5rem 1rem;
-	border-radius: 5px;
-	text-shadow: 0px 0 1px #000;
-	display: inline-block;
+
+.experience .experience-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #1f5297;
+    position: relative;
 }
 
-#experience .content h3 {
-    font-weight: 700;
-    font-size: 26px;
-    color: #173b6c;
+.experience .experience-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #050d18;
+    margin-bottom: 10px;
 }
 
-#experience .content ul {
-    list-style: none;
-    padding: 0;
+.experience .experience-item h5 {
+    font-size: 16px;
+    background: #e4edf9;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-#experience .content ul li {
+.experience .experience-item ul {
+    padding-left: 20px;
+}
+
+.experience .experience-item ul li {
     padding-bottom: 10px;
 }
 
-#experience .content ul i {
-    font-size: 20px;
-    padding-right: 2px;
-    color: #149ddd;
+.experience .experience-item:last-child {
+    padding-bottom: 0;
 }
 
-#experience .content p:last-child {
-    margin-bottom: 0;
+.experience .experience-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #1f5297;
 }
 
 
@@ -393,60 +383,12 @@ section {
   padding-bottom: 10px;
   color: white;
 }
-.html {width: 80%; background-color: purple;}
+.html {width: 85%; background-color: purple;}
 .java {width: 75%; background-color: purple;}
 .python {width: 90%; background-color: purple;}
-
-.skills .icon-box {
-    margin-bottom: 10px;
-}
-
-.skills .icon {
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 54px;
-    height: 54px;
-    background: #149ddd;
-    border-radius: 50%;
-    transition: 0.5s;
-    border: 1px solid #149ddd;
-}
-
-.skills .icon i {
-    color: #fff;
-    font-size: 24px;
-}
-
-.skills .icon-box:hover .icon {
-    background: #fff;
-}
-
-.skills .icon-box:hover .icon i {
-    color: #149ddd;
-}
-
-.skills .title {
-    margin-left: 80px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-.skills .title a {
-    color: #343a40;
-}
-
-.skills .title a:hover {
-    color: #149ddd;
-}
-
-.skills .description {
-    margin-left: 80px;
-    line-height: 24px;
-    font-size: 14px;
-}
+.php {width: 80%; background-color: purple;}
+.mysql {width: 70%; background-color: purple;}
+.linux {width: 90%; background-color: purple;}
 
 /*--------------------------------------------------------------
 # Education
