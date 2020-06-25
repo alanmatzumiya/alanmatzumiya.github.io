@@ -281,6 +281,13 @@ section {
     color: #173ddd;
 }
 
+.section .img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 8px solid #2c2f3f;
+}
+
 .content ul {
     list-style: none;
     padding: 0;
