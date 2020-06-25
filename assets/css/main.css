@@ -378,8 +378,27 @@ section {
 # Skills
 --------------------------------------------------------------*/
 
+
+
+/* Container for skill bars */
+.skills container.container {
+  width: 100%; /* Full width */
+  background-color: #fff; /* Grey background */
+}
+
+.skills .skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+.html {width: 90%; background-color: purple;}
+.java {width: 80%; background-color: purple;}
+.python {width: 90%; background-color: purple;}
+
 .skills .icon-box {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .skills .icon {
@@ -433,12 +452,26 @@ section {
 # Education
 --------------------------------------------------------------*/
 
-.education .education-item {
-    margin-bottom: 30px;
+#academic{
+    style: "overflow-x:auto";
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#academic th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #fdd;
 }
 
-#education td:nth-child(3){
-	text-align: center;
+#academic tr:hover {background-color: #fff;}
+
+#academic th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #149ddd;
+  color: white;
 }
 
 /*--------------------------------------------------------------
@@ -614,5 +647,39 @@ section {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+    padding: 15px;
+    color: #f4f6fd;
+    font-size: 12px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 9999;
+    background: #040b14;
+}
+
+#footer .copyright {
+    text-align: center;
+}
+
+#footer .credits {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: #eaebf0;
+}
+
+@media (max-width: 1199px) {
+    #footer {
+        position: static;
+        width: auto;;
     }
 }
