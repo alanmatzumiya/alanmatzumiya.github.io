@@ -6,7 +6,7 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #272829;
     background: #ffd;
-}
+
 }
 
 a {
@@ -231,9 +231,6 @@ section {
     overflow: hidden;
 }
 
-.section-bg {
-    background: #f5f8fd;
-}
 
 .section-title {
     padding-bottom: 30px;
@@ -281,10 +278,12 @@ section {
     color: #173ddd;
 }
 
-.section .img {
-    margin: 15px auto;
+#about img {
+    margin: 20px auto;
     display: block;
-    width: 120px;
+    width: 250px;
+    border: 6px outset #149ddd;
+    style: center
 }
 
 .content ul {
@@ -374,27 +373,22 @@ section {
 # Skills
 --------------------------------------------------------------*/
 
-
-
-/* Container for skill bars */
-.skills container.container {
-  width: 100%; /* Full width */
-  background-color: #fff; /* Grey background */
-}
-
 .skills .skills {
+  border-radius: 20px;
   text-align: right;
-  padding-top: 10px;
+  padding-top: 3px;
   padding-right: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
   color: white;
 }
-.html {width: 85%; background-color: purple;}
-.java {width: 75%; background-color: purple;}
-.python {width: 90%; background-color: purple;}
-.php {width: 80%; background-color: purple;}
-.mysql {width: 70%; background-color: purple;}
-.linux {width: 90%; background-color: purple;}
+.skills.html {width: 85%; background-color: purple;}
+.skills.java {width: 75%; background-color: purple;}
+.skills.python {width: 90%; background-color: purple;}
+.skills.php {width: 80%; background-color: purple;}
+.skills.mysql {width: 70%; background-color: purple;}
+.skills.linux {width: 90%; background-color: purple;}
+
+
 
 /*--------------------------------------------------------------
 # Education
