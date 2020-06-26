@@ -284,8 +284,10 @@ section {
 .section .img {
     margin: 15px auto;
     display: block;
-    width: 150px;
-    border: 8px solid #2c2f3f;
+    width: 200px;
+    border: 5px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .content ul {
