@@ -455,7 +455,8 @@ section {
 #projects .container{
     padding-bottom: 50px;
     border-radius: 25px;
-    background-color: #44244c;
+    background: url("../img/elephant_valley.png") top center;	
+    background-size: cover;
 }
 #projects {
     font-style: "overflow-x:auto";
