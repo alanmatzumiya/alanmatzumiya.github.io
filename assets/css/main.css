@@ -128,13 +128,12 @@ h6 {
     margin-left: 300px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1500px) {
     #header {
         left: -300px;    
     }
     #main {
-        margin-left: 0;
-	margin-bottom: 500px;    
+        margin-left: 0;    
     }
 }
 /*--------------------------------------------------------------
@@ -230,6 +229,7 @@ h6 {
 section {
     padding: 0px 0;
     overflow: hidden;
+    margin-bottom: 1500px: 	
 }
 
 
