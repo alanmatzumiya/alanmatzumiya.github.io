@@ -101,7 +101,7 @@
         time: 1000
     });
 
-    // Skills section
+    // skills section
     $('.skills-content').waypoint(function() {
         $('.progress .progress-bar').each(function() {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
@@ -112,13 +112,13 @@
 
     // Porfolio isotope and filter
     $(window).on('load', function() {
-        const proyectosIsotope = $('.proyectos-container').isotope({
-            itemSelector: '.proyectos-item',
+        const proyectosIsotope = $('.projects-container').isotope({
+            itemSelector: '.projects-item',
             layoutMode: 'fitRows'
         });
 
-        $('#proyectos-filters li').on('click', function() {
-            $("#proyectos-filters li").removeClass('filter-active');
+        $('#projects-filters li').on('click', function() {
+            $("#projects-filters li").removeClass('filter-active');
             $(this).addClass('filter-active');
             proyectosIsotope.isotope({
                 filter: $(this).data('filter')
@@ -131,8 +131,8 @@
     });
 
 
-    // Proyectos details carousel
-    $(".proyectos-details-carrusel").owlCarousel({
+    // Projects details carousel
+    $(".projects-details-carrusel").owlCarousel({
         autoplay: true,
         dots: true,
         loop: true,

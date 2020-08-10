@@ -4,7 +4,7 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-    color: #272829;
+    color: #ffd;
     background: #ffd;
 
 }
@@ -14,7 +14,7 @@ a {
 }
 
 a:hover {
-    color: #37b3ed;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -227,13 +227,13 @@ h6 {
 --------------------------------------------------------------*/
 
 section {
-    padding: 60px 0;
+    padding: 0px 0;
     overflow: hidden;
 }
 
 
 .section-title {
-    padding-bottom: 30px;
+    padding: 30px;
 }
 
 .section-title h2 {
@@ -242,7 +242,7 @@ section {
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
-    color: #173b6c;
+    color: #149ddd;
 }
 
 .section-title h2::after {
@@ -265,13 +265,18 @@ section {
 # About Section
 --------------------------------------------------------------*/
 
-
-#about .content h3 {
+#about .container {
+    border-radius: 25px;	
+    width: 100%;
+    height: 100vh;
+    background: url("../img/elephant_valley.png") top center;
+    background-size: cover;
+}
+#about h3 {
     font-weight: 700;
     font-size: 26px;
-    color: #173b6c;
+    color: #149ddd;
 }
-
 .section-title h1 {
     font-weight: 700;
     font-size: 35px;
@@ -307,14 +312,17 @@ section {
 }
 
 .content p:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
-
 
 /*--------------------------------------------------------------
 # Experience
 --------------------------------------------------------------*/
-
+#experience .container{
+    border-radius: 25px;
+    background: #44244c;
+    background-size: cover;
+};
 .experience .experience-title {
     font-size: 26px;
     font-weight: 700;
@@ -336,13 +344,13 @@ section {
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: #050d18;
+    color: #fff;
     margin-bottom: 10px;
 }
 
 .experience .experience-item h5 {
     font-size: 16px;
-    background: #e4edf9;
+    background: #3c848c;
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
@@ -375,32 +383,51 @@ section {
 
 
 /*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-
-.skills .skills {
-  border-radius: 20px;
-  text-align: right;
-  padding-top: 3px;
-  padding-right: 10px;
-  padding-bottom: 3px;
-  color: white;
+# Skills #skills .container {
+	background: #44244c;
+	background-size: cover;
 }
-.skills.html {width: 85%; background-color: purple;}
-.skills.java {width: 75%; background-color: purple;}
-.skills.python {width: 90%; background-color: purple;}
-.skills.php {width: 80%; background-color: purple;}
-.skills.mysql {width: 70%; background-color: purple;}
-.skills.linux {width: 90%; background-color: purple;}
+--------------------------------------------------------------*/
+.container {
+	border-radius: 25px;
+	background: #44244c;
+}
+
+* .skills .container .container {
+  border-radius: 25px;
+  width: 90%;
+  background: #ffd;
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+}
+
+* .skills .skills {
+  border-radius: 20px;
+  padding-top: 3px; /* Add top padding */
+  padding-bottom: 3px; /* Add bottom padding */
+  text-align: right;
+  padding-right: 10px;
+  color: #ffd
+}
+.skills .html {width: 85%; background-color: #44ab80;}
+.skills.java {width: 75%; background-color: #44ab80;}
+.skills.python {width: 90%; background-color: #44ab80;}
+.skills.php {width: 80%; background-color: #44ab80;}
+.skills.mysql {width: 70%; background-color: #44ab80;}
+.skills.linux {width: 90%; background-color: #44ab80;}
 
 
 
 /*--------------------------------------------------------------
 # Education
 --------------------------------------------------------------*/
-
-#academic{
-    style: "overflow-x:auto";
+#education .container{
+    padding-bottom: 50px;
+    border-radius: 25px;
+    background-color: #44244c;
+}
+#academic {
+    font-style: "overflow-x:auto";
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
@@ -410,8 +437,11 @@ section {
   text-align: center;
   border: 1px solid #fdd;
 }
+#academic tr:hover {background-color: #44ab80;}
 
-#academic tr:hover {background-color: #fff;}
+#academic a { 
+  color: #942038
+}  
 
 #academic th {
   padding-top: 12px;
@@ -424,34 +454,49 @@ section {
 /*--------------------------------------------------------------
 # Projects
 --------------------------------------------------------------*/
-
-
-#projects .content ul {
-    list-style: none;
-    padding: 0;
+#projects .container{
+    border-radius: 25px;
+    width: 100%;
+    height: 100vh;
+    background: url("../img/elephant_valley_right.png") top center;
+    background-size: cover;
+}
+#projects {
+    font-style: "overflow-x:auto";
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#academic th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #fdd;
 }
 
-#projects .content ul li {
-    padding-bottom: 20px;
-}
+#academic tr:hover {background-color: #44ab80;}
 
-#projects .content ul i {
-    font-size: 20px;
-    padding-right: 10px;
-    color: #173b6c;
-}
+#academic a { 
+  color: #942038
+}  
 
-#projects .content p:last-child {
-    margin-bottom: 0px;
+#academic th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #149ddd;
+  color: white;
 }
 
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+#contact .container {
+    padding-bottom: 300px;
+    border-radius: 25px;
+    background-color: #44244c;
+};
 
-.contact {
-    padding-bottom: 130px;
 }
 
 .contact .info {
@@ -496,9 +541,10 @@ section {
 
 
 .contact .php-email-form {
+    border-radius: 25px;	
     width: 100%;
     padding: 30px;
-    background: #fff;
+    background: #49517e;
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
