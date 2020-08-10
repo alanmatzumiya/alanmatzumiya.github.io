@@ -128,7 +128,7 @@ h6 {
     margin-left: 300px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1199px) {
     #header {
         left: -300px;    
     }
@@ -229,7 +229,6 @@ h6 {
 section {
     padding: 0px 0;
     overflow: hidden;
-    margin-bottom: 1500px: 	
 }
 
 
@@ -267,9 +266,7 @@ section {
 --------------------------------------------------------------*/
 
 #about .container {
-    border-radius: 25px;	
-    width: 100%;
-    height: 100vh;
+    border-radius: 25px;
     background: url("../img/elephant_valley.png") top center;
     background-size: cover;
 }
@@ -456,11 +453,9 @@ section {
 # Projects
 --------------------------------------------------------------*/
 #projects .container{
+    padding-bottom: 50px;
     border-radius: 25px;
-    width: 100%;
-    height: 100vh;
-    background: url("../img/elephant_valley_right.png") top center;
-    background-size: cover;
+    background-color: #44244c;
 }
 #projects {
     font-style: "overflow-x:auto";
