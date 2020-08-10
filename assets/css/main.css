@@ -130,10 +130,11 @@ h6 {
 
 @media (max-width: 1199px) {
     #header {
-        left: -300px;
+        left: 0;
+	width: 300px;    
     }
     #main {
-        margin-left: 0;
+        margin-left: 300px;
     }
 }
 /*--------------------------------------------------------------
