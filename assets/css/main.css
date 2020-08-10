@@ -389,6 +389,7 @@ section {
 .container {
 	border-radius: 25px;
 	background: #44244c;
+	background-size: cover;
 }
 
 * .skills .container .container {
@@ -423,6 +424,7 @@ section {
     padding-bottom: 50px;
     border-radius: 25px;
     background-color: #44244c;
+    background-size: cover;	
 }
 #academic {
     font-style: "overflow-x:auto";
@@ -492,6 +494,7 @@ section {
     padding-bottom: 300px;
     border-radius: 25px;
     background-color: #44244c;
+    background-size: cover;	
 };
 
 }
