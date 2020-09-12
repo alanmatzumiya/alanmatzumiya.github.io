@@ -3,53 +3,51 @@ title: Portfolio
 icon: fa-th
 order: 2
 ---
-
-<article class="shade-two">
-    <header>
-        <h3> 
-            Mi primer sitio web construido fue <a href="https://github.com/alanmatzumiya/old-website">first-website</a>.
-            Este fue resumido en el siguiente curriculum usando "latex", y que puede ser obtenido en <a href="https://github.com/alanmatzumiya/resume-latex">resume-latex</span></a> 
-            para usar y modificar.
-        </h3>
-    </header>
+<header>
+    <h3> 
+       Mi primer sitio web construido fue <a href="https://github.com/alanmatzumiya/old-website">first-website</a>.
+       Este fue resumido en el siguiente curriculum usando "latex", y que puede ser obtenido en <a href="https://github.com/alanmatzumiya/resume-latex">resume-latex</span></a> 
+       para usar y modificar.
+    </h3>
+</header>
     <br>
 
 <!-- CV -->
-    <div class="container">
+<div class="container">
     <div id="adobe-dc-view" style="height: 800px;"></div>
-     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-     <script type="text/javascript">
-        document.addEventListener("adobe_dc_view_sdk.ready", function()
-        {
-            var adobeDCView = new AdobeDC.View({clientId: "b37b8b60bc344c63a5d92b6679b6e786", divId: "adobe-dc-view"});
-            adobeDCView.previewFile(
-           {
-              content:   {location: {url: "assets/images/resume/CV.pdf"}},
-              metaData: {fileName: "CV.pdf"}
-           });
-        });	  
-     </script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script type="text/javascript">
+       document.addEventListener("adobe_dc_view_sdk.ready", function()
+       {
+           var adobeDCView = new AdobeDC.View({clientId: "b37b8b60bc344c63a5d92b6679b6e786", divId: "adobe-dc-view"});
+           adobeDCView.previewFile(
+          {
+             content:   {location: {url: "assets/images/resume/CV.pdf"}},
+             metaData: {fileName: "CV.pdf"}
+          });
+       });	  
+    </script>
     </div>
 
     <hr>
 
-    <header>
-    <h3> 
-        Algunos de mis projectos <a href="https://github.com/alanmatzumiya/">Github</a> que puedo considerar
-        son los siguientes:
-    </h3>
-    </header>
-    <br>
+<header>
+   <h3> 
+      Algunos de mis projectos <a href="https://github.com/alanmatzumiya/">Github</a> que puedo considerar
+      son los siguientes:
+   </h3>
+</header>
+   <br>
     
 <!-- Table -->
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Git</th>
-          </tr>
+<div class="table-wrapper">
+   <table>
+      <thead>
+        <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Git</th>
+        </tr>
         </thead>
         <tbody>
           <tr>
@@ -74,7 +72,6 @@ order: 2
             <td><a href="#" class="icon-b fa-github-alt"><span class="label">Dribbble</span></a></td>
           </tr>
         </tfoot>
-      </table>
-    </div>
-</article> 
+   </table>
+</div>
 <hr>
