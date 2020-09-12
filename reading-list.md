@@ -2,6 +2,8 @@
 title: My YouTube Playlist
 subtitle: Esta es mi Playlist de YouTube. ¡Disfrutenla!
 layout: "page"
+cover-photo: assets/images/banner.jpg
+cover-photo-alt: example cover photo
 icon: fa-book
 order: 3
 ---
