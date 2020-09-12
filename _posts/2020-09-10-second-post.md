@@ -1,6 +1,6 @@
 ---
 title: Second Post
-author: Alan N.
+author: Alan M.
 layout: post
 icon: fa-lightbulb
 icon-style: regular
