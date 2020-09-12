@@ -4,11 +4,9 @@
 
 ![Prologue Theme](assets/images/screenshot.png "Prologue Theme Screenshot")
 
-* **Personal Project:** Personal website
-
 # Summary
 
-This website serves as my personal website where I can show all the projects I worked on and my experiences.
+This **personal space** serves as my personal website where I can show all the projects I worked on and my experiences.
 
 # Technologies:
 
