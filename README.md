@@ -4,9 +4,25 @@
 
 ![Prologue Theme](assets/images/screenshot.png "Prologue Theme Screenshot")
 
+# My website
+[Personal Project] - Project: Personal website
+
+# Summary
+This website serves as my personal website where I can show all the projects I worked on and my experiences.
+
+# Technologies:
+
+* HTML
+* CSS
+* Bootstrap
+* GitHub Pages
+* Git
+* Markdown
+
 This is Prologue, a simple, single page responsive site template from [HTML5 UP](https://html5up.net/prologue), now available as a blog-aware Jekyll theme from [Chris Bobbe](https://chrisbobbe.github.io). It features a clean, minimalistic design and a sticky sidebar with navigation-linked scrolling.
 
 **Demo**: https://chrisbobbe.github.io/jekyll-theme-prologue/
+
 
 # Added Features
 
