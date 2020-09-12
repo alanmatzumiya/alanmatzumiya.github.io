@@ -1,16 +1,10 @@
 ---
 title: My YouTube Playlist
-subtitle: A list of music I liked
+subtitle: Esta es mi Playlist de YouTube. ¡Disfrutenla!
 layout: "page"
 icon: fa-book
 order: 3
 ---
-
-{% highlight markdown %}
-## Esta es mi Playlist de YouTube. ¡Disfrutenla!
-{% endhighlight %}
-
-***
 
 ### Videos
 
