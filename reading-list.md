@@ -9,7 +9,7 @@ order: 3
 ---
 
 <header>
-  <h2 class="alt"> Esta es mi Playlist de <a href="https://www.youtube.com/">YouTube</a>. ¡Disfrutenla! 
+  <h2 class="alt"> Esta es mi Playlist de <a href="https://www.youtube.com/">YouTube</a>. ¡Disfrutenla!</h2> 
 </header>
 
 ### Videos
