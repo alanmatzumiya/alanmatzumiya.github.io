@@ -4,7 +4,7 @@ author: Alan M.
 layout: post
 ---
 <header>
-  <p>You can know more about me from my websites.</p>
+  <p>You can know more about me on my websites.</p>
 </header>
 
 <div class="table-wrapper">
