@@ -25,7 +25,7 @@ icon-style: regular
 </script>
 <script>
 gapi.analytics.ready(function() {
-  var CLIENT_ID = 'UA-177619690-2';
+  var CLIENT_ID = UA-177619690-2;
   gapi.analytics.auth.authorize({
     container: 'auth-button',
     clientid: CLIENT_ID,
