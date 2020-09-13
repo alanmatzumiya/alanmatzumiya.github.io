@@ -4,13 +4,12 @@ title: Analytics
 icon: fa-pencil-alt
 order: 3
 ---
-<iframe src="https://zoom.us/join" sandbox="allow-forms allow-scripts"></iframe>
 <head>
   <title>Embed API Demo</title>
 </head>
 
 <!-- Step 1: Create the containing elements. -->
-
+<footer>
 <section id="auth-button"></section>
 <section id="view-selector"></section>
 <section id="timeline"></section>
@@ -31,7 +30,7 @@ gapi.analytics.ready(function() {
 
   // Step 3: Authorize the user.
 
-  var CLIENT_ID = 'Insert your client ID here';
+  var CLIENT_ID = '177619690';
 
   gapi.analytics.auth.authorize({
     container: 'auth-button',
@@ -76,3 +75,4 @@ gapi.analytics.ready(function() {
   });
 });
 </script>
+<\footer>
