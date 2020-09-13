@@ -2,9 +2,6 @@
 title: My YouTube Playlist
 author: Alan M.
 layout: post
-cover-photo: assets/images/banner.jpg
-cover-photo-alt: example cover photo
-auto-header: none
 icon: fa-lightbulb
 icon-style: regular
 ---
