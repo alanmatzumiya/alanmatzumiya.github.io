@@ -25,13 +25,11 @@ icon-style: regular
 </script>
 <script>
 gapi.analytics.ready(function() {
-  var CLIENT_ID = '177619690';
-
+  var CLIENT_ID = 'UA-177619690-2';
   gapi.analytics.auth.authorize({
     container: 'auth-button',
     clientid: CLIENT_ID,
   });
-  
   var viewSelector = new gapi.analytics.ViewSelector({
     container: 'view-selector'
   });
@@ -51,7 +49,6 @@ gapi.analytics.ready(function() {
   gapi.analytics.auth.on('success', function(response) {
     viewSelector.execute();
   });
-
   viewSelector.on('change', function(ids) {
     var newIds = {
       query: {
