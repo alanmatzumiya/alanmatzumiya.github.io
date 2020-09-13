@@ -6,7 +6,7 @@ icon: fa-lightbulb
 icon-style: regular
 ---
 <header>
-  <title>Embed API Demo</title>
+  <h3>Embed API Demo</h3>
 </header>
 
 <!-- Step 1: Create the containing elements. -->
@@ -15,9 +15,9 @@ icon-style: regular
 <section id="auth-button"></section>
 <section id="view-selector"></section>
 <section id="timeline"></section>
-
+</div>
 <!-- Step 2: Load the library. -->
-
+<div class="container">
 <script>
 (function(w,d,s,g,js,fjs){
   g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(cb){this.q.push(cb)}};
@@ -26,7 +26,6 @@ icon-style: regular
   fjs.parentNode.insertBefore(js,fjs);js.onload=function(){g.load('analytics')};
 }(window,document,'script'));
 </script>
-
 <script>
 gapi.analytics.ready(function() {
 
