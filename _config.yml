@@ -51,7 +51,7 @@ linkedin_url: https://linkedin.com/in/alanmatzumiya
 github_url: https://github.com/alanmatzumiya
 
 # Google Analytics Tracking ID goes here:
-google_analytics: UA-177619690-3
+google_analytics: UA-177619690-2
 
 # The following settings are NECESSARY for the Prologue theme to run:
 theme: jekyll-theme-prologue
