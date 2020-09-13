@@ -10,7 +10,8 @@ icon-style: regular
 </header>
 
 <!-- Step 1: Create the containing elements. -->
-<footer>
+
+<div class="container">
 <section id="auth-button"></section>
 <section id="view-selector"></section>
 <section id="timeline"></section>
@@ -76,4 +77,4 @@ gapi.analytics.ready(function() {
   });
 });
 </script>
-</footer>
+</div>
