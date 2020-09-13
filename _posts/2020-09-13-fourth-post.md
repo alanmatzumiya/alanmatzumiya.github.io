@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 ---
 title: Google Analytics Api Embedded
 author: Alan M.
