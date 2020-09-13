@@ -19,12 +19,12 @@ layout: post
     <tbody>
       <tr>
         <td>Circuital Minds</td>
-        <td>This is my personal blog to write any topic I liked.</td>
-        <td><a href="href="https://alanmatzumiya.github.io/circuitalminds/"> Go now! </a></td>
+        <td>This is my personal blog to write any topic that I liked.</td>
+        <td><a href="https://alanmatzumiya.github.io/circuitalminds/"> Go now! </a></td>
       </tr>
       <tr>
         <td>Python Courses</td>
-        <td>I builded this site to sharing my knowledges about programming in python.</td>
+        <td>I built this site to share my knowledge of Python programming.</td>
         <td><a href="https://alanmatzumiya.github.io/python-courses/"> Go now! </a></td>
       </tr>
      </tbody>
