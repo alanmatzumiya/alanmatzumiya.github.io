@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 ---
 title: Google Analytics Api Embedded
 author: Alan M.
@@ -12,12 +13,14 @@ icon-style: regular
   </div>
 </header>
 
-<div class="container">
+<!-- Step 1: Create the containing elements. -->
+
 <section id="auth-button"></section>
 <section id="view-selector"></section>
 <section id="timeline"></section>
-</div>
-<div class="container">
+
+<!-- Step 2: Load the library. -->
+
 <script>
 (function(w,d,s,g,js,fjs){
   g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(cb){this.q.push(cb)}};
@@ -28,14 +31,24 @@ icon-style: regular
 </script>
 <script>
 gapi.analytics.ready(function() {
-  var CLIENT_ID = UA-177619690-2;
+
+  // Step 3: Authorize the user.
+
+  var CLIENT_ID = 'UA-177619690-2';
+
   gapi.analytics.auth.authorize({
     container: 'auth-button',
-    clientid: CLIENT_ID,
+    clientid: "alan.matzumiya@gmail.com",
   });
+
+  // Step 4: Create the view selector.
+
   var viewSelector = new gapi.analytics.ViewSelector({
     container: 'view-selector'
   });
+
+  // Step 5: Create the timeline chart.
+
   var timeline = new gapi.analytics.googleCharts.DataChart({
     reportType: 'ga',
     query: {
@@ -49,9 +62,13 @@ gapi.analytics.ready(function() {
       container: 'timeline'
     }
   });
+
+  // Step 6: Hook up the components to work together.
+
   gapi.analytics.auth.on('success', function(response) {
     viewSelector.execute();
   });
+
   viewSelector.on('change', function(ids) {
     var newIds = {
       query: {
@@ -62,4 +79,3 @@ gapi.analytics.ready(function() {
   });
 });
 </script>
-</div>
