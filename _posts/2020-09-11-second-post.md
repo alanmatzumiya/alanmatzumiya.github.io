@@ -6,7 +6,7 @@ icon: fa-lightbulb
 icon-style: regular
 ---
 <header>
-  <h2 class="alt"> This is my <a href="https://www.youtube.com/">YouTube</a> Playlist. Enjoy it!</h2> 
+  <h3 class="alt"> This is my <a href="https://www.youtube.com/">YouTube</a> Playlist. Enjoy it!</h3> 
 </header>
 
 <footer>
