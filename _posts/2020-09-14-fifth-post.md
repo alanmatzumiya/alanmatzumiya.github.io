@@ -2,6 +2,8 @@
 title: Excellent Widgets
 author: Alan M.
 layout: post
+icon: fa-lightbulb
+icon-style: regular
 ---
 <header>
   <p>My favorites Widgets as Iframes.</p>
