@@ -1,5 +1,5 @@
 ---
-title: My YouTube Playlist
+title: I Like Music
 author: Alan M.
 layout: post
 icon: fa-lightbulb
