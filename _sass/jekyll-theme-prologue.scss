@@ -393,8 +393,8 @@
 
 		tbody {
 			tr {
-				 {
-					background: #fff;
+				&:nth-child(2n+2) {
+					background: #f4f4f4;
 				}
 			}
 		}
@@ -407,7 +407,7 @@
 			text-align: left;
 			padding: 0.5em 1em 0.5em 1em;
 			color: #fff;
-			background: #222729;
+			background: #222729 url('images/overlay.png');
 		}
 
 		thead {
