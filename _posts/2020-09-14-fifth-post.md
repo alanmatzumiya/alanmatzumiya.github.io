@@ -16,3 +16,6 @@ icon-style: regular
 </div>
 
 <iframe width="500" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://virtualsky.lco.global/embed/index.html?longitude=-111.02386000000001&latitude=29.0878&projection=lambert&showstarlabels=true&showorbits=true&ecliptic=true&meridian=true&gridlines_az=true&gridlines_eq=true&gridlines_gal=true&live=true" allowTransparency="true"></iframe>
+
+
+<script src="//onlinegdb.com/embed/js/H1fXF5ZBw?theme=dark"></script>
