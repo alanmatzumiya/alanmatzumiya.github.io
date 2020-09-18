@@ -23,4 +23,4 @@ icon-style: regular
 
 ***
 
-<script src="//onlinegdb.com/embed/js/H1fXF5ZBw?theme=dark"></script>
+<script src="//onlinegdb.com/embed/js/SkT839WBw?theme=dark"></script>
