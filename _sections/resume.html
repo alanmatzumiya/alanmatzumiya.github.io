@@ -3,6 +3,7 @@ title: Resume
 icon: fa-book
 order: 2
 ---
+<head>
 <style>
 .dropbtn {
   background-color: #4CAF50;
@@ -43,7 +44,9 @@ order: 2
 
 .show {display:block;}
 </style>
+</head>
 
+<div class="container">
 <h2>Clickable Dropdown</h2>
 <p>Click on the button to open the dropdown menu.</p>
 
@@ -55,6 +58,16 @@ order: 2
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
+</div>
+<script>
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("myBtn").onclick = function() {myFunction()};
+
+/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+</script>
 </div>
 
 <!-- Table -->
