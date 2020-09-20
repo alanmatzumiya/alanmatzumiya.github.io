@@ -13,31 +13,99 @@ order: 3
         <tr>
         <th>Name</th>
         <th>Description</th>
-        <th>Git</th>
         </tr>
        </thead>
        <tbody>
           <tr>
             <td><strong>pySpectralFPK</strong></td>
-            <td><strong>Numerical approximation: stochastic Burgers and Fisher–KPP equation (python package included).</strong></td>
-            <td><strong><a href="https://github.com/alanmatzumiya/Paper.git" class="icon-b fa-github"><span class="label">Github</span></a> </strong></td>
+            <td><button id="pyFPK">Show Description</button>
+                  <dialog id="descriptionFPK">
+                        <form method="dialog">
+                            <section>
+                              <p>Numerical approximation: stochastic Burgers and Fisher–KPP equation.</p>
+                            </section>
+                            <menu>
+                              <button id="cancel1" type="reset">Close</button>
+                              <button><a href="https://github.com/alanmatzumiya/Paper.git" class="icon-b fa-github"><span class="label">Github</span></a></button>
+                            </menu>
+                          </form>
+                   </dialog>
+            </td>
           </tr>
           <tr>
             <td>pySpectralPDE</td>
-            <td>Partial Differential Equations Using Spectral Methods (python package included).</td>
-            <td><a href="https://github.com/alanmatzumiya/spectral-methods.git" class="icon-b fa-github"><span class="label">Github</span></a> </td>
+            <td><button id="pyPDE">Show Description</button>
+                  <dialog id="descriptionPDE">
+                        <form method="dialog">
+                            <section>
+                              <p>Partial Differential Equations Using Spectral Methods.</p>
+                            </section>
+                            <menu>
+                              <button id="cancel2" type="reset">Close</button>
+                              <button><a href="https://github.com/alanmatzumiya/spectral-methods.git" class="icon-b fa-github"><span class="label">Github</span></a></button>
+                            </menu>
+                          </form>
+                   </dialog>
+            </td>
           </tr>
           <tr>
             <td>Python Courses</td>
-            <td>Didactic programming material in python oriented to: engineering, data analysis, app and web development.</td>
-            <td><a href="https://github.com/alanmatzumiya/python-courses.git" class="icon-b fa-github"><span class="label">Github</span></a> </td>
+            <td><button id="pyCourses">Show Description</button>
+                  <dialog id="descriptionCourses">
+                        <form method="dialog">
+                            <section>
+                              <p>Didactic programming material in python oriented to: engineering, data analysis, app and web development.</p>
+                            </section>
+                            <menu>
+                              <button id="cancel3" type="reset">Close</button>
+                              <button><a href="https://github.com/alanmatzumiya/python-courses.git" class="icon-b fa-github"><span class="label">Github</span></a></button>
+                            </menu>
+                          </form>
+                   </dialog>
+            </td>
           </tr>
        </tbody>
-       <tfoot>
-          <tr>
-            <td colspan="2"></td>
-            <td><a href="#" class="icon-b fa-github-alt"><span class="label">Dribbble </span></a> </td>
-          </tr>
-       </tfoot> 
 </table>
+<script>
+  (function() {
+    var updateButton1 = document.getElementById('pyFPK');
+    var cancelButton1 = document.getElementById('cancel1');
+    var favDialog1 = document.getElementById('descriptionFPK');
+    var updateButton2 = document.getElementById('pyPDE');	  
+    var cancelButton2 = document.getElementById('cancel2'); 
+    var favDialog2 = document.getElementById('descriptionPDE');
+    var updateButton3 = document.getElementById('pyCourses');
+    var cancelButton3 = document.getElementById('cancel3');
+    var favDialog3 = document.getElementById('descriptionCourses');
+    // Update button opens a modal dialog
+    updateButton1.addEventListener('click', function() {
+      favDialog1.showModal();
+    });
+
+    // Form cancel button closes the dialog box
+    cancelButton1.addEventListener('click', function() {
+      favDialog1.close();
+    });
+    // Update button opens a modal dialog
+    updateButton2.addEventListener('click', function() {
+      favDialog2.showModal();
+    });
+
+    // Form cancel button closes the dialog box
+    cancelButton2.addEventListener('click', function() {
+      favDialog2.close();
+    });
+	  
+    // Update button opens a modal dialog
+    updateButton3.addEventListener('click', function() {
+      favDialog3.showModal();
+    });
+
+    // Form cancel button closes the dialog box
+    cancelButton3.addEventListener('click', function() {
+      favDialog3.close();
+    });
+        
+  })();
+</script>      
 </div>
