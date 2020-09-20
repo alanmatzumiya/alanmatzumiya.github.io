@@ -15,16 +15,35 @@ order: 2
        <tbody>
           <tr>
             <td><strong>Degree in Mathematical Science</strong></td>
-            <td><button onclick="myDegree()">Show Description</button>
-		<dialog id="degree"></dialog> 
+            <td><button id="degree">Show Description</button>
+		<dialog id="thesisDegree">
+			<form method="dialog">
+			    <section>
+			      <p><a href='https://github.com/alanmatzumiya/spectral-methods.git'>Numerical Solutions for Burgers’ Equation in the Stochastic and Deterministic Version Using Spectral Methods.</a></p>
+			    </section>
+			    <menu>
+			      <button id="cancel1" type="reset">Close</button>
+			      <button type="submit">Go</button>
+			    </menu>
+			  </form>
+ 		</dialog>
 	    </td>
 	  </tr>
 	  <tr>     
             <td>Chemistry Engineering</td>
-	    <td><td><button onclick="myBachelor()">Show Description</button>
-		<dialog id="bachelor"></dialog> 
-	    </td>
-	    </td>
+	    <td><button id="bachelor">Show Description</button>
+		<dialog id="thesisBachelor">
+			<form method="dialog">
+			    <section>
+			      <p><a href='http://www.repositorioinstitucional.uson.mx/handle/unison/1840'>Caracterización y evaluación de las propiedades bioactivas de una mezcla de biocompósitode hidroxiapatita/β-wollastonita preparados por el método sol gel: sometidos a tratamientos térmicos diferentes.</a></p>
+			    </section>
+			    <menu>
+			      <button id="cancel2" type="reset">Close</button>
+			      <button type="submit">Go</button>
+			    </menu>
+			  </form>
+		 </dialog>
+	   </td>
      	  </tr>
        </tbody>
        <tfoot>
@@ -39,16 +58,35 @@ order: 2
        </tfoot>
    </table>
 <script>
-	/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-	function myDegree() {
-	  document.getElementById("degree").innerHTML = "<a href='https://github.com/alanmatzumiya/spectral-methods.git'>Numerical Solutions for Burgers’ Equation in the Stochastic and Deterministic Version Using Spectral Methods.</a>";
-	}
-</script>
-<script>
-	/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-	function myBachelor() {
-	  document.getElementById("bachelor").innerHTML = "<a href='http://www.repositorioinstitucional.uson.mx/handle/unison/1840'>Caracterización y evaluación de las propiedades bioactivas de una mezcla de biocompósitode hidroxiapatita/β-wollastonita preparados por el método sol gel: sometidos a tratamientos térmicos diferentes.</a>";
-	}
-</script>
+  (function() {
+    var updateButton1 = document.getElementById('degree');
+    var cancelButton1 = document.getElementById('cancel1');
+    var favDialog1 = document.getElementById('thesisDegree');
+    var updateButton2 = document.getElementById('bachelor');	  
+    var cancelButton2 = document.getElementById('cancel2'); 
+    var favDialog2 = document.getElementById('thesisBachelor');
+    
+    // Update button opens a modal dialog
+    updateButton1.addEventListener('click', function() {
+      favDialog1.showModal();
+    });
+
+    // Form cancel button closes the dialog box
+    cancelButton1.addEventListener('click', function() {
+      favDialog1.close();
+    });
+	  
+    // Update button opens a modal dialog
+    updateButton2.addEventListener('click', function() {
+      favDialog2.showModal();
+    });
+
+    // Form cancel button closes the dialog box
+    cancelButton2.addEventListener('click', function() {
+      favDialog2.close();
+    });
+
+  })();
+</script>	
 </div>
 
