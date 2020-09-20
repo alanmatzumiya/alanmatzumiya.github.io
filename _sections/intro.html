@@ -7,17 +7,18 @@ icon: fa-comment
 order: 1
 ---
 <div class="container">
-<header>
-  <h2 id="initial" class="alt"></h2>
-</header>
+<header id="initial"></header>
 
 <footer>
-  <button onclick="introText()">Alan Daniel Matzumiya Zazueta</button>
+  <button id="mybtn" onclick="introText()">Alan Daniel Matzumiya Zazueta</button>
 </footer>
   
 <script>
 function introText() {
-  document.getElementById("initial").innerHTML = "Hi! I'm <strong>Alan</strong>, a <a href='https://en.wikipedia.org/wiki/Mathematician'>Mathematician</a> and<br /> I also I'm <a href='https://en.wikipedia.org/wiki/Programmer'>Programmer</a>.";
+  document.getElementById("initial").innerHTML = "<h2 class='alt'>Hi! I'm <strong>Alan</strong>, a <a href='https://en.wikipedia.org/wiki/Mathematician'>Mathematician</a> and<br /> I also I'm <a href='https://en.wikipedia.org/wiki/Programmer'>Programmer</a>.</h2>";
+  document.getElementById("mybtn").onclick = function () {
+  document.getElementById("initial").innerHTML = "";
   }
+}
 </script> 
 </div>  
