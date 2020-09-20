@@ -16,10 +16,10 @@ order: 1
 
 <script>
 function introText() {
-  var x = document.getElementsByTagName("initial")[0];
+  var x = document.getElementsByTagName("initial");
   
-  if (x.id === "initial") { 
-    x.value = "Hi! I'm <strong>Alan</strong>, a <a href='https://en.wikipedia.org/wiki/Mathematician'>Mathematician</a> and<br /> I also I'm <a href='https://en.wikipedia.org/wiki/Programmer'>Programmer</a>.";
+  if (x[0].id === "initial") { 
+    x.innerHTML = "Hi! I'm <strong>Alan</strong>, a <a href='https://en.wikipedia.org/wiki/Mathematician'>Mathematician</a> and<br /> I also I'm <a href='https://en.wikipedia.org/wiki/Programmer'>Programmer</a>.";
   }
 }
 </script> 
