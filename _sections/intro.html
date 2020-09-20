@@ -7,10 +7,19 @@ icon: fa-comment
 order: 1
 ---
 <header>
-  <h2 class="alt">Hi! I'm <strong>Alan</strong>, a <a href="https://en.wikipedia.org/wiki/Mathematician">Mathematician</a> and<br />
-  I also I'm <a href="https://en.wikipedia.org/wiki/Programmer">Programmer</a>.</h2>
+  <h2 id="initial" class="alt"></h2>
 </header>
 
 <footer>
-  <a href="#resume" class="button scrolly">Alan Daniel Matzumiya Zazueta</a>
+  <button onclick="introText()">Alan Daniel Matzumiya Zazueta</button>
 </footer>
+
+<script>
+function introText() {
+  var x = document.getElementsByTagName("initial")[0];
+  
+  if (x.id === "initial") { 
+    x.value = "Hi! I'm <strong>Alan</strong>, a <a href='https://en.wikipedia.org/wiki/Mathematician'>Mathematician</a> and<br /> I also I'm <a href='https://en.wikipedia.org/wiki/Programmer'>Programmer</a>.";
+  }
+}
+</script> 
