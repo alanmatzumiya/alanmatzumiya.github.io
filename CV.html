@@ -25,10 +25,10 @@ function webframe() {
 <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 <script type="text/javascript">
 (function() {
-	document.getElementById("website-frame").innerHTML = ""
 	var updateButton = document.getElementById('pdf');
 	updateButton.addEventListener("click", function()
        {
+	   document.getElementById("website-frame").innerHTML = ""
 	   var adobeDCView = new AdobeDC.View({clientId: "b37b8b60bc344c63a5d92b6679b6e786", divId: "adobe-dc-view"});
 	   adobeDCView.previewFile(
 	  {
