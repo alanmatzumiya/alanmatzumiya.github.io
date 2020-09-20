@@ -25,7 +25,7 @@ order: 3
                               <p>Numerical approximation: stochastic Burgers and Fisher–KPP equation.</p>
                             </section>
                             <menu>
-                              <button id="cancel1" type="reset">Close</button>
+                              <button id="cancelFPK" type="reset">Close</button>
                               <button><a href="https://github.com/alanmatzumiya/Paper.git" class="icon-b fa-github"><span class="label">Github</span></a></button>
                             </menu>
                           </form>
@@ -41,7 +41,7 @@ order: 3
                               <p>Partial Differential Equations Using Spectral Methods.</p>
                             </section>
                             <menu>
-                              <button id="cancel2" type="reset">Close</button>
+                              <button id="cancelPDE" type="reset">Close</button>
                               <button><a href="https://github.com/alanmatzumiya/spectral-methods.git" class="icon-b fa-github"><span class="label">Github</span></a></button>
                             </menu>
                           </form>
@@ -57,7 +57,7 @@ order: 3
                               <p>Didactic programming material in python oriented to: engineering, data analysis, app and web development.</p>
                             </section>
                             <menu>
-                              <button id="cancel3" type="reset">Close</button>
+                              <button id="cancelCourses" type="reset">Close</button>
                               <button><a href="https://github.com/alanmatzumiya/python-courses.git" class="icon-b fa-github"><span class="label">Github</span></a></button>
                             </menu>
                           </form>
@@ -69,13 +69,13 @@ order: 3
 <script>
   (function() {
     var updateButton1 = document.getElementById('pyFPK');
-    var cancelButton1 = document.getElementById('cancel1');
+    var cancelButton1 = document.getElementById('cancelFPK');
     var favDialog1 = document.getElementById('descriptionFPK');
     var updateButton2 = document.getElementById('pyPDE');	  
-    var cancelButton2 = document.getElementById('cancel2'); 
+    var cancelButton2 = document.getElementById('cancelPDE'); 
     var favDialog2 = document.getElementById('descriptionPDE');
     var updateButton3 = document.getElementById('pyCourses');
-    var cancelButton3 = document.getElementById('cancel3');
+    var cancelButton3 = document.getElementById('cancelCourses');
     var favDialog3 = document.getElementById('descriptionCourses');
     // Update button opens a modal dialog
     updateButton1.addEventListener('click', function() {
