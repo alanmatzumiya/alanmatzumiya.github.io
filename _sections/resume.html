@@ -3,41 +3,6 @@ title: Resume
 icon: fa-book
 order: 2
 ---
-<div class="container">
-	<style>
-	.dropbtn {
-	  color: white;
-	  padding: 16px;
-	  font-size: 16px;
-	  border: none;
-	  cursor: pointer;
-	}
-
-	.dropdown {
-	  position: relative;
-	  display: inline-block;
-	}
-
-	.dropdown-content {
-	  display: none;
-	  position: absolute;
-	  width: 500px;
-	  height: 600px;
-	  overflow: auto;
-	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	}
-
-	.dropdown-content a {
-	  color: black;
-	  padding: 12px 16px;
-	  text-decoration: none;
-	  display: block;
-	}
-
-	.show {display:block;}
-	</style>
-</div>
-
 <!-- Table -->
 <div class="table-wrapper">
 <table>
@@ -50,30 +15,17 @@ order: 2
        <tbody>
           <tr>
             <td><strong>Degree in Mathematical Science</strong></td>
-            <td><div class="dropdown">
-		  <button id="myBtn" class="dropbtn">Show Description</button>
-		  <div id="myDropdown" class="dropdown-content">
-			<a href="https://github.com/alanmatzumiya/spectral-methods.git" target="_blank">
-			Numerical Solutions for Burgers’ Equation in the Stochastic and Deterministic Version Using Spectral Methods.
-			</a>
-	          </div>
-		 </div>
-		    </td>
-		    <tr> 
-            <td>Chemistry Engineering</td>
-	    <td><div class="dropdown">
-		  <button id="myBtn" class="dropbtn">Show Description</button>
-		  <div id="myDropdown" class="dropdown-content">
-		    <a href="http://www.repositorioinstitucional.uson.mx/handle/unison/1840"
-                         target="_blank">
-                         Caracterización y evaluación de las propiedades bioactivas de una mezcla de
-                         biocompósitos
-                         de hidroxiapatita/β-wollastonita preparados por el método sol gel: sometidos a
-                         tratamientos térmicos diferentes.</a>
-	          </div>
-		 </div>
+            <td><button onclick="myDegree()">Show Description</button>
+		<dialog id="degree"></dialog> 
 	    </td>
-	</tr>
+	  </tr>
+	  <tr>     
+            <td>Chemistry Engineering</td>
+	    <td><td><button onclick="myBachelor()">Show Description</button>
+		<dialog id="bachelor"></dialog> 
+	    </td>
+	    </td>
+     	  </tr>
        </tbody>
        <tfoot>
           <tr>
@@ -87,12 +39,15 @@ order: 2
        </tfoot>
    </table>
 <script>
-	// Get the button, and when the user clicks on it, execute myFunction
-	document.getElementById("myBtn").onclick = function() {myFunction()};
-
 	/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-	function myFunction() {
-	  document.getElementById("myDropdown").classList.toggle("show");
+	function myDegree() {
+	  document.getElementById("degree").innerHTML = "<a href='https://github.com/alanmatzumiya/spectral-methods.git'>Numerical Solutions for Burgers’ Equation in the Stochastic and Deterministic Version Using Spectral Methods.</a>";
+	}
+</script>
+<script>
+	/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+	function myBachelor() {
+	  document.getElementById("bachelor").innerHTML = "<a href='http://www.repositorioinstitucional.uson.mx/handle/unison/1840'>Caracterización y evaluación de las propiedades bioactivas de una mezcla de biocompósitode hidroxiapatita/β-wollastonita preparados por el método sol gel: sometidos a tratamientos térmicos diferentes.</a>"
 	}
 </script>
 </div>
