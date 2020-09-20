@@ -16,6 +16,7 @@ order: 3
 	<div id="website-frame"></div>
 	<div id="adobe-dc-view" style="height: 800px;"></div>
 
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 <script>
 function webframe() {
   document.getElementById("adobe-dc-view").innerHTML = "";
@@ -27,7 +28,7 @@ function closeDocs() {
   document.getElementById("website-frame").innerHTML = "";
   }	
 </script>
-<script src="https://documentcloud.adobe.com/view-sdk/main.js" type="text/javascript">
+<script type="text/javascript">
 (function() {
 	var updateButton = document.getElementById('pdf');
 	updateButton.addEventListener("click", function()
