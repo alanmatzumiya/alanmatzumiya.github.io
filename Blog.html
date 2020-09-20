@@ -1,12 +1,10 @@
 ---
 title: blogs
-subtitle: these are my blogs
+subtitle: You can know more about me on my websites.
 layout: "page"
 icon: fa-book
 order: 4
 ---
-<h3 style="text-align: left;">You can know more about me on my websites.</h3>
-
 <div class="table-wrapper">
   <table>
     <thead>
@@ -19,14 +17,62 @@ order: 4
     <tbody>
       <tr>
         <td>Circuital Minds</td>
-        <td>This is my personal blog to write any topic that I liked.</td>
-        <td><a href="https://alanmatzumiya.github.io/circuitalminds/"> Go now! </a></td>
+        <td><button id="circuitalPage">Show</button>
+                  <dialog id="circuitalDescription">
+                        <form method="dialog">
+                            <section>
+                              <p>This is my personal blog to write any topic that I liked.</p>
+                            </section>
+                            <menu>
+                              <button id="cancelCircuital" type="reset">Close</button>
+                              <button onclick="window.location.href='https://alanmatzumiya.github.io/circuitalminds/'">Go to page</button>
+                            </menu>
+                          </form>
+                   </dialog>
       </tr>
       <tr>
         <td>Python Courses</td>
-        <td>I built this site to share my knowledge of Python programming.</td>
-        <td><a href="https://alanmatzumiya.github.io/python-courses/"> Go now! </a></td>
+        <td><button id="pycoursesPage">Show</button>
+                  <dialog id="pycoursesDescription">
+                        <form method="dialog">
+                            <section>
+                              <p>I built this site to share my knowledge of Python programming.</p>
+                            </section>
+                            <menu>
+                              <button id="cancelpycourses" type="reset">Close</button>
+                              <button onclick="window.location.href='https://alanmatzumiya.github.io/python-courses/'">Go to page</button>
+                            </menu>
+                          </form>
+                   </dialog>
+        </td>
       </tr>
      </tbody>
   </table>
+<script>
+  (function() {
+    // document.getElementById('description').innerHTML = "<dialog id='thesis'><form method="dialog"><section><p></p></section><menu><button id="cancel" type="reset">Close</button><button id="go"></button></menu></form></dialog>"
+    var circuitalButton = document.getElementById('circuitalPage');
+    var closeCircuital = document.getElementById('cancelCircuital');
+    var circuitalDialog = document.getElementById('circuitalDescription');
+    var pyCoursesButton = document.getElementById('pycoursesPage');	  
+    var cancelpyCourses = document.getElementById('cancelpycourses'); 
+    var pycoursesDialog = document.getElementById('pycoursesDescription')
+    // Update button opens a modal dialog
+    circuitalButton.addEventListener('click', function() {
+      circuitalDialog.showModal();
+    });
+
+    // Form cancel button closes the dialog box
+    closeCircuital.addEventListener('click', function() {
+      circuitalDialog.close();
+    });
+    // Update button opens a modal dialog
+    pyCoursesButton.addEventListener('click', function() {
+      pycoursesDialog.showModal();
+    });
+
+    // Form cancel button closes the dialog box
+    cancelpyCourses.addEventListener('click', function() {
+      pycoursesDialog.close();
+    });  
 </div>
