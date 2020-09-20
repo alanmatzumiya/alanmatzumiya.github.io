@@ -45,24 +45,6 @@ order: 2
 	    background: #eee;
 	}
 	</style>
-	<h2>Clickable Dropdown</h2>
-	<p>Click on the button to open the dropdown menu.</p>
-
-	<div class="dropdown">
-	  <button id="myBtn" class="dropbtn">My Website</button>
-	  <div id="myDropdown" class="dropdown-content">
-            <iframe title="Inline Frame Example" width="500" height="600" src="https://alanmatzumiya.github.io/old-website/"></iframe>
-	  </div>
-	</div>
-	<script>
-	// Get the button, and when the user clicks on it, execute myFunction
-	document.getElementById("myBtn").onclick = function() {myFunction()};
-
-	/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-	function myFunction() {
-	  document.getElementById("myDropdown").classList.toggle("show");
-	}
-	</script>
 </div>
 
 <!-- Table -->
@@ -94,8 +76,24 @@ order: 2
        </tbody>
        <tfoot>
           <tr>
-            <td </td>
-            <td><a href="#" class="button">Descargar CV</a> <a href="href="https://github.com/alanmatzumiya/" class="button"><span class="icon-b fa-github"></span></a> </td>
+	    <td>
+		<div class="dropdown">
+		  <button id="myBtn" class="dropbtn">My Website</button>
+		  <div id="myDropdown" class="dropdown-content">
+		    <iframe title="Inline Frame Example" width="500" height="600" src="https://alanmatzumiya.github.io/old-website/"></iframe>
+		  </div>
+		</div>
+		<script>
+		// Get the button, and when the user clicks on it, execute myFunction
+		document.getElementById("myBtn").onclick = function() {myFunction()};
+
+		/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+		</script>
+            </td>		    
+            <td><a href="#" class="button">Descargar CV</a></td>
           </tr>
        </tfoot>
    </table>    
