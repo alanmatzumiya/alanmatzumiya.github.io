@@ -80,7 +80,7 @@ order: 2
 		<div class="dropdown">
 		  <button id="myBtn" class="dropbtn">My Website</button>
 		  <div id="myDropdown" class="dropdown-content">
-		    <iframe title="Inline Frame Example" width="500" height="600" src="https://alanmatzumiya.github.io/old-website/"></iframe>
+		    <iframe title="Inline Frame Example" width="500" height="800" src="https://alanmatzumiya.github.io/old-website/"></iframe>
 		  </div>
 		</div>
 		<script>
@@ -93,7 +93,35 @@ order: 2
 		}
 		</script>
             </td>		    
-            <td><a href="#" class="button">Descargar CV</a></td>
+            <td><div class="dropdown">
+		  <button id="myBtn" class="dropbtn">CV</button>
+		  <div id="myDropdown" class="dropdown-content">
+                  <!-- CV -->
+
+                  <div id="adobe-dc-view" style="height: 800px;"></div>
+                  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+                  <script type="text/javascript">
+                    document.addEventListener("adobe_dc_view_sdk.ready", function()
+                    {
+                    var adobeDCView = new AdobeDC.View({clientId: "b37b8b60bc344c63a5d92b6679b6e786", divId: "adobe-dc-view"});
+                    adobeDCView.previewFile(
+                    {
+                    content:   {location: {url: "assets/images/resume/CV.pdf"}},
+                    metaData: {fileName: "CV.pdf"}
+                    });
+                    });	  
+                  </script>
+		  </div>
+		<script>
+		// Get the button, and when the user clicks on it, execute myFunction
+		document.getElementById("myBtn").onclick = function() {myFunction()};
+
+		/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+		</script>
+		</td>
           </tr>
        </tfoot>
    </table>    
