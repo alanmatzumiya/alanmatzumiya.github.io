@@ -18,12 +18,14 @@ order: 3
 
 <script>
 function webframe() {
+  document.getElementById("adobe-dc-view").innerHTML = ""
   document.getElementById("website-frame").innerHTML = "<iframe title='inline-website-frame' width='500' height='800' src='https://alanmatzumiya.github.io/old-website/'></iframe>";
   }
 </script>     
 <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 <script type="text/javascript">
 (function() {
+	document.getElementById("website-frame").innerHTML = ""
 	var updateButton = document.getElementById('pdf');
 	updateButton.addEventListener("click", function()
        {
