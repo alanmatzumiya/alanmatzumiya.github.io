@@ -1,32 +1,16 @@
 ---
-title: My Websites
+title: I Like Music
 author: Alan M.
 layout: post
+icon: fa-lightbulb
+icon-style: regular
 ---
 <header>
-  <p>You can know more about me on my websites.</p>
+  <h3 class="alt"> This is my <a href="https://www.youtube.com/">YouTube</a> Playlist. Enjoy it!</h3> 
 </header>
 
-<div class="table-wrapper">
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>URL</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Circuital Minds</td>
-        <td>This is my personal blog to write any topic that I liked.</td>
-        <td><a href="https://alanmatzumiya.github.io/circuitalminds/"> Go now! </a></td>
-      </tr>
-      <tr>
-        <td>Python Courses</td>
-        <td>I built this site to share my knowledge of Python programming.</td>
-        <td><a href="https://alanmatzumiya.github.io/python-courses/"> Go now! </a></td>
-      </tr>
-     </tbody>
-  </table>
-</div>
+<footer>
+  <div class="container">
+  <iframe class="6u 12u$(mobile)" width="650" height="450" src="https://www.youtube.com/embed/videoseries?list=PLU1cYDntAmw1Ti7Tex8oIzPTfJcwWCQuG" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</footer>
