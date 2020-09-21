@@ -5,31 +5,12 @@ layout: "page"
 icon: fa-book
 order: 3
 ---
-<div class="container">
-	<style>
-	/* Style the tab */
-	.tab {
-	  overflow: hidden;
-	  border: 1px solid #ccc;
-	  background-color: #f1f1f1;
-	}
 
-	/* Style the buttons inside the tab */
-	.tab button {
-	  float: left;
-	  border: none;
-	  outline: none;
-	  cursor: pointer;
-	  padding: 14px 16px;
-	  transition: 0.3s;
-	}
-	</style>
-</div>
 
 <div class="container">
-	<div class="tab">
-	<button onclick="webframe()">CV website</button>
-	<button id="pdf">CV PDF</button>
+	<div class="container" style="overflow: hidden; border: 1px solid #ccc; background-color: #f1f1f1;">
+	<button onclick="webframe()" style="float: left;">CV website</button>
+	<button id="pdf" style="float: left;">CV PDF</button>
 	<button onclick="closeDoc()" style="float: right;">Close</button>
 	</div>
 
