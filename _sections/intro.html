@@ -7,19 +7,21 @@ icon: fa-comment
 order: 1
 ---
 <div class="container">
-<header id="initial"></header>
+<header id="text-init"></header>
 
 <footer>
-  <button id="mybtn" onclick="introText()">Alan Daniel Matzumiya Zazueta</button>
+  <button id="mybtn" onclick="init()">Alan Daniel Matzumiya Zazueta</button>
 </footer>
   
 <script>
-function introText() {
-  // var stopButton = document.getElementById("mybtn")
-  document.getElementById("initial").innerHTML = "<h2 class='alt'>Hi! I'm <strong>Alan</strong>, a <a href='https://en.wikipedia.org/wiki/Mathematician'>Mathematician</a> and<br /> I also I'm <a href='https://en.wikipedia.org/wiki/Programmer'>Programmer</a>.</h2>";
-  // stopButton.onclick = function () {
-  // document.getElementById("initial").innerHTML = "";
-  // stopButton.onclick = introText()
+function init() {
+  document.getElementById("text-init").innerHTML = "<h2 class='alt'>Hi! I'm <strong>Alan</strong>, a <a href='https://en.wikipedia.org/wiki/Mathematician'>Mathematician</a> and<br /> I also I'm <a href='https://en.wikipedia.org/wiki/Programmer'>Programmer</a>.</h2>";
+  document.getElementById("mybtn").innerHTML = "<button id='mybtn' onclick='stop()'>Alan Daniel Matzumiya Zazueta</button>";
+  }
+  
+function stop() {
+  document.getElementById("text-init").innerHTML = "";
+  document.getElementById("mybtn").innerHTML = "<button id='mybtn' onclick='init()'>Alan Daniel Matzumiya Zazueta</button>";
   }
 </script> 
 </div>  
