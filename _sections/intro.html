@@ -16,25 +16,6 @@ function init () {
   document.getElementById("text-init").innerHTML = "<p class='alt'>Hi! I'm <strong>Alan</strong>.</p>";
   document.getElementById("mybtn").innerHTML = "<button onclick='stop()' class='button scrolly'>Alan Matzumiya</button>";
   }
-</script>   
-<script>
-!(function($) {
-    "use strict";
-
-    // Portada typed
-    if ($('.typed').length) {
-        let typed_strings = $(".typed").data('typed-items');
-        typed_strings = typed_strings.split(',')
-        new Typed('.typed', {
-            strings: typed_strings,
-            loop: true,
-            typeSpeed: 100,
-            backSpeed: 50,
-            backDelay: 2000
-        });
-    }
-</script>
-<script>
 function stop () {
   document.getElementById("text-init").innerHTML = "";
   document.getElementById("mybtn").innerHTML = "<button onclick='init()'>Alan Matzumiya</button>";
