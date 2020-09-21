@@ -7,14 +7,13 @@ icon: fa-comment
 order: 1
 ---
 <header id="mybtn">
-  <button onclick="init()">Alan Matzumiya</button>
+  <button onclick="init()" style="width: 40px; height: 10px;">Alan Matzumiya</button>
 </header>
-<div id="text-init" style="float: right;"></div>
+<div id="text-init" style="float: right; height: 300px;"></div>
 
 <script>
 function init () {
-  document.getElementById("text-init").innerHTML = "<p class='alt'>Hi! I'm <strong>Alan</strong>, a <a href="https://en.wikipedia.org/wiki/Mathematician">Mathematician</a> and<br />
-  I also I'm <a href="https://en.wikipedia.org/wiki/Programmer">Programmer</a>.</p>";
+  document.getElementById("text-init").innerHTML = "<p class='alt'>Hi! I'm <strong>Alan</strong>, a <a href='https://en.wikipedia.org/wiki/Mathematician'>Mathematician</a> and<br />I also I'm <a href='https://en.wikipedia.org/wiki/Programmer'>Programmer</a>.</p>";
   document.getElementById("mybtn").innerHTML = "<button onclick='stop()' class='button scrolly'>Alan Matzumiya</button>";
   }
 function stop () {
