@@ -5,19 +5,21 @@ icon: fa-comment
 order: 1
 ---
 <style>
-    #body {
+    fill {
         overflow: hidden;
         background-size: cover;
-        background-image: url('assets/images/banner-collage.png');
     }
-</style>        
+</style>
+<div class="container">
+<img src='assets/images/banner-collage.png' class="fill">
+    <header id="mybtn" >
+        <button onclick="init()" style="width: 300px; height: 60px;"><h4 class='alt'>Click Me!</h4></button>
+    </header>  
 
-<header id="mybtn" >
-    <button onclick="init()" style="width: 300px; height: 60px;"><h4 class='alt'>Click Me!</h4></button>
-</header>  
-  
-<footer id="text-init">
-</footer>
+    <footer id="text-init">    
+    </footer>
+</img>
+</div>
 
 <script>
 function init () {
