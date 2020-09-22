@@ -4,25 +4,30 @@ auto-header: none
 icon: fa-comment
 order: 1
 ---
-<style>
-  .fill {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('assets/images/banner-collage.png');
-}
-</style>  
+<div class="container">
+
+  <style>
+    .fill {
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-image: url('assets/images/banner-collage.png');
+  }
+  </style>  
+
+</div>
 
 <div class="fill">
+
+  <header id="mybtn" >
+    <button onclick="init()" style="width: 300px; height: 60px;"><h4 class='alt'>Click Me!</h4></button>
+  </header>  
   
-<header id="mybtn">
-  <button onclick="init()" style="width: 300px; height: 60px;"><h4 class='alt'>Click Me!</h4></button>
-</header>
-  
-<footer id="text-init">
-</footer>
-  
+  <footer id="text-init">
+  </footer>
+
 </div>
+
 <script>
 function init () {
   document.getElementById("text-init").innerHTML = "<h2 class='alt'>A <a href='https://en.wikipedia.org/wiki/Mathematician'>Mathematician</a> and Engineer; But <br />I'm also a <a href='https://en.wikipedia.org/wiki/Programmer'>Programmer</a>.</h2>";
