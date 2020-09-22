@@ -4,17 +4,13 @@ auto-header: none
 icon: fa-comment
 order: 1
 ---
-<div class="container" style="background-image: url('assets/images/banner-collage.png'); background-size: cover; overflow: hidden;">
-    <div class="container">
-    <header id="mybtn" >
-        <button onclick="init()" style="width: 300px; height: 60px;"><h4 class='alt'>Click Me!</h4></button>
-    </header>  
+<img class="alt" src='assets/images/banner-collage.png' style="background-size: cover; overflow: hidden;">
+<header id="mybtn" >
+    <button onclick="init()" style="width: 300px; height: 60px;"><h4 class='alt'>Click Me!</h4></button>
+</header>  
 
-    <footer id="text-init">    
-    </footer>
-    </div>
-</div>
-
+<footer id="text-init">    
+</footer>
 <script>
 function init () {
   document.getElementById("text-init").innerHTML = "<h2 class='alt'>A <a href='https://en.wikipedia.org/wiki/Mathematician'>Mathematician</a> and Engineer; But <br />I'm also a <a href='https://en.wikipedia.org/wiki/Programmer'>Programmer</a>.</h2>";
