@@ -17,17 +17,19 @@ order: 4
       <tr>
         <td>Circuital Minds</td>
         <td><button id="circuitalPage">Show</button>
-                  <dialog class="12u$" id="circuitalDescription">
-                        <form method="dialog">
-                            <section>
-                              <iframe allowfullscreen='allowfullscreen' style='width: 100%; height: 100%; border: none;' title='inline-frame' src='https://alanmatzumiya.github.io/circuitalminds/about/'></iframe>
-                            </section>
-                            <menu>
-                              <button id="cancelCircuital" type="reset">Close</button>
-                              <button onclick="window.location.href='https://alanmatzumiya.github.io/circuitalminds/'">Go to page</button>
-                            </menu>
-                          </form>
-                   </dialog>
+            <dialog id="circuitalDescription">
+              <form method="dialog">
+                <div class="row uniform">
+                <div class="12u$">
+                  <iframe allowfullscreen='allowfullscreen' style='width: 100%; height: 100%; border: none;' title='inline-frame' src='https://alanmatzumiya.github.io/circuitalminds/about/'></iframe>
+                </div>
+                <div class="12u$">  
+                  <button class="6u 12u$(xsmall)" id="cancelCircuital" type="reset">Close</button>
+                  <button class="6u 12u$(xsmall)" onclick="window.location.href='https://alanmatzumiya.github.io/circuitalminds/'">Go to page</button>
+                </div>
+                </div>     
+              </form>
+            </dialog>
       </tr>
       <tr>
         <td>Python Courses</td>
