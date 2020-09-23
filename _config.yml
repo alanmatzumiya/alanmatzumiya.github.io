@@ -36,7 +36,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   This site is created to spread my knowledge of programming and mathematics through the experience of my projects.
 author: Alan Daniel Matzumiya Zazueta
 email: alan.matzumiya@gmail.com
-avatar: assets/images/avatar.jpg
+avatar: assets/images/avatar-02.png
 
 # You'll want to customize url and baseurl for your own site:
 baseurl: "/" # the subpath of your site, e.g. /blog
