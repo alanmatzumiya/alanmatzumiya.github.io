@@ -21,3 +21,14 @@ function stop () {
   document.getElementById("mybtn").innerHTML = "<button onclick='init()'><h4>Click Me!</h4></button>";
   }
 </script>
+<script>
+        /* make the API call */
+FB.api(
+    "/instagram_oembed",
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+      }
+    }
+);
+</script>
