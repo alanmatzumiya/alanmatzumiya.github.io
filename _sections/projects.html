@@ -4,11 +4,7 @@ icon: fa-th
 order: 4
 ---
 <hr>
-<p id="desc-git" style="text-align: left;">
-	Puedes consultar en GitHub algunos de mis proyectos de programación que están siendo desarrollados,
-	los cuales tienen como objetivo reunir todas las practicas en el lenguaje Python y obtener como resultado
-	algo útil como paquetes Python, y guías educativas para usuarios principiantes o avanzados en el uso de este lenguaje.
-</p>
+<p id="desc-git" style="text-align: left;"></p>
 <hr>
 <br>
   <button style="float: right;">Traducir a Ingles</button>
@@ -74,6 +70,23 @@ order: 4
           </tr>
        </tbody>
 </table>
+<script>
+    let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/data.json';
+    let request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+
+    request.onload = function() {
+      const descript = request.response;
+      showDescript(descript);
+    }
+
+    function showDescript(jsonObj) {
+      const textDesc = document.getElementById('desc-git');
+      textDesc.innerHTML = jsonObj['description'];
+    }	
+</script>	
 <script>
   (function() {
     // document.getElementById('description').innerHTML = "<dialog id='thesis'><form method="dialog"><section><p></p></section><menu><button id="cancel" type="reset">Close</button><button id="go"></button></menu></form></dialog>"
