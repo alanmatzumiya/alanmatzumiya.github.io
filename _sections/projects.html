@@ -7,7 +7,7 @@ order: 4
 <p id="desc-git" style="text-align: left;"></p>
 <hr>
 <br>
-  <button style="float: right;">Traducir a Ingles</button>
+  <button id="desc-trad" style="float: right;">Traducir a Ingles</button>
 <br><br>
 
 <!-- Table -->
@@ -84,7 +84,7 @@ order: 4
 
     function showDescript(jsonObj) {
       const textDesc = document.getElementById('desc-git');
-      textDesc.innerHTML = jsonObj['description'];
+      textDesc.innerHTML = jsonObj['traduction'];
     }	
 </script>	
 <script>
