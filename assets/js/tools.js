@@ -1,22 +1,27 @@
-let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/data.json';
-let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-
 request.onload = function() {
-  const descript = request.response;
-  showDescript(descript);
+  showDescript();
 }
 
-function showDescript(jsonObj) {
+function showDescript() {
+  let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/data.json';
+  let request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+  const jsonObj = request.response;
   const textDesc = document.getElementById('desc-git');
   textDesc.innerHTML = jsonObj['description'];
-  document.getElementById("desc-button").innerHTML = "<button onclick='tradButton(jsonObj)' style='float: right;'>Traducir a Español</button>";
+  document.getElementById("desc-button").innerHTML = "<button onclick='tradButton()' style='float: right;'>Traducir a Español</button>";
 }	
 
-function tradButton(jsonObj) {
+function tradButton() {
+  let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/data.json';
+  let request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+  const jsonObj = request.response;
   const textTrad = document.getElementById('desc-git');
   textTrad.innerHTML = jsonObj['traduction'];
-  document.getElementById("desc-button").innerHTML = "<button onclick='showDescript(jsonObj)' style='float: right;'>Traducir a Ingles</button>";
+  document.getElementById("desc-button").innerHTML = "<button onclick='showDescript()' style='float: right;'>Traducir a Ingles</button>";
 }
