@@ -8,7 +8,7 @@ request.onload = function() {
   const jsonObj = request.response;
   var desc = jsonObj['description'];
   var trad = jsonObj['traduction'];
-  showDescript(descText);
+  showDescript();
 }
 
 function showDescript() {
