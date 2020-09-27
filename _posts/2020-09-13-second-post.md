@@ -11,6 +11,6 @@ icon-style: regular
 
 <footer>
   <div class="container">
-    <iframe class="6u 12u$(mobile)" allow="microphone; camera" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%;" src="https://success.zoom.us/join" frameborder="0"></iframe>
+    <iframe class="6u 12u$(mobile)" style="border: 0; width: 100%; height: 100%;" src="https://success.zoom.us/join" frameborder="0"></iframe>
   </div>
 </footer>
