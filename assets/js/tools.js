@@ -13,11 +13,11 @@ request.onload = function() {
 
 function showDescript() {
   document.getElementById('desc-git').innerHTML = desc;
-  document.getElementById("desc-button").innerHTML = "<button onclick='showButton()' style='float: right;'>Traducir a Español</button>";
+  document.getElementById("desc-button").innerHTML = "<button onclick='showButton()' style='float: right;'>Read in Spanish</button>";
 }	
 
 function showTrad() {
   textTrad.innerHTML = jsonObj['traduction'];
   document.getElementById('desc-git').innerHTML = trad;
-  document.getElementById("desc-button").innerHTML = "<button onclick='showDescript()' style='float: right;'>Traducir a Ingles</button>";
+  document.getElementById("desc-button").innerHTML = "<button onclick='showDescript()' style='float: right;'>Leer en Ingles</button>";
 }
