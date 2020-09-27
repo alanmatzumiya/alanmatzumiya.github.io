@@ -16,5 +16,7 @@ function showDescript(jsonObj) {
 }	
 
 function tradButton(jsonObj) {
+  const textTrad = document.getElementById('desc-git');
+  textTrad.innerHTML = jsonObj['traduction'];
   document.getElementById("desc-button").innerHTML = "<button onclick='showDescript(jsonObj)' style='float: right;'>Traducir a Ingles</button>";
 }
