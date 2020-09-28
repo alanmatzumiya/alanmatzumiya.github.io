@@ -1,4 +1,4 @@
-let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/data.json';
+let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/projects.json';
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
@@ -11,7 +11,7 @@ request.onload = function() {
 }
 
 function showDescript() {
-  let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/data.json';
+  let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/projects.json';
   let request = new XMLHttpRequest();
   request.open('GET', requestURL);
   request.responseType = 'json';
@@ -25,7 +25,7 @@ function showDescript() {
 }			
 
 function showTrad() {
-  let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/data.json';
+  let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/projects.json';
   let request = new XMLHttpRequest();
   request.open('GET', requestURL);
   request.responseType = 'json';
