@@ -36,5 +36,4 @@ function showTrad() {
   document.getElementById('desc-git').innerHTML = jsonObj['traduction'];
   document.getElementById("desc-button").innerHTML = "<button onclick='showDescript()' style='float: right;'>Read in English</button>";
   }
-
 }
