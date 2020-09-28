@@ -1,39 +1,39 @@
-let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/projects.json';
-let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+let URL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/projects.json';
+let requestProjects = new XMLHttpRequest();
+requestProjects.open('GET', URL);
+requestProjects.responseType = 'json';
+requestProjects.send();
 
-request.onload = function() {
-  const jsonObj = request.response;
-  document.getElementById('desc-git').innerHTML = jsonObj['description'];
+requestProjects.onload = function() {
+  const jsonProjects = requestProjects.response;
+  document.getElementById('desc-git').innerHTML = jsonProjects['description'];
   document.getElementById("desc-button").innerHTML = "<button onclick='showTrad()' style='float: right;'>Read in Spanish</button>";
 }
 
 function showDescript() {
-  let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/projects.json';
-  let request = new XMLHttpRequest();
-  request.open('GET', requestURL);
-  request.responseType = 'json';
-  request.send();
+  let URL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/projects.json';
+  let requestProjects = new XMLHttpRequest();
+  requestProjects.open('GET', URL);
+  requestProjects.responseType = 'json';
+  requestProjects.send();
 
-  request.onload = function() {
-  const jsonObj = request.response;
-  document.getElementById('desc-git').innerHTML = jsonObj['description'];
+  requestProjects.onload = function() {
+  const jsonProjects = requestProjects.response;
+  document.getElementById('desc-git').innerHTML = jsonProjects['description'];
   document.getElementById("desc-button").innerHTML = "<button onclick='showTrad()' style='float: right;'>Read in Spanish</button>";
   }
 }			
 
 function showTrad() {
-  let requestURL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/projects.json';
-  let request = new XMLHttpRequest();
-  request.open('GET', requestURL);
-  request.responseType = 'json';
-  request.send();
+  let URL = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/projects.json';
+  let requestProjects = new XMLHttpRequest();
+  requestProjects.open('GET', URL);
+  requestProjects.responseType = 'json';
+  requestProjects.send();
 
-  request.onload = function() {
-  const jsonObj = request.response;
-  document.getElementById('desc-git').innerHTML = jsonObj['traduction'];
+  requestProjects.onload = function() {
+  const jsonProjects = requestProjects.response;
+  document.getElementById('desc-git').innerHTML = jsonProjects['traduction'];
   document.getElementById("desc-button").innerHTML = "<button onclick='showDescript()' style='float: right;'>Read in English</button>";
   }
 }
