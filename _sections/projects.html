@@ -40,15 +40,15 @@ order: 4
             <td>pySpectralPDE</td>
             <td><button id="pyPDE">Show</button>
                   <dialog id="descriptionPDE" class="12u$">
-                        <form class="12u$" method="dialog">
-                            <section class="12u$">
-                              <iframe class="12u$" allowfullscreen='allowfullscreen' title='inline-frame' src='https://alanmatzumiya.github.io/spectral-methods/'></iframe>
-                            </section>
-                            <menu>
-                              <button id="cancelPDE" type="reset">Close</button>
-                              <button onclick="window.location.href='https://alanmatzumiya.github.io/spectral-methods/'" class="icon-b fa-github"><span class="label">Github</span></button>
-                            </menu>
-                          </form>
+                          <div style="height: 600px;">         
+                              <iframe class="12u$" allowfullscreen='allowfullscreen' style='width: 100%; height: 100%; border: none;' title='inline-frame' src='https://alanmatzumiya.github.io/spectral-methods/'></iframe>
+                          </div>
+			  <div class="12u$" style="overflow: hidden; border: none;">
+			  <div class="select-wrapper">
+                              <button class="2u icon-b fa-github" style="float: left;" onclick="window.location.href='https://alanmatzumiya.github.io/spectral-methods/'"><span class="label">Github</span></button>
+			      <button class="2u$" id="cancelPDE" type="reset" style="float: right;">Close</button>	  
+                         </div>
+		         </div>
                    </dialog>
             </td>
           </tr>
@@ -56,15 +56,15 @@ order: 4
             <td>Python Courses</td>
             <td><button id="pyCourses">Show</button>
                   <dialog id="descriptionCourses" class="12u$">
-                        <form method="dialog" class="12u$">
-                            <section class="12u$">
+                          <div style="height: 600px;"> 
 			      <iframe class="12u$" allowfullscreen='allowfullscreen' title='inline-frame' src='https://alanmatzumiya.github.io/python-courses/'></iframe>	    
-                            </section>
-                            <menu>
-                              <button id="cancelCourses" type="reset">Close</button>
-                              <button onclick="window.location.href='https://alanmatzumiya.github.io/python-courses/'" class="icon-b fa-github"><span class="label">Github</span></button>
-                            </menu>
-                          </form>
+                          </div>
+			  <div class="12u$" style="overflow: hidden; border: none;">
+			  <div class="select-wrapper">
+                              <button class="2u icon-b fa-github" style="float: left;" onclick="window.location.href='https://alanmatzumiya.github.io/python-courses/'"><span class="label">Github</span></button>
+			      <button class="2u$" id="cancelCourses" type="reset">Close</button> 
+                         </div>
+		         </div>
                    </dialog>
             </td>
           </tr>
