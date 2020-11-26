@@ -1,0 +1,96 @@
+---
+title: Dashboards
+author: Alan M.
+layout: post
+icon: fa-lightbulb
+icon-style: regular
+---
+<h1>Some Dashboards</h1>
+<div id="piechart"></div>
+
+<style>
+
+canvas {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  }
+</style>
+<!-- 
+  A simple Lorenz Attractor renderer by @liabru
+-->
+<canvas id='canvas' width='500px' height='650px'> 
+<script>
+  // A simple Lorenz Attractor renderer
+// Change the parameters for different results!
+// by @liabru - http://brm.io
+
+var canvas = document.getElementById('canvas'),
+    context = canvas.getContext('2d'),
+    c = 28, 
+    h = 0.015,
+    t = -6,
+    x0 = 0, 
+    y0 = 1, 
+    z0 = 10,
+    x1,
+    y1,
+    z1,
+    cx = 250,
+    cy = 330,
+    scale = 15,
+    n = 20000,
+    i = 0;
+
+var interval = setInterval(function() {
+  if (i < n) {
+    for (var k = 0; k < 20; k += 1) {
+      x1 = x0 + h * t * (x0 - y0);
+      y1 = y0 + h * (-x0 * z0 + c * x0 - y0);
+      z1 = z0 + h * (x0 * y0 - z0);
+
+      context.strokeStyle = "hsl(" + Math.abs(x1)*10 + "," + Math.abs(y1)*10 + "%," + Math.abs(z1)*2 + "%)";
+      
+      context.beginPath();
+      context.moveTo(cx + x0 * scale, cy + y0 * scale);
+      context.lineTo(cx + x1 * scale, cy + y1 * scale);
+      context.stroke();
+
+      x0 = x1;
+      y0 = y1;
+      z0 = z1;
+
+      i += 1;
+    }
+  } else {
+    clearInterval(interval);
+  }
+}, 1);
+</script>  
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Work', 8],
+  ['Eat', 2],
+  ['TV', 4],
+  ['Gym', 2],
+  ['Sleep', 8]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Average Day', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
