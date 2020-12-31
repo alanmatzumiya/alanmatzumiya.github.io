@@ -14,7 +14,7 @@ requestThesis.onload = function() {
   document.getElementById('description-math').innerHTML = textMath['description'];
   document.getElementById('sponsorship-math').innerHTML = textMath['sponsorship'];
   document.getElementById('publisher-math').innerHTML = textMath['publisher'];
-  document.getElementById('classiication-math').innerHTML = textMath['classification'];
+  document.getElementById('classification-math').innerHTML = textMath['classification'];
   document.getElementById('title-math').innerHTML = textMath['title'];
   document.getElementById('type-math').innerHTML = textMath['type'];
 }
