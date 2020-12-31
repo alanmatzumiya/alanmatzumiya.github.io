@@ -393,9 +393,8 @@
 
 		tbody {
 			tr {
-				&:nth-child(2n+2) {
-					background: #f4f4f4;
-				}
+			    background: rgba(35,36,39,0.95);
+			    color: #fff;
 			}
 		}
 
