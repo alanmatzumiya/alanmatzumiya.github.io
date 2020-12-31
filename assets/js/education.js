@@ -10,7 +10,7 @@ requestThesis.onload = function() {
   const textMath = jsonThesis['thesisMath'];
   document.getElementById('author-math').innerHTML = textMath['author'];
   document.getElementById('date-math').innerHTML = textMath['date'];
-  document.getElementById('url-math').innerHTML = "<a href="+textMath['url']+"Thesis"+"</a>";
+  document.getElementById('url-math').innerHTML = "<a href="+textMath['url']+" target='_blank'>Thesis</a>";
   document.getElementById('description-math').innerHTML = textMath['description'];
   document.getElementById('sponsorship-math').innerHTML = textMath['sponsorship'];
   document.getElementById('publisher-math').innerHTML = textMath['publisher'];
