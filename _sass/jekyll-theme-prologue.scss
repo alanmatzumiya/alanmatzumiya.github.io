@@ -393,8 +393,8 @@
 
 		tbody {
 			tr {
-				background: #eee;
-				color: #fff;
+				&:nth-child(2n+2) {
+					background: #f4f4f4;
 				}
 			}
 		}
@@ -455,7 +455,7 @@
 		margin-bottom: 40px;
 
 		header {
-			color: rgba(35,36,39,0.95);
+			color: #666;
 			text-align: center;
 			background: #fff;
 			margin: 0;
