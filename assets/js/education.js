@@ -21,7 +21,7 @@ requestThesis.onload = function() {
   document.getElementById('author-chemistry').innerHTML = textChemistry['author'];
   document.getElementById('date-chemistry').innerHTML = textChemistry['date'];
   document.getElementById('url-chemistry').innerHTML = "<a href="+textChemistry['url']+" target='_blank'>Thesis Document</a>";
-  document.getElementById('description-chemistry').innerHTML = textMath['description'];
+  document.getElementById('description-chemistry').innerHTML = textChemistry['description'];
   document.getElementById('sponsorship-chemistry').innerHTML = textChemistry['sponsorship'];
   document.getElementById('publisher-chemistry').innerHTML = textChemistry['publisher'];
   document.getElementById('classification-chemistry').innerHTML = textChemistry['classification'];
