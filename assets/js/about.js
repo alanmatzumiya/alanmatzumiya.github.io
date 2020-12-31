@@ -7,7 +7,7 @@ request.send();
 request.onload = function() {
   const jsonObj = request.response;
   const textAbout = jsonObj['about']; 
-  document.getElementById('motivation').innerHTML = textAbout['motivation'];
+  document.getElementById('resumen').innerHTML = textAbout['resumen'];
   document.getElementById('content').innerHTML = textAbout['content'];
-  document.getElementById('commentary').innerHTML = textAbout['commentary'][0] + '<br><br>' + textAbout['commentary'][1] + '<br><br>' + textAbout['commentary'][2] + '<br><br>' + textAbout['commentary'][3];
+  document.getElementById('something-else').innerHTML = textAbout['something-else'][0] + '<br><br>' + textAbout['something-else'][1] + '<br><br>' + textAbout['something-else'][2] + '<br><br>' + textAbout['something-else'][3];
 }
