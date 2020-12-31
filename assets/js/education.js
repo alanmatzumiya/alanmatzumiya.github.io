@@ -1,11 +1,12 @@
 
-let urlFile = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/projects.json';
+let urlThesis = 'https://raw.githubusercontent.com/alanmatzumiya/alanmatzumiya.github.io/gh-pages/assets/thesis.json';
 let requestThesis = new XMLHttpRequest();
-requestThesis.open('GET', urlFile);
+requestThesis.open('GET', urlThesis);
 requestThesis.responseType = 'json';
 requestThesis.send();
 
-requestProjects.onload = function() {
+requestThesis.onload = function() {
   const jsonThesis = requestThesis.response;
-  document.getElementById('author').innerHTML = jsonProjects['thesis'][1]['author'];
+  const textMath = jsonThesis['thesisMath'];
+  document.getElementById('author').innerHTML = textMath['author'];
 }
