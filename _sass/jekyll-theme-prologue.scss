@@ -439,11 +439,13 @@
 		@include vendor('transition', 'background-color 0.35s ease-in-out');
 
 		&:hover {
-			background-color: #1ba1e2;
+			color: #1ba1e2;
+			background-color: #e8e8e8;
 		}
 
 		&:active {
-			background-color: #1ba1e2;
+			color: #1ba1e2;
+			background-color: #e8e8e8;
 		}
 	}
 
@@ -454,15 +456,15 @@
 		margin-bottom: 40px;
 
 		header {
-			color: #e8e8e8;
 			text-align: center;
-			background-color: #1ba1e2;
+			background: rgba(35,36,39,0.95);
 			margin: 0;
 			padding: 1em;
 			font-size: 0.8em;
 
-			h3 {
+			h3, h2 {
 				font-size: 1em;
+				color: #e8e8e8;
 			}
 		}
 	}
