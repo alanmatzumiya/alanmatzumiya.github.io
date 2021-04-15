@@ -31,9 +31,9 @@ collections: [sections]
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Alan Matzumiya
-subtitle: This is Where my Mind is
+subtitle: |-June 23, 2020-| 
 description: >- # this means to ignore newlines until "baseurl:"
-  I started here on June 23, 2020.
+  I started here on.
 author: Alan Daniel Matzumiya Zazueta
 email: alan.matzumiya@gmail.com
 avatar: assets/images/avatar.png
