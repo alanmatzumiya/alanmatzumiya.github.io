@@ -1,3 +1,3 @@
 # alanmatzumiya.github.io
 
-# Website
+# website
