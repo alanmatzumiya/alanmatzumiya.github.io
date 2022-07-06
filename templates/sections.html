@@ -1,0 +1,120 @@
+<header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> {{ cv['short-name'] }}.</h1>
+    <p>Mathematician and Web Developer.</p>
+    <img src="static/img/banner-collage.png" alt="boy" class="w3-image" width="100%" height="1108">
+</header>
+
+<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">{{ cv['full-name'] }}</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Some text about me.
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>        
+    <p class="w3-wide">Web Development</p>
+    <div class="w3-white">
+    <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <br>
+
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+    <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">11+</span><br>
+        Partners
+    </div>
+    <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">55+</span><br>
+        Projects Done
+    </div>
+    <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">89+</span><br>
+        Happy Clients
+    </div>
+    <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">150+</span><br>
+        Meetings
+    </div>
+    </div>
+
+    <button class="w3-button w3-light-grey w3-padding-large w3-section"
+            onclick='window.open("static/portfolio/cv.pdf")'>
+    <i class="fa fa-download"></i> Download Resume
+    </button>
+
+    <h3 class="w3-padding-16 w3-text-light-grey">Table</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16">Web Design</li>
+        <li class="w3-padding-16">
+            <h2>???</h2>
+            <span class="w3-opacity">???</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+        </ul>
+    </div>
+
+    <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Table</li>
+        <li class="w3-padding-16">Web Design</li>
+        <li class="w3-padding-16">
+            <h2>???</h2>
+            <span class="w3-opacity">???</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+        </ul>
+    </div>
+    
+    </div>
+
+    <h3 class="w3-padding-24 w3-text-light-grey">???</h3>
+    <img src="static/img/avatar.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">???</span> ??? </p>
+    <p>???</p><br>
+        
+</div>
+
+<div class="w3-padding-64 w3-content" id="documents">
+    <h2 class="w3-text-light-grey">My Documents</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-half">
+        <img src="/static/img/thesis-01.png" style="width:100%">
+    </div>
+
+    <div class="w3-half">
+        <img src="/static/img/thesis-02.png" style="width:100%">
+    </div>
+    </div>
+
+</div>
+    
+<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> {{ cv['residency'] }}.</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +52 {{ cv['cellphone'] }}</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: {{ cv['email']}}</p>
+    </div><br>
+    <p>Let's get in touch. Send me a message:</p>
+
+    <form action="/" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> Send Message
+        </button>
+      </p>
+    </form>
+  </div>
