@@ -10,9 +10,9 @@ function urlparse ( url, params ) {
     ).join("&");        
 };
 
-function get ( url, method, callback ) {
+function get ( url, callback ) {
     var req = new XMLHttpRequest();
-    req.open( method.toUpperCase(), url );
+    req.open( "GET", url );
     req.send();
     req.onreadystatechange = function () {
         setTimeout( function () {
@@ -20,3 +20,12 @@ function get ( url, method, callback ) {
         }, 200 );
     };
 };
+
+$( function() {
+    get(
+        "/update-template/",
+        function ( data ) {
+            print("Template Updated")
+        }
+    )
+} )

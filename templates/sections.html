@@ -1,87 +1,98 @@
 <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> {{ cv['short-name'] }}.</h1>
-    <p>Mathematician and Web Developer.</p>
-    <img src="static/img/banner-collage.png" alt="boy" class="w3-image" width="100%" height="1108">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> {{ template.author.name }}.</h1>
+    <p>{{ template.header_text }}.</p>
+    <img src="{{ template.img }}/banner-collage.png"
+         alt="{{ template.author.name }}"
+         class="w3-image" width="100%" height="1108"
+    >
 </header>
-
 <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">{{ cv['full-name'] }}</h2>
+
+    <h3 class="w3-padding-24 w3-text-light-grey"></h3>
+    <img src="static/img/avatar.png"
+         alt="Avatar"
+         class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <h2><span class="w3-large w3-margin-right"></span>
+        {{ template.author['full-name'] }}
+    </h2>
+    <p></p>
+
     <hr style="width:200px" class="w3-opacity">
-    <p>Some text about me.
-    </p>
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>        
-    <p class="w3-wide">Web Development</p>
-    <div class="w3-white">
-    <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    <p>{{ template.presentation }}.</p>
+
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    {% for skill in template.skills %}
+    <p class="w3-wide">{{ skill.name }}</p>
+    <div class="w3-light-grey w3-round-xlarge">
+        <div class="w3-round-xlarge w3-center w3-teal"
+             style="height:28px;width:{{ skill.percent }}%">{{ skill.percent }}%
+        </div>
     </div>
     <br>
+    {% endfor %}
 
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-    <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">11+</span><br>
-        Partners
+    <div class="w3-row w3-center w3-padding-16 w3-section">
+    {% for i in range( template.aptitudes | length ) %}
+        <div class="w3-quarter w3-dark-grey w3-section"><span class="w3-xlarge">
+            {{ template.aptitudes[i] }}
+        </span></div>
+    {% endfor %}
     </div>
-    <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br>
-        Projects Done
-    </div>
-    <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br>
-        Happy Clients
-    </div>
-    <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br>
-        Meetings
-    </div>
-    </div>
-
-    <button class="w3-button w3-light-grey w3-padding-large w3-section"
-            onclick='window.open("static/portfolio/cv.pdf")'>
-    <i class="fa fa-download"></i> Download Resume
-    </button>
-
-    <h3 class="w3-padding-16 w3-text-light-grey">Table</h3>
+</div>
+<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="education">
+    <h3 class="w3-padding-16 w3-text-light-grey">Education</h3>
     <div class="w3-row-padding" style="margin:0 -16px">
     <div class="w3-half w3-margin-bottom">
         <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16">Web Design</li>
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">
+            {{ template.bachelor.period }}
+        </li>
         <li class="w3-padding-16">
-            <h2>???</h2>
-            <span class="w3-opacity">???</span>
+            {{ template.bachelor.institution }}
+        </li>
+        <li class="w3-padding-16">
+            <h2>{{ template.bachelor.name }}</h2><span class="w3-opacity">Description</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+            <button onclick='window.open("{{ template.bachelor.url }}")'
+                    class="w3-button w3-white w3-padding-large w3-hover-black">
+            <i class="fa fa-download"></i>
+                Download
+            </button>
         </li>
         </ul>
     </div>
-
     <div class="w3-half">
         <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Table</li>
-        <li class="w3-padding-16">Web Design</li>
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">{{ template.master_degree.period }}</li>
+        <li class="w3-padding-16">{{ template.master_degree.name }}</li>
         <li class="w3-padding-16">
-            <h2>???</h2>
-            <span class="w3-opacity">???</span>
+            <h2>{{ template.master_degree.institution }}</h2>
+            <span class="w3-opacity">Description</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+            <button class="w3-button w3-white w3-padding-large w3-hover-black"
+                    onclick='window.open("static/portfolio/cv.pdf")'>
+            <i class="fa fa-download"></i>
+                Download
+            </button>
         </li>
         </ul>
     </div>
-    
     </div>
-
-    <h3 class="w3-padding-24 w3-text-light-grey">???</h3>
-    <img src="static/img/avatar.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">???</span> ??? </p>
-    <p>???</p><br>
-        
 </div>
 
-<div class="w3-padding-64 w3-content" id="documents">
-    <h2 class="w3-text-light-grey">My Documents</h2>
+<div class="w3-padding-64 w3-content" id="experience">
+    <h2 class="w3-text-light-grey"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experience</h2>
     <hr style="width:200px" class="w3-opacity">
+    {% for x in template.work_experience %}
+    <div class="w3-container">
+      <h5 class="w3-opacity"><b>{{ x.name }} / {{ x.place }}</b></h5>
+      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{ x.period }}</h6>
+      <p>{{ x.description }}</p>
+      <hr>
+    </div>
+    {% endfor %}
 
     <div class="w3-row-padding" style="margin:0 -16px">
     <div class="w3-half">
@@ -100,12 +111,11 @@
     <hr style="width:200px" class="w3-opacity">
 
     <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> {{ cv['residency'] }}.</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +52 {{ cv['cellphone'] }}</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: {{ cv['email']}}</p>
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> {{ template.author.residency }}.</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: {{ template.author['cell-phone'] }}</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: {{ template.author.email }}</p>
     </div><br>
     <p>Let's get in touch. Send me a message:</p>
-
     <form action="/" target="_blank">
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
@@ -117,4 +127,4 @@
         </button>
       </p>
     </form>
-  </div>
+</div>

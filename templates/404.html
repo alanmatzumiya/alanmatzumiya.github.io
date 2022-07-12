@@ -1,20 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 <head>    
-    {% include 'head.html' %}    
-    <link rel="stylesheet" href="static/css/404.css">
-    <title>Page not found - Alan Matzumya</title>
+    {% include template.head %}
+    <link rel="stylesheet" href="{{ template.css }}/404.css">
+    <title>{{ template.title['404'] }}</title>
 </head>
 <body class="w3-black">
 
-{% include 'navigator.html' %}    
+{% include template.navigator %}
 
 <div class="w3-padding-large" id="main">    
     
     <header class="w3-container w3-padding-32 w3-center">
         
-        <h1 class="w3-jumbo"><span class="w3-hide-small">404</h1>
-            <p>The requested page could not be found.</p>
+        <h1 class="w3-jumbo"><span class="w3-hide-small">404</span></h1>
+            <p>{{ error_message }}</p>
             <a href="/" class="w3-button w3-black w3-padding-large w3-hover-white">Back Home</a>
         <section id="solar-system">
             <div id="sun"></div>
@@ -33,7 +33,6 @@
         </section>
     </header>
 </div>    
-{% include 'footer.html' %}
-</div>    
+{% include template.footer %}
 </body>
 </html>
