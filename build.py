@@ -1,36 +1,24 @@
-from pathlib import Path
+# -*- coding: utf-8 -*-
 from flask import Flask
 from flask_cors import CORS
-from subprocess import getoutput as prompt
-from json import load
+from views import add_views
+from pathlib import Path
+from utils import get_host, getconfig
 path = Path(__file__).parent
-
-
-def getout(command):
-    out = prompt(command).strip()
-    print(out)
-    return out
-
-
-def getconfig(key):
-    conf = load(path.joinpath("conf.json").open())
-    return conf.get(key)
 
 
 def create_app():
     cfg = getconfig("app")
-    folders = dict(
-        static_folder=cfg["static_folder"],
-        template_folder=cfg["template_folder"]
-    )
+    folders = {i: cfg[i] for i in ("static_folder", "template_folder")}
     app = Flask(__name__, **folders)
-    app.env = cfg["env"]
-    app.secret_key = cfg["secret_key"]
+    for i in ("env", "secret_key"):
+        setattr(app, i, cfg[i])
     CORS(app)
+    add_views(app)
     return app
 
 
 def run_server(app):
     settings = getconfig("app")["server"]
-    settings["host"] = getout("hostname -I")
+    settings["host"] = get_host()
     app.run(**settings)
