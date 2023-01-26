@@ -1,0 +1,88 @@
+%============================================================================%
+%	DOCUMENT CONTENT
+%============================================================================%
+\begin{document}
+\section{}
+\columnratio{0.31}
+\setlength{\columnsep}{2.2em}
+\setlength{\columnseprule}{4pt}
+\colseprulecolor{lightcol}
+\begin{paracol}{2}
+\begin{leftcolumn}
+%---------------------------------------------------------------------------------------
+%	META IMAGE
+%----------------------------------------------------------------------------------------
+\includegraphics[width=\linewidth]{<formal-photo>}	%trimming relative to image size
+%---------------------------------------------------------------------------------------
+%	META SKILLS
+%----------------------------------------------------------------------------------------
+
+\vspace{2mm}
+\cvtext{\textbf{Edad:} <age> años}
+
+\vspace{2mm}
+\cvtext{\textbf{Fecha y Lugar de Nacimiento:}
+\\<birthday>. <birthplace>
+}
+
+\cvsection{CONTACTO}
+
+\icontext{MapMarker}{12}{\textbf{<residency>}}{black}\\[6pt]
+\icontext{MobilePhone}{12}{\textbf{<cell-phone>}}{black}\\[6pt]
+\iconemail{Envelope}{12}{\textbf{<email>}}{<email>}{black}\\[6pt]
+\iconhref{Github}{12}{\textbf{<github.user>}~}{<github.url>}{black}\\[6pt]
+%---------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\cvsection{IDIOMAS}
+
+\cvskill{Ingles Escrito}{<english.written.percent> \%}{<english.written.scale>} \\[-2pt]
+\cvskill{Ingles Oral}{<english.spoken.percent> \%}{<english.spoken.scale>} \\[-2pt]
+
+\cvsection{HABILIDADES\\Y APTITUDES}
+
+<aptitudes>
+
+<skills>
+
+%---------------------------------------------------------------------------------------
+%	CERTIFICATION
+%----------------------------------------------------------------------------------------
+\end{leftcolumn}
+\begin{rightcolumn}
+%---------------------------------------------------------------------------------------
+%	TITLE  HEADER
+%----------------------------------------------------------------------------------------
+\fcolorbox{white}{darkcol}{\begin{minipage}[c][3.5cm][c]{1\mpwidth}
+	\begin {center}
+		\HUGE{ \textbf{ \textcolor{white}{ \uppercase{ <name> } } } } \\[-24pt]
+		\textcolor{white}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
+		\large{ \textcolor{white} {<presentation.short>} }
+ 	\end {center}
+\end{minipage}} \\[2pt]
+%---------------------------------------------------------------------------------------
+%	PROFILE
+%----------------------------------------------------------------------------------------
+
+\cvsection{EDUCACI\'ON}
+
+<education>
+
+%---------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\cvsection{Experencia Laboral}
+
+<experience>
+
+\vfill
+\end{rightcolumn}
+\end{paracol}
+
+\null
+\vspace*{\fill}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.45\linewidth][c]{\mystrut \small \textcolor{white}{Coypright 2021 Alan Matzumiya}}}
+\vspace{1mm}
+\end{document}

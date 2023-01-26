@@ -1,0 +1,8 @@
+{
+    "main": {
+        "path": "/home/alanmatzumiya/GitHub/alanmatzumiya/alanmatzumiya.github.io/main"
+    },
+    "gh-pages": {
+        "path" : "/home/alanmatzumiya/GitHub/alanmatzumiya/alanmatzumiya.github.io/gh-pages"
+    }
+}

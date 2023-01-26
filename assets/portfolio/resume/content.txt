@@ -1,0 +1,405 @@
+%============================================================================%
+%
+%	DOCUMENT CONTENT
+%
+%============================================================================%
+\begin{document}
+\fcolorbox{white}{white}{\begin{minipage}[c][0.96\textheight][t]{0.7\linewidth}
+
+%---------------------------------------------------------------------------------------
+%	TITLE HEADLINE
+%----------------------------------------------------------------------------------------
+\vspace{-3pt}
+% use this for multiple words like working titles etc.
+%\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\uppercase{M.Sc. Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{IT Consultant}}}\\
+% \large{ \textcolor{white}{{JS Fullstack Engineer}}}}
+%}}
+% use this for single words, e.g. CV or RESUME etc.
+\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Alan Matzumiya}} } \textcolor{softcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{English}} } }}
+
+%----------------------------------------------------------------------------------------
+%	HEADER IMAGE
+%----------------------------------------------------------------------------------------
+
+
+%\hspace{-1.6cm}
+%\includegraphics[trim= 0 250 0 270,clip,width=1\linewidth+3.1cm]{myfoto.jpg}	%trimming relative to image size!
+\includegraphics[width=0.9995\linewidth]{../../img/banner.png}	%trimming relative to image size
+
+%---------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+\transparent{0.85}%
+\vspace{-127pt}
+\hspace{0.32\linewidth}
+\colorbox{bgcol}{
+	\parbox{0.60\linewidth}{\vspace{-1.15mm}\hspace{-0.028\linewidth}\colorbox{softcol}{\parbox{1.028\linewidth}{\textcolor{white}{\hspace{0.22\linewidth}Alan Daniel Matzumiya Zazueta}}}
+		\vspace{-4.5mm}
+		\begin{center}
+		\larrow{softcol}\larrow{softcol} \textcolor{white}{I'm Chemical Engineer and M.Sc. Mathematics.\\I'm Also Python Full Stack Focused on Data Analysis and Software / Web Development}
+		\end{center}
+	}
+}
+\vspace{60pt}
+\transparent{1}%
+%============================================================================%
+%
+%	CV SECTIONS AND EVENTS (MAIN CONTENT)
+%
+%============================================================================%
+
+%---------------------------------------------------------------------------------------
+%	STATUS
+%----------------------------------------------------------------------------------------
+\cvsection{About Me}
+
+\colorbox{sectcol}{
+	\parbox{0.969\linewidth}{
+	\parbox{0.45\linewidth}{
+	\begin{itemize}
+		\item[\larrow{softcol}] \textcolor{white}{\textbf{Age: 28 years}}
+		\item[\larrow{softcol}] \textcolor{white}{\textbf{Birthday: 14 Sept 1992}}
+		\item[\larrow{softcol}] \textcolor{white}{\textbf{Hometown: Guaymas, Son}}
+		\item[\larrow{softcol}] \textcolor{white}{\textbf{Residency: Hermosillo, Son}}
+	\end{itemize}
+	}
+	\parbox{0.4\linewidth}{
+	\begin{itemize}
+		\item[\larrow{softcol}] \textcolor{white}{\textbf{Native Language: Spanish}}
+		\item[\larrow{softcol}]	\cvskill{Speak English} {80 \%} {0.8}
+		\item[\larrow{softcol}]	\cvskill{Write English} {90 \%} {0.9}
+	\end{itemize}
+	}
+	}
+}
+\vspace{5pt}
+
+%---------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\cvsection{Experience}
+
+%
+\cvevent{May-Aug 2015}{Professional Practices}{CFE, Hermosillo}{Environmental audit assistant in plant}{Project proposal developed to modify water treatment plant}
+
+%\textcolor{softcol}{\hrule}
+
+%
+\cvevent{June-Sept 2018}{Scientific Researching}{UNAM, Oaxaca}{Studies about numerical methods to solve stochastic partial differential equations}{The article publication can be consulted at the following button: \hspace{2mm} \href{https://www.researchgate.net/publication/334330862_INITIAL_CONDITIONS_CONTINUITY_OF_A_NUMERICAL_APPROXIMATION_FOR_KOLMOGOROV_EQUATIONS/}{\colorbox{bgcol}{\colorbox{white}{\hspace{3mm}\textcolor{bgcol}{\textbf{Get Info}} \hspace{1.5mm} \icon{Info}{8}{bgcol}\hspace{3mm}}}}}
+
+%\textcolor{softcol}{\hrule}
+
+%
+\cvevent{2017 - 2019}{Programming Workshops}{Unison, Hermosillo}{Programming class teacher developed in Jupyter Notebook using Python language and oriented to engineering students}{The class material can be consulted at the following button: \hspace{8mm} \href{https://circuitalminds.github.io/pyfullstack/}{\colorbox{bgcol}{\colorbox{white}{\hspace{1mm}{\textcolor{bgcol}{\textbf{Notebooks}} \hspace{1.5mm} \icon{Github}{8}{bgcol}\hspace{1mm}}}}}}
+
+%\textcolor{softcol}{\hrule}
+
+%
+\cvevent{2019 - Now}{Programming Projects}{GitHub}{
+	Python package to solving PDE's including its stochastic versions \hspace{0.25mm} \href{https://www.github.com/alanmatzumiya/Paper/}{\colorbox{bgcol}{\colorbox{white}{\hspace{0mm} \textcolor{bgcol}{\textbf{Repository}} \hspace{1.5mm} \icon{Github}{8}{bgcol} \hspace{0mm}}}}
+	\vspace{1mm}}
+	{
+	Python Package to build spectral numerical methods \hspace{18mm} \href{https://www.github.com/alanmatzumiya/pySpectralPDE}{\colorbox{bgcol}{\colorbox{white}{\hspace{1.060mm}\textcolor{bgcol}{\textbf{Repository}} \hspace{1.5mm} \icon{Github}{8}{bgcol}\hspace{1.060mm}}}}
+	\vspace{1mm}
+}
+
+\vspace{5pt}
+%---------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%--------------------------------------------------------------------------------------
+\cvsection{Education}
+
+\cvevent{2017 - 2019}{
+	Master Degree in Mathematical Sciences}{Unison, Hermosillo}{Thesis: Numerical Solutions to the Stochastic and Deterministic Burgers Equation Using Spectral Methods
+	}
+	{
+	Click on the following button to download thesis file: \hspace{18mm} \href{https://github.com/alanmatzumiya/pySpectralPDE/raw/master/docs/Thesis.pdf}{\colorbox{bgcol}{\colorbox{white}{\textcolor{bgcol}{\hspace{3mm}\textbf{Get PDF}} \hspace{1.5mm} \icon{Download}{8}{bgcol}\hspace{3mm}}}}
+}
+
+%\textcolor{sectcol}{\hrule}
+
+%
+\cvevent{2011 - 2016}{Bachelor in Chemical Engineering}{Unison, Hermosillo}{
+	Thesis: Caracterizaci\'on y evaluaci\'on de las propiedades bioactivas de una mezcla de biocomp\'ositos de hidroxiapatita/$\beta$-wollastonita
+	}
+	{
+	Click on the following button to download thesis file: \hspace{18mm} \href{http://www.repositorioinstitucional.uson.mx/handle/unison/1840}{\colorbox{bgcol}{\colorbox{white}{\textcolor{bgcol}{\hspace{3mm}\textbf{Get PDF}} \hspace{1.5mm} \icon{Download}{8}{bgcol}\hspace{3mm}}}}
+}
+
+
+\end{minipage}}%
+\fcolorbox{white}{sectcol}{\begin{minipage}[c][0.96\textheight][t]{0.33\linewidth}
+
+
+\begin{metasection}{Contact}
+
+	\icontext{MapMarker}{12}{Hermosillo, Sonora}{white}\\[6pt]
+
+	\iconhref{Whatsapp}{12}{\textbf{+52 662 364 8525}}{https://api.whatsapp.com/send?phone=5216623648525\&text=Hola\%20Alan,\%20Buen\%20D\%C3\%ADa.}{white}\\[6pt]
+
+	\iconemail{Send}{12}{\textbf{alan.matzumiya@gmail.com}}{alan.matzumiya@gmail.com}{white}\\[6pt]
+
+	\iconhref{Link}{12}{\textbf{alanmatzumiya.github.io}}{https://alanmatzumiya.github.io/}{white}\\[6pt]
+
+	\iconhref{Link}{12}{\textbf{Circuital Minds}}{https://circuitalminds.github.io/}{white}\\[6pt]
+
+	\LARGE{
+	\href{https://www.github.com/alanmatzumiya/}{\icon{Github}{12}{white}}
+	\hspace{1mm}
+	\href{https://www.linkedin.com/in/alanmatzumiya/}{\icon{LinkedinSquare}{12}{white}}
+	\hspace{1mm}
+	\href{https://www.facebook.com/alanmatzumiya/}{\icon{FacebookOfficial}{12}{white}}
+	\hspace{1mm}
+	\href{https://www.instagram.com/alanmatzumiya/}{\icon{Instagram}{12}{white}}
+	\hspace{1mm}
+	\href{https://www.pinterest.com/alanmatzumiya/}{\icon{Pinterest}{12}{white}}}\\[6pt]
+
+\end{metasection}
+
+%----------------------------------------------------------------------------------------
+%	META SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{metasection}{Skills}
+
+	\vspace{2pt}
+
+	\icontext{Tasks}{12}{Software / Web Development}{white}\\
+	\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
+
+	\icontext{BarChart}{12}{Numerical Algorithms / Data Analysis}{white}\\
+	\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\\[6pt]
+
+	\vspace{6pt}
+
+	\cvskill{\icontext{Code}{12}{Python / JavaScript}{white}} {4+ yrs} {1} \\[6pt]
+	\cvskill{\icontext{Code}{12}{Visual Basic / PHP}{white}} {5+ yrs} {0.85} \\[6pt]
+	\cvskill{\icontext{Code}{12}{C++ / Fortran}{white}} {5+ yrs} {1} \\[6pt]
+	\cvskill{\icontext{AreaChart}{12}{R / Matlab}{white}} {4+ yrs} {0.90} \\[6pt]
+	\cvskill{\icontext{Code}{12}{HTML / CSS / Markdown}{white}} {5+ yrs} {0.95} \\[6pt]
+	\cvskill{\icontext{Database}{12}{MySQL / MariaDB}{white}} {3+ yrs} {0.90} \\[6pt]
+
+\end{metasection}
+
+\begin{metasection}{Technologies}
+
+\textcolor{white}{\LARGE{\icon{Linux}{24}{white} \icon{Windows}{24}{white}} \icon{Android}{24}{white}}\\[6pt]
+
+\icontext{GithubAlt}{12}{Git /}{white}  \icontext{Check}{12}{Selenium /}{white}
+\icontext{Exchange}{12}{Docker}{white} \\[6pt]
+
+\icontext{Server}{12}{Django / Flask / Dash}{white} \\[6pt]
+
+\icontext{Google}{12}{Google Analytics}{white} \icontext{Android}{12}{Android Studio}{white} \\[6pt]
+
+\icontext{Code}{12}{PyCharm / Visual Studio}{white}\\[6pt]
+
+\icontext{LineChart}{12}{Jupyter Notebook / RStudio}{white}
+
+\end{metasection}
+
+\begin{metasection}{Activities}
+
+\vspace{6pt}
+
+\begin{piechart}{360}{-2}{maya}{maya}{white}
+	\slice{30}{\LARGE{\icon{Desktop}{2}{white}}}{col1}
+	\slice{30}{\LARGE{\icon{Bicycle}{8}{white}}}{col2}
+	\slice{15}{\LARGE{\icon{Headphones}{0}{white}}}{col3}
+	\slice{15}{\LARGE{\icon{Gamepad}{-4}{white}}}{col4}
+	\slice{10}{\LARGE{\icon{Beer}{2}{sectcol}}}{white}
+\end{piechart}
+
+\end{metasection}
+
+\end{minipage}}
+%-------------------------------------------------------------------------------------------------
+%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth)
+%--------------------------------------------------------------------------------------------------
+
+\null
+\vspace*{\fill}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{
+	\makebox[1.45\linewidth][c]{
+		\mystrut \small \textcolor{white}{
+			Coypright 2021 Alan Matzumiya
+		}
+	}
+}
+
+\vspace{1mm}
+\newpage
+%---------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\parbox{1\linewidth}{
+	\cvsection{Projects}
+	\includegraphics[width=1.0\linewidth]{../../img/master-thesis.png}
+}
+\parbox{1\linewidth}{
+	\cvevent{}
+	{
+		Website Built by Jekyll Themes
+	}
+	{
+		\parbox{1\linewidth}{
+			{\href{https://circuitalminds.github.io/}
+				{
+					{\colorbox{gray}{\hspace{7mm}\textcolor{white}{\textbf{CircuitalMinds}} \hspace{1.5mm} \icon{Github}{8}{white}\hspace{6mm}}}}
+			}
+		}
+	}
+	{
+		Organization website called CircuitalMinds
+	}
+	{
+		Contains its own blog and an extended course to learn Python programming
+	}
+}
+\parbox{1\linewidth}{
+	\cvevent{
+	}
+	{
+		Set of applications using flask
+	}
+	{
+		\parbox{1\linewidth}{
+			{\href{https://circuitalminds.herokuapp.com/fractalmetric}
+				{
+					{\colorbox{gray}{\hspace{7.5mm}\textcolor{white}{\textbf{FractalMetric}} \hspace{1.5mm} \icon{Github}{8}{white}\hspace{7.5mm}}}}
+			}
+		}
+	}
+	{
+		This application contains the most common snippets and wrappers to build large web pages, giving an advantage due to its ease
+of use.
+	}
+	{
+		Its main objective is to scale to manage and maintain the resources used by CircuitalMinds
+	}
+}
+\parbox{1\linewidth}{
+	\cvevent{
+	}
+	{
+		Container-server for Jupyter Notebooks
+	}
+	{ \parbox{1\linewidth}{
+			{\href{https://nbsanalysis.herokuapp.com/notebooks/}
+				{
+					{\colorbox{gray}{\hspace{3mm}\textcolor{white}{\textbf{Jupyter Notebooks}} \hspace{1.5mm} \icon{Github}{8}{white}\hspace{3mm}}}}
+			}
+		}
+	}
+	{
+		A container of notebooks that are prepared using Docker Hub with the help of a Pipeline, which are part of the resources of pyFullStack
+	}
+	{
+		With an automated process, the production of an application served in Heroku is carried out using Flask and being able to use the
+notebooks in Jupyter.
+	}
+}
+\parbox{1\linewidth}{
+	\cvevent{
+	}
+	{
+		My home server
+	}
+	{
+		\parbox{1\linewidth}{
+			{\href{https://matsuhub.herokuapp.com/}
+				{
+					{\colorbox{gray}{\hspace{9.5mm}\textcolor{white}{\textbf{MatsuHub}} \hspace{1.5mm} \icon{Github}{8}{white}\hspace{9.5mm}}}}
+			}
+		}
+	}
+	{
+		This development is simply a product of FractalMetric, which is used locally to access my files.
+	}
+	{
+		It is also useful to listen to music downloaded through a wrapper to obtain YouTube videos
+	}
+}
+\vspace{10pt}
+\colorbox{gray}{
+	\parbox{1.0\linewidth}{
+
+		\colorbox{bgcol}{
+			\parbox{0.98\linewidth}{
+				\cvsection{Presentation}
+
+				\parbox{1\linewidth}{
+
+					\textcolor{white}{ \colorbox{sectcol}{
+							By: Alan Matzumiya
+						}
+						\vspace{5pt}
+					}
+
+				}
+				\parbox{1\linewidth}{
+					\textcolor{white}{
+						The academic level that I have currently achieved characterizes me with a multidisciplinary training. However, it has not been my
+only resource to develop skills and knowledge, since I constantly reinforce a self-taught discipline that is used to obtain a broad
+vision in relation to my areas of personal interest.
+						\\\\
+						The knowledge that I consider to highlight is the use of mathematics in different contexts such as its applications in physics and
+statistics; including its theoretical and practical understanding complementing it with the use of programming languages that were
+mentioned above, since I take advantage of having a fairly broad knowledge about them.
+						\\\\
+						However, in relation to my programming knowledge, my goal is to have a knowledge of the Python language at a professional level, and I currently have a good advantage considering this language as my greatest programming resource that allows me
+to go deeply enough in various related areas.
+						\\\\
+						You are free to read my projects considered for this document, and in case you have an interest in any that could be useful to you, with all the confidence you can count on my disposal and with pleasure provide the required information. Furthermore, if
+you have the impression that I can be considered part of your team, you can certainly count on me.
+						\\\\
+						\textcolor{col2}{Important:} I consider myself a good element for having the ability to understand details, order and document in the best
+possible way for future readers; As a mathematician and researcher, this dynamic is a fundamental practice that does not generate
+retrogression.
+						\\\\
+						\vspace{5pt}
+					}
+				}
+			}
+		}
+	}
+}
+
+\null
+\vspace*{\fill}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.45\linewidth][c]{\mystrut \small \textcolor{white}{Coypright 2021 Alan Matzumiya}}}
+
+\vspace{1mm}
+\newpage
+%---------------------------------------------------------------------------------------
+%	Records
+%----------------------------------------------------------------------------------------
+\colorbox{maya}{
+\parbox{1.0\linewidth}{
+	\colorbox{white}{
+		\parbox{0.98\linewidth}{
+			\cvsection{Activities}
+
+            <record-files>
+
+			}
+		}
+	}
+}
+
+\null
+\vspace*{\fill}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{
+	\makebox[1.45\linewidth][c]{
+		\mystrut \small \textcolor{white}{
+			Coypright 2021 Alan Matzumiya}
+	}
+}
+
+\vspace{1mm}
+\end{document}
+%============================================================================%
+%
+%	DOCUMENT END
+%
+%============================================================================%

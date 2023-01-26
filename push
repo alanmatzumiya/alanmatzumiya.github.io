@@ -1,6 +1,16 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 
-git add .
-git commit -m "autocommit"
-git push
+allow_push=$( python3 -m main get allow-push )
+user=alanmatzumiya
+repo=alanmatzumiya.github.io
+
+if $allow_push; then
+    
+  python3 -m main set allow-push false
+  
+  git add .
+  git commit -m "autocommit"
+  git push https://$user:"$( head "$HOME"/secret )"@github.com/$user/$repo.git
+  
+fi

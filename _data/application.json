@@ -1,0 +1,10 @@
+{
+    "name": "app",
+    "config": {
+        "ENV": "development",
+        "SECRET_KEY": "alanmatzumiya",
+        "SESSION_TYPE": "filesystem"
+    },
+    "static_folder": "./static",
+    "template_folder": "./templates"
+}

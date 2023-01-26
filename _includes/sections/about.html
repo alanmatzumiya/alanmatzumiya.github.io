@@ -1,0 +1,16 @@
+<h2>
+    <i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
+    About
+</h2>
+<hr style="width:250px" class="w3-opacity">
+<img src="{{ author.avatar }}"
+     alt="Avatar"
+     class="w3-left w3-circle w3-margin-right"
+     style="width:80px"
+>
+<h3 class="w3-large w3-margin-right w3-text-teal">
+    {{ author['first-name'] }} {{ author['last-name'] }}
+</h3>
+<p class="w3-large w3-margin-right">
+    {{ author.presentation.large }}
+</p>
