@@ -10,13 +10,7 @@ opt, args = argv[1] if argv[1:] else "", argv[2:]
 envfile = root.joinpath(".env")
 url = f'http://{output("hostname -I").strip()}:5000'
 
-root.joinpath("_config.yml").open("w").write(
-    root.joinpath(
-        "_data/config-dev.yml"
-    ).open().read().replace("<URL>", url)
-)
 global dotenv
-
 try:
     from dotenv import load_dotenv
 except ModuleNotFoundError:
@@ -90,15 +84,17 @@ def read_input():
                 print("run argument not given")
         elif opt == "update":
             setenv("allow-push", "true")
-            root.joinpath("_config.yml").open("w").write(
-                root.joinpath(
-                    "_data/config-production.yml"
-                ).open().read()
-            )
             system("bash push")
         else:
             print("Invalid option")
 
 
 if __name__ == "__main__":
+    conf, dataconf = root.joinpath("_config.yml").open("w"), ""
+    if getenv("allow-push"):
+        dataconf = root.joinpath("_data/config-production.yml").open().read()
+    else:
+        dataconf = root.joinpath("_data/config-dev.yml").open().read()
+        dataconf = dataconf.replace("<URL>", url)
+    conf.write(dataconf)
     read_input()
