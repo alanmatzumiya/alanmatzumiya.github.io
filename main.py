@@ -36,7 +36,6 @@ def getdate():
 def getenv(key):
     load_dotenv(envfile)
     value = environ.get(key)
-    print(value)
     return value
 
 
