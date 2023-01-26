@@ -4,7 +4,7 @@ description: |
   I'm Chemical Engineer with Master's Degree in Mathematics.
   My Top Skills are Data Analysis, Software Development and Web Design.
 baseurl: ""
-url: "https://alanmatzumiya.github.io"
+url: https://alanmatzumiya.github.io
 
 bar-items:
   - {id: "home", icon: "home", size": "15%", text: "Home"}

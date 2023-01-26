@@ -90,6 +90,11 @@ def read_input():
                 print("run argument not given")
         elif opt == "update":
             setenv("allow-push", "true")
+            root.joinpath("_config.yml").open("w").write(
+                root.joinpath(
+                    "_data/config-production.yml"
+                ).open().read()
+            )
             system("bash push")
         else:
             print("Invalid option")
