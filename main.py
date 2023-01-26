@@ -90,11 +90,16 @@ def read_input():
 
 
 if __name__ == "__main__":
-    conf, dataconf = root.joinpath("_config.yml").open("w"), ""
     if getenv("allow-push"):
-        dataconf = root.joinpath("_data/config-production.yml").open().read()
+        root.joinpath("_config.yml").open("w").write(
+            root.joinpath(
+                "_data/config-production.yml"
+            ).open().read()
+        )
     else:
-        dataconf = root.joinpath("_data/config-dev.yml").open().read()
-        dataconf = dataconf.replace("<URL>", url)
-    conf.write(dataconf)
+        root.joinpath("_config.yml").open("w").write(
+            root.joinpath(
+                "_data/config-dev.yml"
+            ).open().read().replace("<URL>", url)
+        )
     read_input()
