@@ -3,12 +3,13 @@ from sys import argv
 from os import environ, system
 from time import ctime
 from subprocess import getoutput as output
-
+from multiprocessing import Pool
+processes = ("serve", "app")
 root = Path(__file__).parent
 app_home = root.joinpath("app")
 opt, args = argv[1] if argv[1:] else "", argv[2:]
 envfile = root.joinpath(".env")
-url = f'http://{output("hostname -I").strip()}:5000'
+url = f'http://{output("hostname -I").strip()}:8000'
 
 global dotenv
 try:
@@ -53,11 +54,16 @@ def setenv(key, value, **data):
     load_dotenv(envfile)
 
 
-def run_option(option):
-    if option in ("serve", "app"):
-        system(f"bash make run-{option}")
-    else:
-        print(f"Wrong argument")
+def run(option):
+    system(f"bash make run-{option}")
+
+
+def run_option():
+    with Pool(len(processes)) as p:
+        try:
+            p.map(run, processes)
+        except KeyboardInterrupt:
+            print("Shutdown ...")
 
 
 def read_input():
@@ -77,10 +83,7 @@ def read_input():
             else:
                 print("key-value data invalid")
         elif opt == "run":
-            if args:
-                run_option(args[0])
-            else:
-                print("run argument not given")
+            run_option()
         elif opt == "update":
             setenv("allow-push", "true")
             system("bash push")
@@ -89,16 +92,15 @@ def read_input():
 
 
 if __name__ == "__main__":
+    root.joinpath("_config.yml").open("w").write(
+        root.joinpath(
+            "_data/config-dev.yml"
+        ).open().read().replace("<URL>", url)
+    )
     if getenv("allow-push"):
         root.joinpath("_config.yml").open("w").write(
             root.joinpath(
                 "_data/config-production.yml"
             ).open().read()
-        )
-    else:
-        root.joinpath("_config.yml").open("w").write(
-            root.joinpath(
-                "_data/config-dev.yml"
-            ).open().read().replace("<URL>", url)
         )
     read_input()

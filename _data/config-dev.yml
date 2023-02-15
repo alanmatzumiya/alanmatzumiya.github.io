@@ -6,13 +6,6 @@ description: |
 baseurl: ""
 url: "<URL>"
 
-bar-items:
-  - {id: "home", icon: "home", size": "15%", text: "Home"}
-  - {id: "about", icon: "user", size: "15%", text: "About"}
-  - {id: "education", icon: "certificate", size: "25%", text: "Education"}
-  - {id: "experience", icon: "suitcase", size: "25%", text: "Experience"}
-  - {id: "contact", icon: "envelope", size: "20%", text: "Contact"}
-
 section:
   main: sections/main.html
   header: sections/header.html

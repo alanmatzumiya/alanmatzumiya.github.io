@@ -1,15 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 
 Option=$1
 Login=$( head $HOME/login )
 Host=$( hostname -I )
-Port="5000"
-
-appPath=./app
-Venv=venv/bin/activate
+Port="8000"
 Reqs=requirements.txt
-
 cvPath=./assets/portfolio/resume
 
 
@@ -29,8 +25,15 @@ function InstallServe () {
 
 function RunServe () {
 
-    bundle exec jekyll serve -l -o -H [ --host $Host --port $Port ]
+    bundle exec jekyll serve -l -H [ --host $Host --port $Port ]
     
+}
+
+function RunBuild () {
+
+    Login=$( head $HOME/login )
+    echo "$Login" | sudo -S bundle exec jekyll build JEKYLL_ENV=development -w -d /var/www/circuitalminds/storage
+
 }
 
 function InstallTex() {
@@ -53,12 +56,11 @@ function InstallApp () {
     
     if ! [ -d ./app/venv ]; then
     
-        cd ./app && virtualenv venv
-        source ./$Venv && pip install -r ./$Reqs
+        cd ./app && virtualenv venv && source ./venv/bin/activate && pip install -r ./requirements.txt
         
-    elif [[ -f ./app/$Reqs ]]; then
+    elif [[ -f ./app/requirements.txt ]]; then
 
-        cd ./app && source ./$Venv && pip install -r ./$Reqs
+        cd ./app && source ./venv/bin/activate && pip install -r ./requirements.txt
         
     fi
     
@@ -66,13 +68,15 @@ function InstallApp () {
 
 function RunApp () {
     
-    cd ./app && source ./$Venv && python3 app.py
+    cd ./app && source ./venv/bin/activate && python3 app.py
     
 }
 
 
 if [ $Option == "run-serve" ]; then
     (RunServe)
+elif [ $Option == "run-build" ]; then
+    (RunBuild)
 elif [ $Option == "install-serve" ]; then
     (InstallServe)
 elif [ $Option == "run-app" ]; then

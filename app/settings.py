@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
+
 from subprocess import getoutput as getout
 host = getout("hostname -I").strip()
-port = 8000
+port = 8888
 url = f"http://{host}:{port}"
 import_name = "app"
 static_folder = "./static"
