@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+pdflatex --interaction=batchmode ./main.tex
+
+cp -u ./main.pdf ../thesis.pdf
+

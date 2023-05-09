@@ -1,10 +1,9 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 
 Option=$1
 Login=$( head $HOME/login )
-Host=$( hostname -I )
-Port="8000"
+Host=$( hostname -I | awk '{print $1}' )
+Port="5000"
 Reqs=requirements.txt
 cvPath=./assets/portfolio/resume
 

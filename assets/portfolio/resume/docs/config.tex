@@ -1,0 +1,183 @@
+\documentclass[10pt,A4]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xifthen}
+\usepackage[default]{gillius}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{moresize}
+\usepackage{fontawesome}
+\usepackage[a4paper]{geometry}
+\geometry{top=1cm, bottom=-.6cm, left=0.4cm, right=1cm}
+\setlength{\headheight}{-5pt}
+\setlength{\parindent}{0mm}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{array}
+\newcolumntype{x}[1]{%
+>{\raggedleft\hspace{0pt}}p{#1}}%
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{shapes, backgrounds,mindmap, trees}
+\usepackage{transparent}
+\usepackage{color}
+
+% main colors
+\definecolor{complcol}{RGB}{244,160,0}
+\definecolor{bgcol}{RGB}{110,110,110}
+\definecolor{softcol}{RGB}{219,68,55}
+\definecolor{sectcol}{RGB}{66,133,244}
+\definecolor{maya}{RGB}{124,185,232}
+% pie chart colors
+\definecolor{col1}{RGB}{66,133,244}
+\definecolor{col2}{RGB}{219,68,55}
+\definecolor{col3}{RGB}{244,160,0}
+\definecolor{col4}{RGB}{15,157,88}
+\definecolor{col5}{RGB}{251, 120, 56}
+
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
+
+\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}
+
+% include the left arrow into a tikz picture
+% param1: fill color
+%
+\newcommand{\larrow}[1]
+{\begin{tikzpicture}[scale=0.58]
+	 \filldraw[fill=#1!100,draw=#1!100!black]  \tzlarrow
+ \end{tikzpicture}
+}
+
+% a six pointed arrow poiting to the right
+\newcommand{\tzrarrow}{ (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;}
+
+% include the right arrow into a tikz picture
+% param1: fill color
+%
+\newcommand{\rarrow}
+{\begin{tikzpicture}[scale=0.7]
+	\filldraw[fill=softcol!100,draw=softcol!100!black] \tzrarrow
+ \end{tikzpicture}
+}
+
+%----------------------------------------------------------------------------------------
+%	custom sections
+%----------------------------------------------------------------------------------------
+
+% create a coloured box with arrow and title as cv section headline
+% param 1: section title
+%
+\newcommand{\cvsection}[1]
+{
+\colorbox{sectcol}{\mystrut \makebox[1\mpwidth][l]{
+\larrow{softcol} \hspace{-8pt} \larrow{softcol} \hspace{-8pt} \larrow{softcol} \textbf{\textcolor{white}{\uppercase{#1}}}\hspace{4pt}
+}}\\
+}
+
+\newcommand{\cvskill}[3] {
+	\begin{tabular*}{1\mpwidth}{p{0.75\mpwidth}  r}
+		\textcolor{white}{\textbf{#1}} & \textcolor{white}{\textbf{#2}}\\
+	\end{tabular*}%
+	\hspace{1pt}
+	\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
+	\fill [white] (0,0) rectangle (1\mpwidth, 0.15);
+	\fill [col4] (0,0) rectangle (#3\mpwidth, 0.15);
+	\end{tikzpicture}%
+}
+
+% create a coloured arrow with title as cv meta section section
+% param 1: meta section title
+%
+\newenvironment{metasection}[1] {
+	\vspace{6pt}
+	\begin{center}
+		\textcolor{white}{\large{\uppercase{#1}}}\\
+	\normalsize
+	\parbox{0.7\mpwidth}{\textcolor{white}	\hrule}
+}{\end{center}}
+
+%----------------------------------------------------------------------------------------
+%	 CV EVENT
+%----------------------------------------------------------------------------------------
+
+% creates a stretched box as cv entry headline followed by two paragraphs about
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
+% param 5:	some words about your contributions
+%
+\newcommand{\cvevent}[5]
+{
+\vspace{8pt}
+	\begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
+ 	\textcolor{black}{\textbf{#2}} & \textcolor{softcol}{#3}, \textcolor{bgcol}{\textbf{#1}}
+
+	\end{tabular*}
+\vspace{-12pt}
+\textcolor{softcol}{\hrule}
+\vspace{6pt}
+	\begin{tabular*}{0.5\mpwidth}{p{\mpwidth}}
+\larrow{softcol}  #4\\[3pt]
+\larrow{softcol}  #5\\[6pt]
+	\end{tabular*}
+
+}
+
+% creates a stretched box as
+\newcommand{\cveventmeta}[2]
+{
+	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
+	#2
+}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM STRUT FOR EMPTY BOXES
+%----------------------------------------- -----------------------------------------------
+\newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM LOREM IPSUM
+%----------------------------------------------------------------------------------------
+\newcommand{\lorem}
+{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
+
+
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+\newcommand{\vcenteredinclude}[1]{\begingroup
+\setbox0=\hbox{\includegraphics{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+\newcommand*{\vcenteredhbox}[1]{\begingroup
+\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
+
+%----------------------------------------------------------------------------------------
+%	ICON-SET EMBEDDING
+%----------------------------------------------------------------------------------------
+
+% at this point we simplify our icon-embedding by simply referring to a set of png images.
+% if you find a good way of including svg without conflicting with other packages you can
+% replace this part
+\newcommand{\icon}[3]{\makebox(#2, #2){\textcolor{#3}{\csname fa#1\endcsname}}}	%icon shortcut
+\newcommand{\icontext}[4]{ 						%icon with text shortcut
+	\vcenteredhbox{\icon{#1}{#2}{#4}} \vcenteredhbox{\textcolor{#4}{#3}}
+}
+\newcommand{\iconhref}[5]{ 						%icon with website url
+    \vcenteredhbox{\icon{#1}{#2}{#5}} \href{#4}{\textcolor{#5}{#3}}
+}
+
+\newcommand{\iconemail}[5]{ 						%icon with email link
+    \vcenteredhbox{\icon{#1}{#2}{#5}} \href{mailto:#4}{\textcolor{#5}{#3}}
+}
+
+%----------------------------------------------------------------------------------------
+% 	PIE CHART
+%----------------------------------------------------------------------------------------
+\input{./docs/pie-chart.tex}

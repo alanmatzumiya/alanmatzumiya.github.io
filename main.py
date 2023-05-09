@@ -5,11 +5,11 @@ from time import ctime
 from subprocess import getoutput as output
 from multiprocessing import Pool
 processes = ("serve", "app")
+installers = ("serve", "app")
 root = Path(__file__).parent
 app_home = root.joinpath("app")
-opt, args = argv[1] if argv[1:] else "", argv[2:]
 envfile = root.joinpath(".env")
-url = f'http://{output("hostname -I").strip()}:8000'
+url = f'http://{output("hostname -I").strip()}:5000'
 
 global dotenv
 try:
@@ -59,6 +59,7 @@ def run(option):
 
 
 def run_option():
+    system("clear")
     with Pool(len(processes)) as p:
         try:
             p.map(run, processes)
@@ -66,29 +67,38 @@ def run_option():
             print("Shutdown ...")
 
 
+def install_option(arg):
+    system("clear")
+    if arg in installers:
+        system(f"bash make install-{arg}")
+
+
 def read_input():
+    opt, args = argv[1] if argv[1:] else "", argv[2:]
     if not opt:
-        print("Input option not given")
-    else:
-        if opt == "get":
-            if args:
-                for arg in args:
-                    getenv(arg)
-            else:
-                print("key argument not given")
-        elif opt == "set":
-            if len(args) % 2 == 0:
-                for i in range(len(args) - 1):
-                    setenv(args[i], args[i + 1])
-            else:
-                print("key-value data invalid")
-        elif opt == "run":
-            run_option()
-        elif opt == "update":
-            setenv("allow-push", "true")
-            system("bash push")
+        opt = input("Input option not given. Write option: ")
+    if opt == "get":
+        if args:
+            for arg in args:
+                getenv(arg)
         else:
-            print("Invalid option")
+            print("key argument not given")
+    elif opt == "set":
+        if len(args) % 2 == 0:
+            for i in range(len(args) - 1):
+                setenv(args[i], args[i + 1])
+        else:
+            print("key-value data invalid")
+    elif opt == "run":
+        run_option()
+    elif opt == "update":
+        setenv("allow-push", "true")
+        system("bash push")
+    elif opt == "install":
+        for arg in args:
+            install_option(arg)
+    else:
+        print("Invalid option")
 
 
 if __name__ == "__main__":
