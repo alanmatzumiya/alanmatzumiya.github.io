@@ -67,10 +67,10 @@ def run_option():
             print("Shutdown ...")
 
 
-def install_option(arg):
+def install_option():
     system("clear")
-    if arg in installers:
-        system(f"bash make install-{arg}")
+    system(f"bash make install-app")
+    system(f"bash make install-serve")
 
 
 def read_input():
@@ -95,8 +95,7 @@ def read_input():
         setenv("allow-push", "true")
         system("bash push")
     elif opt == "install":
-        for arg in args:
-            install_option(arg)
+        install_option()
     else:
         print("Invalid option")
 

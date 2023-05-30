@@ -26,15 +26,26 @@
 % main colors
 \definecolor{complcol}{RGB}{244,160,0}
 \definecolor{bgcol}{RGB}{110,110,110}
+
 \definecolor{softcol}{RGB}{219,68,55}
 \definecolor{sectcol}{RGB}{66,133,244}
 \definecolor{maya}{RGB}{124,185,232}
-% pie chart colors
+\definecolor{darkcol}{RGB}{51,51,51}
+\definecolor{bgreycol}{RGB}{153,153,153}
+\definecolor{fgreycol}{RGB}{85,85,85}
+\definecolor{lightcol}{RGB}{238,238,221}
+
+% pie chart colors bgcol:gris
+% softcol:rojo
+% sectcol:azul fuerte
+% complcol: amarillo
+% maya: azul bajo
+
 \definecolor{col1}{RGB}{66,133,244}
 \definecolor{col2}{RGB}{219,68,55}
 \definecolor{col3}{RGB}{244,160,0}
 \definecolor{col4}{RGB}{15,157,88}
-\definecolor{col5}{RGB}{251, 120, 56}
+\definecolor{col5}{RGB}{251,120,56}
 
 \usepackage[hidelinks]{hyperref}
 
@@ -72,18 +83,18 @@
 %
 \newcommand{\cvsection}[1]
 {
-\colorbox{sectcol}{\mystrut \makebox[1\mpwidth][l]{
-\larrow{softcol} \hspace{-8pt} \larrow{softcol} \hspace{-8pt} \larrow{softcol} \textbf{\textcolor{white}{\uppercase{#1}}}\hspace{4pt}
+\colorbox{fgreycol}{\mystrut \makebox[1\mpwidth][l]{
+\larrow{softcol} \hspace{-8pt} \larrow{softcol} \hspace{-8pt} \larrow{softcol} \textbf{\textcolor{lightcol}{\uppercase{#1}}}\hspace{4pt}
 }}\\
 }
 
 \newcommand{\cvskill}[3] {
 	\begin{tabular*}{1\mpwidth}{p{0.75\mpwidth}  r}
-		\textcolor{white}{\textbf{#1}} & \textcolor{white}{\textbf{#2}}\\
+		\textcolor{lightcol}{\textbf{#1}} & \textcolor{lightcol}{\textbf{#2}}\\
 	\end{tabular*}%
 	\hspace{1pt}
 	\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
-	\fill [white] (0,0) rectangle (1\mpwidth, 0.15);
+	\fill [lightcol] (0,0) rectangle (1\mpwidth, 0.15);
 	\fill [col4] (0,0) rectangle (#3\mpwidth, 0.15);
 	\end{tikzpicture}%
 }
@@ -94,9 +105,9 @@
 \newenvironment{metasection}[1] {
 	\vspace{6pt}
 	\begin{center}
-		\textcolor{white}{\large{\uppercase{#1}}}\\
+		\textcolor{maya}{\large{\uppercase{#1}}}\\
 	\normalsize
-	\parbox{0.7\mpwidth}{\textcolor{white}	\hrule}
+	\parbox{0.7\mpwidth}{\textcolor{maya}	\hrule}
 }{\end{center}}
 
 %----------------------------------------------------------------------------------------
@@ -115,7 +126,7 @@
 {
 \vspace{8pt}
 	\begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
- 	\textcolor{black}{\textbf{#2}} & \textcolor{softcol}{#3}, \textcolor{bgcol}{\textbf{#1}}
+ 	\textcolor{black}{\textbf{#2}} & \textcolor{softcol}{#3}, \textcolor{darkcol}{\textbf{#1}}
 
 	\end{tabular*}
 \vspace{-12pt}

@@ -19,6 +19,7 @@
     "cell-phone": "+52 662-364-8525",
     "whats-app-message": "https://web.whatsapp.com/send?phone=5216623648525&text=Hola, Alan Matzumiya",
     "email": "alan.matzumiya@gmail.com",
+    "cv-pdf": "assets/portfolio/cv.pdf",
     "social-media": [
         {
             "icon": "facebook-official",
@@ -43,8 +44,12 @@
     ],
     "skills": [
         {
-            "name": "English",
+            "name": "Speak English",
             "percent": 80
+        },
+        {
+            "name": "Write English",
+            "percent": 90
         },
         {
             "name": "Microsoft-Office",
@@ -94,7 +99,7 @@
             "period" : "2011 - 2016",
             "name" : "Ingeniería Química",
             "institution" : "Departamento de Ingeniería Química y Metalurgia. Universidad de Sonora",
-            "description" : "Titulacion por tesis de investigacion en el area de materiales bio-ceramicos.",
+            "description" : "Caracterización y evaluación de las propiedades bioactivas de una mezcla de bio-compósitos de hidroxiapatita/β-wollastonita.",
             "thesis" : "assets/portfolio/bachelor/thesis.pdf",
             "image": "assets/img/bachelor-thesis.png"
         },
@@ -102,7 +107,7 @@
             "period" : "2017 - 2019",
             "name" : "Maestría en Ciencias Matemáticas",
             "institution" : "Departamento de Matemáticas. Universidad de Sonora",
-            "description" : "Grado obtenido con el objetivo de adquirir conocimientos solidos de programacion para investigar problemas de analisis numerico",
+            "description" : "Numerical Solutions to the Stochastic and Deterministic Burgers Equation Using Spectral Methods.",
             "thesis" : "assets/portfolio/master/thesis.pdf",
             "image": "assets/img/master-thesis.png"
         }
@@ -112,14 +117,14 @@
             "name": "Practicas Profesionales",
             "place": "CFE - Central Ciclo Combinado - Hermosillo",
             "period": "mayo - junio 2015",
-            "description": "Planeacion y propuesta para modificacion de la planta tratadora de agua para lograr un flujo optimo sobre las tuberias y obtener un buen control en el proceso, que con fines ambientales tiene como funcion principal recuperar agua del proceso de generacion de energia electrica.",
+            "description": "Estancia de prácticas profesionales que se llevo acabo en la planta: Central Ciclo Combinado de Hermosillo.",
             "href": ""
         },
         {
             "name": "Investigacion",
             "place": "Instituto de Matemáticas, UNAM - Oaxaca de Juárez",
             "period": "junio 2018",
-            "description": "Investigación dirigida por el Dr. Francisco Javier Delgado Vences para estudiar métodos de resolución de ecuaciones diferenciales parciales estocásticas, con la finalidad de publicar un artículo científico y desarrollar mi tesis de grado. Enlace de la publicacion.",
+            "description": "Investigación dirigida por el Dr. Francisco Javier Delgado Vences para estudiar métodos de resolución de ecuaciones diferenciales parciales estocásticas, con la finalidad de publicar un artículo científico y desarrollar mi tesis de grado.",
             "href": "https://www.researchgate.net/publication/334330862_INITIAL_CONDITIONS_CONTINUITY_OF_A_NUMERICAL_APPROXIMATION_FOR_KOLMOGOROV_EQUATIONS"
         },
         {
@@ -127,7 +132,8 @@
             "place": "Universidad de Sonora",
             "period": "2017-2019",
             "description": "Cursos introductorios al lenguaje mostrando el uso de las tecnologías para la resolución de problemas en la ingeniería.",
-            "href": ""
+            "href": "https://github.com/CircuitalMinds/jupyter/tree/main/nbs/"
+            
         }
     ]
 }

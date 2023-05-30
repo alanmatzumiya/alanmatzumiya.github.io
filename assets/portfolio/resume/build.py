@@ -3,18 +3,30 @@
 from pathlib import Path
 from os import system
 path = Path(__file__).parent
-docs = path.joinpath("docs")
-config = docs.joinpath("config.tex").open().read()
-main = path.joinpath("main.tex").open("w")
-content = docs.joinpath("content.tex").open().read()
 
-for tag in ("header", "sidebar", "records"):
-    content = content.replace(
-        f"<{tag.upper()}>",
-        docs.joinpath(f"{tag}.tex").open().read()
-    )
 
-main.write(
-    "\n\n".join([config, content])
-)
-system("bash make")
+class Main:
+    folder = path.joinpath("docs")
+    outfile = path.joinpath("main.tex")
+
+    @classmethod
+    def texfile(self):
+        tex = {            
+            name: self.folder.joinpath(f"{name}.tex").open().read()
+            for name in (
+                "config", "header", "content", "sidebar", "records"
+            )
+        }        
+        tex["content"] = tex["content"].replace("<HEADER>", tex["header"])
+        tex["content"] = tex["content"].replace("<SIDEBAR>", tex["sidebar"])
+        tex["content"] = tex["content"].replace("<RECORDS>", tex["records"])
+        return "\n\n".join([tex["config"], tex["content"]])
+
+    @classmethod    
+    def build(cls):
+        cls.outfile.open("w").write(cls.texfile())
+        system("bash make")
+
+
+if __name__ == "__main__":
+    Main.build()
