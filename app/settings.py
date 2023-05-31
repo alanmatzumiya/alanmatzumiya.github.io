@@ -3,7 +3,7 @@
 from subprocess import getoutput as getout
 from pathlib import Path
 apath = Path(__file__).parent
-host = getout("hostname -I").split()[0]
+host = getout("hostname -I").split()[-1]
 port = 5050
 url = f"http://{host}:{port}"
 import_name = "app"

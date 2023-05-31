@@ -5,7 +5,7 @@ from time import ctime
 from pathlib import Path
 from subprocess import getoutput as gout
 path = Path(__file__).parent.parent
-static_url = f'http://{gout("hostname -I").split()[0]}:5000/assets'
+static_url = f'http://{gout("hostname -I").split()[-1]}:5000/assets'
 
 
 def getdate():

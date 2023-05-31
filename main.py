@@ -9,7 +9,8 @@ installers = ("serve", "app")
 root = Path(__file__).parent
 app_home = root.joinpath("app")
 envfile = root.joinpath(".env")
-url = f'http://{output("hostname -I").strip()}:5000'
+url = f'http://{output("hostname -I").split()[-1]}'
+
 
 global dotenv
 try:
@@ -59,6 +60,9 @@ def run(option):
 
 
 def run_option():
+    cfg = root.joinpath("_data/config-dev.yml").open().read()
+    cfg = cfg.replace("<URL>", url)
+    root.joinpath("_config.yml").open("w").write(cfg)
     system("clear")
     with Pool(len(processes)) as p:
         try:
@@ -101,11 +105,6 @@ def read_input():
 
 
 if __name__ == "__main__":
-    root.joinpath("_config.yml").open("w").write(
-        root.joinpath(
-            "_data/config-dev.yml"
-        ).open().read().replace("<URL>", url)
-    )
     if getenv("allow-push"):
         root.joinpath("_config.yml").open("w").write(
             root.joinpath(

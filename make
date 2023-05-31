@@ -3,6 +3,7 @@
 Option=$1
 Login=$( head $HOME/login )
 Host=$( hostname -I | awk '{print $1}' )
+Host=$( python3 -c "from subprocess import getoutput as gout;print(gout('hostname -I').split()[-1])" )
 Port="5000"
 Reqs=requirements.txt
 cvPath=./assets/portfolio/resume
@@ -31,7 +32,7 @@ function RunServe () {
 function RunBuild () {
 
     Login=$( head $HOME/login )
-    echo "$Login" | sudo -S bundle exec jekyll build JEKYLL_ENV=development -w -d /var/www/circuitalminds/storage
+    echo "$Login" | sudo -S bundle exec jekyll build JEKYLL_ENV=development -w -d /var/www/circuitalminds/contact/portfolio
 
 }
 
