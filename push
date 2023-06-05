@@ -13,9 +13,4 @@ if $allow_push; then
   git commit -m "autocommit"
   git push https://$user:"$( head "$HOME"/secret )"@github.com/$user/$repo.git
   
-  git pull origin dev
-  git checkout main
-  git merge dev
-  git push -u origin main
-  
 fi
