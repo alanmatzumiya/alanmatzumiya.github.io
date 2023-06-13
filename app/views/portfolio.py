@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from flask import Blueprint, redirect, abort, request
-from .build import Template, static_url, path
+from flask import Blueprint, abort
+from .build import Template, path
 from os import system
 portfolio = Blueprint("portfolio", __name__)
 

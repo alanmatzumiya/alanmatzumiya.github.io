@@ -21,40 +21,25 @@ class ServerDispatcher {
 
     constructor () {
 
-        this.host = "192.168.50.16";
+        this.host = "192.168.50.216";
         this.port = "5050";
-        this.url = "http://192.168.50.16:5050";
+        this.url = "http://192.168.50.216:5050";
     }    
 
-    getdata ( args ) {      
-        var path = args.path;
-        var data = args.data;
-        var urldata = this.url;
-        if ( typeof path != "undefined" ) {
-            if ( path.startsWith( "/" ) ) {
-                urldata += path;                
-            } else {
-                urldata += "/" + path;
-            };            
-        };
+    get ( path="/", data={} ) {
         $.getJSON(
-            urldata, data,
+            this.url+"/api/get"+path, data,
             ( res ) => setTimeout(
                 () => print( res ), 5e2
             )
         );
-    };     
-
-    postdata ( args ) {
-        var path = args.path;
-        var data = args.data;
-        var urldata = [ this.url, path ].join(
-            ( path.startsWith( "/" ) ) ? "" : "/"
-        );        
+    }
+        
+    post ( path="/", data={} ) { 
         $.post(
-            urldata, data,
+            this.url+"/api/post"+path, data,
             ( res ) => setTimeout( 
-                () => print( res ), 5e2 
+                () => print( res ), 5e2
             )
         );
     }
