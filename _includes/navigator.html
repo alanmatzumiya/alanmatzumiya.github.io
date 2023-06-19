@@ -32,10 +32,15 @@
 
 <script>
 function navSection ( id ) {
-    var page = '{{ page.url }}', urlData = document.URL.split("/");
-    var url = '{{ site.url }}';
-    if ( id != "home" ) { url += "#" + id };
-    if ( page != "/" ) { window.location.href = url };
+    if ( id == "home" ) {
+        window.location.href = "/";
+    } else {
+        var page = '{{ page.url }}';
+        var url = '{{ site.url }}/#' + id;
+        if ( page != "/" ) { 
+            window.location.href = url
+        };
+    };
 };
 
 function Drop() {

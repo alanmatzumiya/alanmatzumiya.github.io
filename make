@@ -2,8 +2,7 @@
 
 Option=$1
 Login=$( head $HOME/login )
-Host=$( hostname -I | awk '{print $1}' )
-Host=$( python3 -c "from subprocess import getoutput as gout;print(gout('hostname -I').split()[-1])" )
+Host=$( python3 ./app/get-data.py host )
 Port="5000"
 Reqs=requirements.txt
 cvPath=./assets/portfolio/resume

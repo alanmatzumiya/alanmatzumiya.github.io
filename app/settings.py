@@ -18,3 +18,8 @@ deployment_settings = dict(
     use_debugger=True,
     use_evalex=True
 )
+dataset = {
+    x: globals().get(x)
+    for x in dir()
+    if not x.startswith("__")
+}
