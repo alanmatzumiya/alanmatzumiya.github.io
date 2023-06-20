@@ -45,6 +45,3 @@ class ServerDispatcher {
     }
 
 }
-
-
-var siteData = {{ site.data | jsonify }};

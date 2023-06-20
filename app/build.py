@@ -11,7 +11,6 @@ from settings import (
 )
 from views.home import home
 from views.dispatcher import dispatcher
-from views.portfolio import portfolio
 path = Path(__file__).parent
 
 
@@ -23,7 +22,6 @@ def init_app():
     app.config.update(config)
     CORS(app)
     app.register_blueprint(home)
-    app.register_blueprint(portfolio)
     return app
 
 

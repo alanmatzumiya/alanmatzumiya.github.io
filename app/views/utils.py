@@ -3,6 +3,7 @@
 from time import ctime
 from pathlib import Path
 from subprocess import getoutput as gout
+from os import system as sh
 path = Path(__file__).parent.parent
 host = gout("hostname - I").split()[-1]
 port = 5000
@@ -22,3 +23,14 @@ def getdate():
         if len(s) == 1:
             today[i] = f"0{s}"
     return "{day}-{month}-{year}, {hours}:{minutes}:{seconds}".format(**today)
+
+
+def portfolio_update():
+    fpath = path.parent.joinpath("assets/portfolio/resume")
+    sh(f'cd {str(fpath)} && python3 build.py')
+    print("resume updated successfully")
+
+
+def git_update():
+    sh(f"cd {str(path.parent)} && python3 -m main update")
+    print("repository updated successfully")

@@ -73,8 +73,8 @@ def run_option():
 
 def install_option():
     system("clear")
-    system(f"bash make install-app")
-    system(f"bash make install-serve")
+    system(f"bash install app")
+    system(f"bash install serve")
 
 
 def read_input():

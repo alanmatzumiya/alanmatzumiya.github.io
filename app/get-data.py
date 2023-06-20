@@ -2,6 +2,10 @@ from settings import dataset, getout
 from sys import argv
 
 
+def git_branch():
+    return getout("git branch").split()[-1]
+
+
 def login():
     return getout("echo $( head $HOME/login )")
 

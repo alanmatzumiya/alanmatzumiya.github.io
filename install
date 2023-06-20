@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+
+function Application () {
+    if ! [ -d ./app/venv ]; then
+        cd ./app && virtualenv venv && source ./venv/bin/activate && pip install -r ./requirements.txt
+    elif [[ -f ./app/requirements.txt ]]; then
+        cd ./app && source ./venv/bin/activate && pip install -r ./requirements.txt
+    fi
+}
+
+function jekyllServe () {
+    Login=$( head $HOME/login )
+    
+    echo "$Login" | sudo -S apt-get install ruby
+    echo "$Login" | sudo -S apt-get install jekyll
+    echo "$Login" | sudo -S apt-get install bundler
+
+    echo "$Login" | sudo -S gem install jekyll bundler
+    echo "$Login" | sudo -S gem install update
+
+    echo "$Login" | sudo -S bundle install
+    echo "$Login" | sudo -S bundler install
+}
+
+
+if [[ $1 == "app" ]]; then
+  ( Application )
+elif [[ $1 == "serve" ]]; then
+  ( jekyllServe )
+fi
+
