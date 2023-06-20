@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-if [ $1 == "install-latex" ]; then	
+if [[ $1 == "install-latex" ]]; then	
     echo "$Login" | sudo -S apt-get install texlive-full
 else
     pdflatex --interaction=batchmode ./main.tex
