@@ -19,8 +19,8 @@ def api_get(opt=None):
     return jsonify(Template.get_request())
 
 
-@home.route("/api/post/", methods=["GET"])
-@home.route("/api/post/<opt>", methods=["POST"])
+@home.route("/api/post/", methods=["GET", "POST"])
+@home.route("/api/post/<opt>/", methods=["GET", "POST"])
 def api_post(opt=None):
     if opt == "update":
         portfolio_update()

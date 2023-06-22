@@ -1,0 +1,34 @@
+- {
+    id: "home",
+    icon: "home",
+    size": "15%", 
+    text: "Home"
+  }
+
+- {
+    id: "about",
+    icon: "user",
+    size: "15%",
+    text: "About"
+  }
+
+- {
+    id: "education", 
+    icon: "certificate", 
+    size: "15%", 
+    text: "Education"
+  }
+
+- {
+    id: "experience", 
+    icon: "suitcase",
+    size: "15%",
+    text: "Experience"
+  }
+  
+- {
+    id: "contact",
+    icon: "envelope",
+    size: "15%",
+    text: "Contact"
+  }
