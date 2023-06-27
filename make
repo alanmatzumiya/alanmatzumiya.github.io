@@ -32,4 +32,6 @@ elif [ $Option == "run-build" ]; then
     (RunBuild)
 elif [ $Option == "run-app" ]; then
     (RunApp)
+elif [ $Option == "update" ]; then
+    git rebase
 fi;
