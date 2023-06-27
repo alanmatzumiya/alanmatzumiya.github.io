@@ -1,10 +1,7 @@
-{% assign author = site.data.author %}
 <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-
     {% for x in author.social-media %}
     <a href="{{ x.url }}"><span class="fa fa-{{ x.icon }} w3-text-teal w3-hover-text-white w3-hover-opacity"></span></a>
     {% endfor %}
-
     <p class="w3-medium">
     &copy; {{site.time | date: '%Y'}} Crafted & Designed by
     <a href="{{ author.github }}"
@@ -13,5 +10,4 @@
         {{ author.name }}
     </a>
     </p>
-
 </footer>
