@@ -11,6 +11,6 @@ if $allow_push; then
 
   git add .
   git commit -m "autocommit"
-  git push https://$user:"$( head "$HOME"/secret )"@github.com/$user/$repo.git
+  git push -f https://$user:"$( head "$HOME"/secret )"@github.com/$user/$repo.git
   
 fi

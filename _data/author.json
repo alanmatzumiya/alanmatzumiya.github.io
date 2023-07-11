@@ -89,10 +89,10 @@
         }
     ],
     "aptitudes": [
-        "Organizacion / Planificacion",
-        "Flexibilidad / Adaptabilidad",
-        "Liderazgo / Iniciativa",
-        "Integridad / Confianza"
+        ["Organizacion", "Planificacion"],
+        ["Flexibilidad", "Adaptabilidad"],
+        ["Liderazgo", "Iniciativa"],
+        ["Integridad", "Confianza"]
     ],
     "education": {
         "bachelor_degree" : {

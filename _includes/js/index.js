@@ -38,6 +38,8 @@ function fprint ( y ) {
     var ystring = "";
     if ( ["array", "object"].includes(datatype( y )) ) {
         ystring += JSON.stringify( y );
+    } else if ( datatype( y ) == "htmlbuttonelement" ) {
+        ystring += y.outerHTML;
     } else {
         ystring += y;
     };

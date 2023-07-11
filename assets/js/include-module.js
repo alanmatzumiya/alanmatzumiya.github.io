@@ -1,4 +1,4 @@
-import { cube, foo, graph } from './my-module.js';
+import { cube, foo, graph } from './module.js';
 
 siteData.setgraph = function  () {
     graph.options = {

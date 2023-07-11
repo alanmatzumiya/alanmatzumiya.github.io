@@ -3,14 +3,14 @@
     Experience
 </h2>
 <hr style="width:250px" class="w3-opacity">
-{% for x in author.experience %}
+{%- for x in author.experience -%}
 <div class="w3-container">
   <h5 class="w3-opacity"><b>{{ x.name }} / {{ x.place }}</b></h5>
   <h6 class="w3-text-teal">
       <i class="fa fa-calendar fa-fw w3-margin-right"></i>
       {{ x.period }}
   </h6>
-  <p>{{ x.description }} {% if x.href != "" %}<a class="w3-wide w3-text-teal w3-hover-text-dark-grey" style="text-decoration:none;" href="{{ x.href }}">Obtener informacion.</a>{% endif %}</p>
+  <p>{{ x.description }} {%- if x.href != "" -%}<a class="w3-wide w3-text-teal w3-hover-text-dark-grey" style="text-decoration:none;" href="{{ x.href }}">Obtener informacion.</a>{%- endif -%}</p>
   <hr>
 </div>
-{% endfor %}
+{%- endfor -%}
