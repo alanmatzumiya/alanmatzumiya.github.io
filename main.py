@@ -4,7 +4,7 @@ from os import environ, system
 from time import ctime
 from subprocess import getoutput as output
 from multiprocessing import Pool
-processes = ("serve", "app", "copy")
+processes = ("serve", "app")
 installers = ("serve", "app")
 root = Path(__file__).parent
 app_home = root.joinpath("app")
