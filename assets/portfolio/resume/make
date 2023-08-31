@@ -1,15 +1,13 @@
 #!/bin/bash
 
 
-if [[ $1 == "install-latex" ]]; then	
+if [[ $1 == "install-latex" ]]; then
     echo "$Login" | sudo -S apt-get install texlive-full
-else
+elif [[ $1 == "cv" ]]; then
     pdflatex --interaction=batchmode ./main.tex
-
     cp -u ./main.pdf ../cv.pdf
-
     for i in aux log out pdf
     do
       rm "main.$i"
     done
-fi    
+fi

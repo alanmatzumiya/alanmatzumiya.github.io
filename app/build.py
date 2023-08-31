@@ -11,6 +11,7 @@ from settings import (
 )
 from views.home import home
 from views.dispatcher import dispatcher
+from views.utils import portfolio_update
 path = Path(__file__).parent
 
 
@@ -45,6 +46,7 @@ class Server:
     settings = deployment_settings
 
     def run(self):
+        portfolio_update()
         application = DispatcherMiddleware(
             self.app, {"/dispatcher": self.dispatcher}
         )

@@ -7,7 +7,7 @@
          <i class="fa fa-{{ x.icon }} w3-text-teal w3-xxlarge"></i><p>{{ x.text }}</p>
     </a>
     {%- endfor -%}
-    <a href="{{ author.github }}" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a onclick="window.open( '{{ author.github }}' )" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="fa fa-github w3-text-teal w3-xxlarge"></i>
     </a>
 </nav>
@@ -18,9 +18,9 @@
     <a class="w3-bar-item w3-button topnav icon" onclick="Drop()">
         <i class="fa fa-bars"></i>
     </a>    
-    <a class="w3-bar-item w3-button topnav icon w3-right" href="{{ author.github }}"><span class="fa fa-github w3-text-teal"></span></a>    
+    <a class="w3-bar-item w3-button topnav icon w3-right" onclick="window.open( '{{ author.github }}' )"><span class="fa fa-github w3-text-teal"></span></a>
     {% for x in author.social-media %}    
-    <a class="w3-bar-item w3-button topnav icon w3-right" href="{{ x.url }}"><span class="fa fa-{{ x.icon }} w3-text-teal"></span></a>
+    <a class="w3-bar-item w3-button topnav icon w3-right" onclick="window.open( '{{ x.url }}' )"><span class="fa fa-{{ x.icon }} w3-text-teal"></span></a>
     {% endfor %}    
     </div>
 

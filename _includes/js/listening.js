@@ -45,3 +45,7 @@ class ServerDispatcher {
     }
 
 }
+
+function getData () {
+    return {{ site.data | jsonify }};
+};
