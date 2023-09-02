@@ -18,24 +18,24 @@ document.addEventListener( "DOMContentLoaded", function () {
     } );
 } );
 </script>
-<header class="w3-center w3-black w3-text-white" id="home">   
-    
-<div class="hero-image">
+<header class="w3-center w3-padding-64 w3-black w3-text-white" id="home">
+
+    <div class="hero-image">
     <img src="{{ site.banner }}"
          alt="{{ author.name }}"
-         class="w3-image w3-hover-opacity" width="100%" height="1108"
+         class="w3-image w3-opacity"
     >
     <div class="hero-text">
-    <h1 class="w3-xxlarge"><span class="w3-hide-small">I'm {{ author.name }}.</span></h1>
-    <h1 class="w3-large"><span class="w3-hide-large w3-hide-medium">I'm {{ author.name }}.</span></h1>
-    <p class="w3-large w3-hide-small w3-wide w3-text-teal">{{ author.presentation.short }}.</p>
-    <p class="w3-small w3-hide-large w3-hide-medium w3-wide w3-text-teal">{{ author.presentation.short }}.</p>
-    <p class="w3-tiny w3-wide w3-text-light-grey">click here to download pdf</p>
+    <h1 class="w3-xlarge"><span class="w3-hide-small">I'm {{ author.name }}.</span></h1>
+    <h1 class="w3-medium"><span class="w3-hide-large w3-hide-medium">I'm {{ author.name }}.</span></h1>
+    <h1 class="w3-large w3-hide-small w3-wide w3-text-teal">{{ author.presentation.short }}.</h1>
+    <h1 class="w3-small w3-hide-large w3-hide-medium w3-wide w3-text-teal">{{ author.presentation.short }}.</h1>
+    <h1 class="w3-tiny w3-wide w3-text-light-grey">click here to download pdf</h1>
     <button id="download-btn" type="button" class="btn-icon w3-tiny">
         <div class="cloud">
             {%- for n in (1..11) -%}
             <div class="puff puff-{{ n }}"></div>
-            {%- endfor -%} 
+            {%- endfor -%}
             <div class="cloud-core"></div>
             <div class="check"></div>
             <div class="arrow">
@@ -53,7 +53,5 @@ document.addEventListener( "DOMContentLoaded", function () {
         <div class="progress"></div>
     </button>
     </div>
-</div>
-
-
-</header>    
+    </div>
+</header>

@@ -1,11 +1,4 @@
 #myNavbar {
-    opacity: 0.0;
-    transition-duration: 0.2s;
-    transition: opacity 0.1s;
-    transition-delay: 0.1s;
-}
-
-#myNavbar:hover {
     opacity: 1.0;
 }
 
