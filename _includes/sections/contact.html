@@ -1,32 +1,67 @@
-<h2><i class="fa fa-envelope fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Contact</h2>
-<hr style="width:250px" class="w3-opacity">
+<h2 class="w3-xlarge"><i class="w3-xlarge fa fa-envelope fa-fw w3-margin-right w3-text-teal"></i>Contacto</h2>
+<hr style="width:250px"
+    class="w3-opacity"
+>
 <div class="w3-section">
-<p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>{{ author.residency }}</p>
-<p>
-  <a href="{{ author['whats-app-message'] }}">
-  <i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>{{ author['cell-phone'] }}
-  </a>
+<p class="w3-medium"><i class="w3-medium fa fa-map-marker fa-fw w3-text-teal w3-margin-right"></i>{{ author.residency }}</p>
+<p class="w3-medium">
+    <a href="{{ author['whats-app-message'] }}">
+    <i class="w3-medium fa fa-phone fa-fw w3-text-teal w3-medium w3-margin-right"></i>{{ author['cell-phone'] }}
+    </a>
 </p>
-<p>
-  <i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>{{ author.email }}
+<p class="w3-medium">
+    <i class="w3-medium fa fa-envelope fa-fw w3-text-teal w3-medium w3-margin-right"></i>{{ author.email }}
 </p>
 </div>
 <br>
 <div class="container">
 <div class="row">
 <div class="column">
-    <img src="{{ author.avatar }}" style="width:100%;" class="w3-left w3-margin-right">
+    <img src="{{ author.avatar }}"
+         style="width:100%;"
+         class="w3-left w3-margin-right"
+    >
 </div>
 <div class="column">
     <form action="/">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your name..">
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email" placeholder="Your Email..">
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-    <button style="width: 100%;" class="w3-button w3-teal w3-padding-large" type="submit">
-    <i class="fa fa-paper-plane"></i> Submit
+    <label class="w3-medium w3-text-black"
+           for="name"
+    >
+        Name:
+    </label>
+    <input class="w3-medium"
+           type="text"
+           id="name"
+           name="name"
+           placeholder="Your name.."
+    >
+    <label class="w3-medium w3-text-black"
+           for="email"
+    >
+        Email:
+    </label>
+    <input class="w3-medium"
+           type="text"
+           id="email"
+           name="email"
+           placeholder="Your Email.."
+    >
+    <label class="w3-medium w3-text-black"
+           for="subject"
+    >
+        Subject:
+    </label>
+    <textarea class="w3-medium"
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height:170px"
+    ></textarea>
+    <button style="width: 100%;"
+            class="w3-medium w3-button w3-teal w3-padding-large"
+            type="submit"
+    >
+    <i class="w3-medium fa fa-paper-plane"></i> Submit
     </button>
     </form>
 </div>

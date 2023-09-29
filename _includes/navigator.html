@@ -1,38 +1,53 @@
 {%- assign author = site.data.author -%}
+{%- assign bar-items = site.data.bar-items -%}
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-    <img src="{{ author.formal-photo }}" style="width:100%">
-    {%- for x in site.data.bar-items -%}
+    <img src="{{ author.formal-photo }}"
+         style="width:100%"
+    >
+    {%- for x in bar-items -%}
     <a href="#{{ x.id }}"
-         class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-         <i class="fa fa-{{ x.icon }} w3-text-teal w3-xxlarge"></i><p>{{ x.text }}</p>
+       class="w3-bar-item w3-button w3-padding-large w3-hover-black"
+    >
+        <i class="fa fa-{{ x.icon }} w3-text-teal w3-xxlarge"></i><p>{{ x.text }}</p>
     </a>
     {%- endfor -%}
-    <a onclick="window.open( '{{ author.github }}' )" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a onclick="window.open( '{{ author.github }}' )"
+       class="w3-bar-item w3-button w3-padding-large w3-hover-black"
+    >
         <i class="fa fa-github w3-text-teal w3-xxlarge"></i>
     </a>
 </nav>
-
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-
+<div class="w3-top w3-hide-large w3-hide-medium"
+     id="myNavbar">
     <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a class="w3-bar-item w3-button topnav icon" onclick="Drop()">
-        <i class="fa fa-bars"></i>
-    </a>    
-    <a class="w3-bar-item w3-button topnav icon w3-right" onclick="window.open( '{{ author.github }}' )"><span class="fa fa-github w3-text-teal"></span></a>
-    {% for x in author.social-media %}    
-    <a class="w3-bar-item w3-button topnav icon w3-right" onclick="window.open( '{{ x.url }}' )"><span class="fa fa-{{ x.icon }} w3-text-teal"></span></a>
-    {% endfor %}    
-    </div>
-
-    <div class="topnav w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">        
-    <div id="section-links">
-    {%- for x in site.data.bar-items -%}
-        <a href="#{{ x.id }}" class="w3-bar-item w3-button"
-         style="width: 100%;"
-        ><i class="fa fa-{{ x.icon }} w3-text-teal w3-xlarge"></i><p>{{ x.text }}</p>
+        <a class="w3-bar-item w3-button topnav icon"
+           onclick="Drop()"
+        >
+            <i class="fa fa-bars"></i>
         </a>
-    {%- endfor -%}
+        <a class="w3-bar-item w3-button topnav icon w3-right"
+           onclick="window.open( '{{ author.github }}' )"
+        >
+            <span class="fa fa-github w3-text-teal"></span>
+        </a>
+        {% for x in author.social-media %}
+        <a class="w3-bar-item w3-button topnav icon w3-right"
+           onclick="window.open( '{{ x.url }}' )"
+        ><span class="fa fa-{{ x.icon }} w3-text-teal"></span>
+        </a>
+        {% endfor %}
     </div>
+    <div class="topnav w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">        
+        <div id="section-links">
+        {%- for x in bar-items -%}
+        <a href="#{{ x.id }}"
+           class="w3-bar-item w3-button"
+           style="width: 100%;"
+        >
+            <i class="fa fa-{{ x.icon }} w3-text-teal w3-xlarge"></i><p>{{ x.text }}</p>
+        </a>
+        {%- endfor -%}
+        </div>
     </div>
 </div>
 <script>{%- include js/sidebar.js -%}</script>

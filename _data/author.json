@@ -4,8 +4,8 @@
     "casual-photo": "assets/img/casual-photo.jpeg",
     "formal-photo": "assets/img/formal-photo.jpg",
     "presentation": {
-        "large": "I’m Chemical Engineer with Master's Degree in Mathematics. My Top Skills are Data Analysis, Software Development and Web Design.",
-        "short": "Engineer, Mathematician and Web Developer"
+        "large": "Yo soy Ingeniero Químico con Grado de Maestría en Matemáticas. Mis Habilidades Principales son el Análisis de Datos, Desarrollo de Software y Diseño Web.",
+        "short": "Ingeniero, Matemático Y Desarrollador Web"
     },
     "website": "https://alanmatzumiya.github.io",
     "github": "https://www.github.com/alanmatzumiya",
@@ -44,11 +44,11 @@
     ],
     "skills": [
         {
-            "name": "Speak English",
+            "name": "Hablar Inglés",
             "percent": 80
         },
         {
-            "name": "Write English",
+            "name": "Escribir Inglés",
             "percent": 90
         },
         {
@@ -130,7 +130,7 @@
         {
             "name": "Cursos de Programación en Python",
             "place": "Universidad de Sonora",
-            "period": "2017-2019",
+            "period": "2017 - 2019",
             "description": "Cursos introductorios al lenguaje mostrando el uso de las tecnologías para la resolución de problemas en la ingeniería.",
             "href": "https://github.com/CircuitalMinds/jupyter/tree/main/nbs/"
             

@@ -1,12 +1,15 @@
-<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+<footer class="w3-content w3-padding-64 w3-text-grey w3-large">
     {% for x in author.social-media %}    
-    <a href="{{ x.url }}"><span class="fa fa-{{ x.icon }} w3-text-teal w3-hover-text-white w3-hover-opacity"></span></a>
+    <a class="w3-large"
+       href="{{ x.url }}"
+    ><span class="w3-large fa fa-{{ x.icon }} w3-text-teal w3-hover-text-white w3-hover-opacity"></span></a>
     {% endfor %}
     <p class="w3-medium">
     &copy; {{site.time | date: '%Y'}} Crafted & Designed by
     <a href="{{ author.github }}"
        target="_blank"
-       class="w3-hover-text-white">
+       class="w3-medium w3-hover-text-white"
+    >
         {{ author.name }}
     </a>
     </p>

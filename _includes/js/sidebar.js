@@ -26,7 +26,11 @@ window.onclick = function ( e ) {
         ).length == 0 ) { 
             navtop.style.display = "none";
             atop.className = "fa fa-bars";
+        } else {
+            navtop.style.display = "none";
+            atop.className = "fa fa-bars";
         };
+
     };
 
 };

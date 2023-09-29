@@ -1,14 +1,17 @@
-<h3 class="w3-padding-small">Skills</h3>
+<h3 class="w3-large w3-wide w3-padding-small w3-text-light-grey">Habilidades</h3>
 {%- for x in author.aptitudes -%}
-<p class="w3-wide w3-text-teal">{{ x[0] }} / {{ x[1] }}.</p>
-<hr style="width:100%" class="w3-opacity">
+<p class="w3-medium w3-wide w3-text-teal">{{ x[0] }} / {{ x[1] }}.</p>
+<hr style="width:100%"
+    class="w3-opacity"
+>
 {%- endfor -%}
 <br>
 {%- for skill in author.skills -%}
-<p class="w3-wide">{{ skill.name }}</p>
+<p class="w3-medium w3-wide">{{ skill.name }}</p>
 <div class="w3-light-grey w3-round-xxlarge">
-    <div class="w3-round-xxlarge w3-center w3-teal"
-         style="height:28px;width:{{ skill.percent }}%">{{ skill.percent }}%
+    <div class="w3-round-xxlarge w3-center w3-teal w3-text-black"
+         style="height:22px;width:{{ skill.percent }}%"
+    >{{ skill.percent }}%
     </div>
 </div>
 <br>

@@ -2,33 +2,33 @@
     id: "home",
     icon: "home",
     size": "15%", 
-    text: "Home"
+    text: "Inicio"
   }
 
 - {
     id: "about",
     icon: "user",
     size: "15%",
-    text: "About"
+    text: "Acerca"
   }
 
 - {
     id: "education", 
     icon: "certificate", 
     size: "15%", 
-    text: "Education"
+    text: "Educación"
   }
 
 - {
     id: "experience", 
     icon: "suitcase",
     size: "15%",
-    text: "Experience"
+    text: "Experiencia"
   }
   
 - {
     id: "contact",
     icon: "envelope",
     size: "15%",
-    text: "Contact"
+    text: "Contacto"
   }

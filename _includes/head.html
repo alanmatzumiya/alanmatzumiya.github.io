@@ -1,25 +1,47 @@
+{%- assign js-files = "js/index.js, js/main.js, js/listening.js" | split:", " -%}
+{%- assign css-files = "css/top-nav.css, css/btn-icon.css, css/banner.css" | split:", " -%}
 {%- assign name = page.name-%}
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<link rel="canonical" href="{{ site.url }}">
-<link rel="stylesheet" href="{{ site.css }}/index.css">
-<link rel="stylesheet" href="{{ site.css }}/{%- if name == '404.html' -%}404{%- else -%}index{%- endif -%}.css">
-<title>
-{{ site.title }} · {% if name == '404.html' %}Page Not Found{% else %}Home{% endif %}
-</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1"
+>
+<meta http-equiv="X-UA-Compatible"
+      content="IE=edge,chrome=1"
+>
+<link rel="canonical"
+      href="{{ site.url }}"
+>
+<link rel="stylesheet"
+      href="{{ site.css }}/index.css"
+>
+<link rel="stylesheet"
+      href="{{ site.css }}/{%- if name == '404.html' -%}404{%- else -%}index{%- endif -%}.css"
+>
+<title>{{ site.title }} · {% if name == '404.html' %}Page Not Found{% else %}Home{% endif %}</title>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+>
 <link rel="icon" href="{{ site.favicon }}">
 <script crossorigin="anonymous"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
 ></script>
-{%- assign js-files = "js/index.js, js/main.js, js/listening.js" | split:", " -%}
 {%- for filename in js-files -%}
 <script>{%- include {{ filename }} -%}</script>
 {%- endfor -%}
-{%- assign css-files = "css/top-nav.css, css/btn-icon.css, css/banner.css" | split:", " -%}
 {%- for filename in css-files -%}
 <style>{%- include {{ filename }} -%}</style>
 {%- endfor -%}
+<script type="text/javascript">
+    function googleTranslateElementInit () {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'es'}, 'google_translate_element'
+        );
+    };
+</script>
+<script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>

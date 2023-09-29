@@ -18,25 +18,29 @@ document.addEventListener( "DOMContentLoaded", function () {
     } );
 } );
 </script>
-<header class="w3-center w3-padding-64 w3-black w3-text-white" id="home">
-
+<div class="w3-center w3-padding-32" id="google_translate_element"></div>
+<header class="w3-center w3-padding-32 w3-black w3-text-white" id="home">
     <div class="hero-image">
     <img src="{{ site.banner }}"
          alt="{{ author.name }}"
-         class="w3-image w3-opacity"
+         class="w3-opacity"
+         style="width: 100%; height: auto;"
     >
     <div class="hero-text">
-    <h1 class="w3-xlarge"><span class="w3-hide-small">I'm {{ author.name }}.</span></h1>
-    <h1 class="w3-medium"><span class="w3-hide-large w3-hide-medium">I'm {{ author.name }}.</span></h1>
+    <h1 class="w3-xlarge"><span class="w3-hide-small">{{ author.name }}</span></h1>
+    <h1 class="w3-medium"><span class="w3-hide-large w3-hide-medium">{{ author.name }}</span></h1>
     <h1 class="w3-large w3-hide-small w3-wide w3-text-teal">{{ author.presentation.short }}.</h1>
-    <h1 class="w3-small w3-hide-large w3-hide-medium w3-wide w3-text-teal">{{ author.presentation.short }}.</h1>
-    <h1 class="w3-tiny w3-wide w3-text-light-grey">click here to download pdf</h1>
-    <button id="download-btn" type="button" class="btn-icon w3-tiny">
+    <h1 class="w3-tiny w3-hide-large w3-hide-medium w3-wide w3-text-teal">{{ author.presentation.short }}.</h1>
+    <h1 class="w3-tiny w3-wide w3-text-light-grey">Click Para Descargar pdf</h1>
+    <button id="download-btn"
+            type="button"
+            class="btn-icon w3-tiny"
+    >
         <div class="cloud">
             {%- for n in (1..11) -%}
-            <div class="puff puff-{{ n }}"></div>
+            <div class="puff puff-{{ n }} w3-light-grey"></div>
             {%- endfor -%}
-            <div class="cloud-core"></div>
+            <div class="cloud-core w3-light-grey"></div>
             <div class="check"></div>
             <div class="arrow">
             <div class="arrow-stem">

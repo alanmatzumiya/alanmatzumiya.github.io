@@ -1,16 +1,18 @@
-<h2>
-    <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
-    Experience
+<h2 class="w3-xlarge">
+    <i class="fa fa-suitcase fa-fw w3-margin-right w3-xlarge w3-text-teal"></i>
+    Experiencia
 </h2>
-<hr style="width:250px" class="w3-opacity">
+<hr style="width:250px"
+    class="w3-opacity"
+>
 {%- for x in author.experience -%}
 <div class="w3-container">
-  <h5 class="w3-opacity"><b>{{ x.name }} / {{ x.place }}</b></h5>
-  <h6 class="w3-text-teal">
-      <i class="fa fa-calendar fa-fw w3-margin-right"></i>
-      {{ x.period }}
-  </h6>
-  <p>{{ x.description }} {%- if x.href != "" -%}<a class="w3-wide w3-text-teal w3-hover-text-dark-grey" style="text-decoration:none;" href="{{ x.href }}"> Obtener informacion.</a>{%- endif -%}</p>
-  <hr>
+    <h5 class="w3-medium w3-opacity"><b>{{ x.name }} / {{ x.place }}</b></h5>
+    <h6 class="w3-medium w3-text-teal">
+        <i class="w3-medium fa fa-calendar fa-fw w3-margin-right"></i>
+        {{ x.period }}
+    </h6>
+    <p class="w3-medium">{{ x.description }} {%- if x.href != "" -%}<a class="w3-medium w3-wide w3-text-teal w3-hover-text-dark-grey" style="text-decoration:none;" href="{{ x.href }}"> Obtener información.</a>{%- endif -%}</p>
+    <hr>
 </div>
 {%- endfor -%}

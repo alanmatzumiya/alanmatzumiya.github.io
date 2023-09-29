@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 Option=$1
 Login=$( head $HOME/login )

@@ -47,3 +47,13 @@ function fprint ( y ) {
 
 };
 
+function urlData () {
+    var data = {
+        url: location.href,
+        path: location.pathname,
+        port: location.port,
+        protocol: location.protocol.split(":")[0],
+        host: location.hostname
+    };
+    return data;
+};

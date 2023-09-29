@@ -1,28 +1,28 @@
-<h2>
-    <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
-    Education
+<h2 class="w3-xlarge">
+    <i class="fa fa-certificate fa-fw w3-margin-right w3-xlarge w3-text-teal"></i>
+    Educación
 </h2>
 <hr style="width:250px" class="w3-opacity">
 <div class="w3-row-padding" style="margin:0 -16px">
 <div class="w3-half w3-margin-bottom">
     <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-    <li class="w3-dark-grey w3-xlarge w3-padding-16">
+    <li class="w3-large w3-dark-grey w3-padding-16">
         {{ author.education.bachelor_degree.name }}
     </li>
-    <li class="w3-padding-16 w3-text-black">
+    <li class="w3-medium w3-padding-16 w3-text-black">
         {{ author.education.bachelor_degree.institution }}
     </li>
     <li class="w3-padding-16 w3-text-black">
-        <h2>{{ author.education.bachelor_degree.period }}</h2>
-        <p class="w3-text-dark-grey w3-padding-16">
+        <h2 class="w3-medium">{{ author.education.bachelor_degree.period }}</h2>
+        <p class="w3-medium w3-text-dark-grey w3-padding-16">
         Tesis: <span class="w3-opacity">{{ author.education.bachelor_degree.description }}</span>
         </p>
     </li>
     <li class="w3-light-grey w3-padding-16">
         <button onclick='window.open("{{ author.education.bachelor_degree.thesis }}")'
-                class="w3-button w3-white w3-padding-large w3-hover-black">
-        <i class="fa fa-download"></i>
-            Download
+                class="w3-medium w3-border w3-button w3-white w3-padding-large w3-hover-black">
+        <i class="w3-medium fa fa-download"></i>
+            Descargar
         </button>
         <hr style="width:200px" class="w3-opacity">
         <img src="{{ author.education.bachelor_degree.image }}" class="w3-circle w3-margin-right" style="width:100%">
@@ -31,23 +31,23 @@
 </div>
 <div class="w3-half w3-margin-bottom">
     <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-        <li class="w3-dark-grey w3-xlarge w3-padding-16">
+        <li class=" w3-large w3-dark-grey w3-padding-16">
             {{ author.education.master_degree.name }}
         </li>
-        <li class="w3-padding-16 w3-text-black">
+        <li class="w3-medium w3-padding-16 w3-text-black">
             {{ author.education.master_degree.institution }}
         </li>
         <li class="w3-padding-16 w3-text-black">
-            <h2>{{ author.education.master_degree.period }}</h2>
-            <p class="w3-text-dark-grey w3-padding-16">
+            <h2 class="w3-medium">{{ author.education.master_degree.period }}</h2>
+            <p class="w3-medium w3-text-dark-grey w3-padding-16">
             Tesis: <span class="w3-opacity">{{ author.education.master_degree.description }}</span>
             </p>
         </li>
         <li class="w3-light-grey w3-padding-16">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black"
+            <button class="w3-medium w3-border w3-button w3-white w3-padding-large w3-hover-black"
                     onclick='window.open("{{ author.education.master_degree.thesis }}")'>
-            <i class="fa fa-download"></i>
-                Download
+            <i class="w3-medium fa fa-download"></i>
+                Descargar
             </button>
             <hr style="width:200px" class="w3-opacity">
             <img src="{{ author.education.master_degree.image }}" class="w3-circle w3-margin-right" style="width:100%">
