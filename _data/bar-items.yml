@@ -9,7 +9,7 @@
     id: "about",
     icon: "user",
     size: "15%",
-    text: "Acerca"
+    text: "Acerca de mí"
   }
 
 - {
