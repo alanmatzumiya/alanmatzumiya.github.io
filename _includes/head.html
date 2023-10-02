@@ -1,6 +1,6 @@
-{%- assign js-files = "js/index.js, js/main.js, js/listening.js" | split:", " -%}
+{%- assign js-files = "js/index.js, js/x.js" | split:", " -%}
 {%- assign css-files = "css/top-nav.css, css/btn-icon.css, css/banner.css" | split:", " -%}
-{%- assign name = page.name-%}
+{%- assign page-name = page.name -%}
 <meta charset="UTF-8">
 <meta name="viewport"
       content="width=device-width, initial-scale=1"
@@ -14,10 +14,12 @@
 <link rel="stylesheet"
       href="{{ site.css }}/index.css"
 >
+{%- if page-name == '404.html' -%}
 <link rel="stylesheet"
-      href="{{ site.css }}/{%- if name == '404.html' -%}404{%- else -%}index{%- endif -%}.css"
+      href="{{ site.css }}/404.css"
 >
-<title>{{ site.title }} · {% if name == '404.html' %}Page Not Found{% else %}Home{% endif %}</title>
+{%- endif -%}
+<title>{{ site.title }} · {% if page-name == '404.html' %}Page Not Found{% else %}Home{% endif %}</title>
 <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat"
 >

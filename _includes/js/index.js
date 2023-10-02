@@ -1,5 +1,5 @@
 function datatype ( value ) {
-    
+
     if ( value === null ) {
         return "null";
     }
@@ -8,7 +8,7 @@ function datatype ( value ) {
 
     if (!["object", "function"].includes( baseType )) {
         return baseType.toLowerCase();
-    }  
+    }
 
     const tag = value[Symbol.toStringTag];
 
@@ -22,9 +22,9 @@ function datatype ( value ) {
     ) {
         return "class";
     }
-    
+
     const className = value.constructor.name;
-    
+
     if ( typeof className === "string" && className !== "" ) {
         return className.toLowerCase();
     }
@@ -32,7 +32,15 @@ function datatype ( value ) {
     return baseType.toLowerCase();
 
 };
-  
+
+function callable ( func ) {
+    return type( func ) == "function";
+};
+
+function isdefined ( x ) {
+    return x != undefined;
+};
+
 function fprint ( y ) {
 
     var ystring = "";
@@ -47,6 +55,16 @@ function fprint ( y ) {
 
 };
 
+function getkeys ( x ) {
+    return Object.keys( x );
+};
+function getvalues ( x ) {
+    return Object.values( x );
+};
+function getitems ( x ) {
+    return Object.entries( x );
+};
+
 function urlData () {
     var data = {
         url: location.href,
@@ -56,4 +74,21 @@ function urlData () {
         host: location.hostname
     };
     return data;
+};
+
+function urlparse ( url, params ) {
+    return url + "?" + Object.entries( params ).map(
+        x => x[0] + "=" + x[1]
+    ).join("&");
+};
+
+function get ( url ) {
+    var req = new XMLHttpRequest();
+    req.open( "GET", url );
+    req.send();
+    req.onreadystatechange = function () {
+        setTimeout( function () {
+            print( req );
+        }, 5e2 );
+    };
 };

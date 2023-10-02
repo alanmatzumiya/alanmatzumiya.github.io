@@ -21,16 +21,8 @@ window.onclick = function ( e ) {
     if ( 
             navtop.style.display == "block" & e.target != divtop & e.target != atop & e.target != itop
     ) {
-        if ( getvalues( navtop.querySelectorAll("a") ).filter(
-            l => e.target == l 
-        ).length == 0 ) { 
             navtop.style.display = "none";
             atop.className = "fa fa-bars";
-        } else {
-            navtop.style.display = "none";
-            atop.className = "fa fa-bars";
-        };
-
-    };
+      };
 
 };
