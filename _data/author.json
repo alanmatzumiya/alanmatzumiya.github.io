@@ -134,6 +134,14 @@
             "description": "Cursos introductorios al lenguaje mostrando el uso de las tecnologías para la resolución de problemas en la ingeniería.",
             "href": "https://github.com/CircuitalMinds/jupyter/tree/main/nbs/"
             
+        },
+        {
+            "name": "Plant operations Engineer",
+            "place": "Windstar LPG Inc",
+            "period": "2021 - 2023",
+            "description": "Inventory control and management with excel and QlikView. Mass balances development and approval for oil refined products (LPG, diesel and gasoline.). LPG purchases and sales with Microsoft Dynamics GP, Personnel management and internal trainer, Supply chain activities for trucking and retail.",
+            "href": ""
+
         }
     ]
 }
