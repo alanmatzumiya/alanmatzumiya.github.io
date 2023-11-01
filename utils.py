@@ -5,15 +5,11 @@ from time import ctime
 from subprocess import getoutput as output
 path = Path(__file__).parent
     
-    
-    
 
 def gout(cmd, *cmds):
     lines = list((cmd,) + cmds)
     for line in lines:
         output(line)
-
-
 
 
 def getdate():

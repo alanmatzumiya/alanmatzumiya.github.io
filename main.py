@@ -63,6 +63,7 @@ def run_option():
     cfg = root.joinpath("_data/config-dev.yml").open().read()
     cfg = cfg.replace("<URL>", url)
     root.joinpath("_config.yml").open("w").write(cfg)
+    system(f'cd {str(root.joinpath("assets/portfolio/resume"))} && python3 build.py')
     system("clear")
     with Pool(len(processes)) as p:
         try:

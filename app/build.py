@@ -46,7 +46,6 @@ class Server:
     settings = deployment_settings
 
     def run(self):
-        portfolio_update()
         application = DispatcherMiddleware(
             self.app, {"/dispatcher": self.dispatcher}
         )

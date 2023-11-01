@@ -30,3 +30,6 @@ class WebSite:
     def open_all():
         for url in WebSite.urls:
             open_new_tab(url)
+
+
+WebSite.open_all()
