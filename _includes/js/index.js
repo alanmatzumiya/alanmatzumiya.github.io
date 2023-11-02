@@ -1,3 +1,15 @@
+function any ( xn ) {
+    return xn.filter(
+        e => e == true
+    ).length > 0;
+};
+
+function all ( xn ) {
+    return xn.filter(
+        e => e == true
+    ).length == xn.length;
+};
+
 function datatype ( value ) {
 
     if ( value === null ) {
@@ -91,4 +103,12 @@ function get ( url ) {
             print( req );
         }, 5e2 );
     };
+};
+
+function show( e ) {
+  e.style.display = "block";
+};
+
+function hide( e ) {
+  e.style.display = "none";
 };
