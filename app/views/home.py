@@ -26,7 +26,7 @@ def api_post(opt=None):
         portfolio_update()
         git_update()
         return Template.send_json(dict(
-            response_from="all data has been updated successfully"
+            message="all data has been updated successfully"
         ))
     else:
         return abort(404)

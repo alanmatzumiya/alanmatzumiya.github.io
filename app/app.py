@@ -2,7 +2,7 @@
 
 from werkzeug.exceptions import HTTPException
 from build import Server
-from views.build import Template, request, json
+from views.build import Template, request
 server = Server()
 app = server.app
 

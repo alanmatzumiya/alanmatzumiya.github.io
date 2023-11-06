@@ -4,22 +4,15 @@ from werkzeug.serving import run_simple
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from flask import Flask
 from flask_cors import CORS
-from pathlib import Path
 from settings import (
-    import_name, template_folder, config,
-    host, port, url, deployment_settings
+    app_settings, config, host, port, url, deployment_settings
 )
 from views.home import home
 from views.dispatcher import dispatcher
-from views.utils import portfolio_update
-path = Path(__file__).parent
 
 
 def init_app():
-    app = Flask(
-        import_name=import_name,
-        template_folder=template_folder
-    )
+    app = Flask(**app_settings)
     app.config.update(config)
     CORS(app)
     app.register_blueprint(home)
@@ -29,7 +22,7 @@ def init_app():
 def init_dispatcher():
     dispatch = Flask(
         import_name="dispatcher",
-        template_folder=template_folder
+        template_folder=app_settings["template_folder"]
     )
     dispatch.config.update(config)
     CORS(dispatch)

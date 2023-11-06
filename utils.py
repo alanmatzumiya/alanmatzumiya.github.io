@@ -1,15 +1,33 @@
-from time import ctime
+# -*- coding: utf-8 -*-
+
 from pathlib import Path
-from os import environ, system
+from os import environ, system as sh
 from time import ctime
-from subprocess import getoutput as output
-path = Path(__file__).parent
-    
+from subprocess import getoutput
+root = Path(__file__).parent
+envfile = root.joinpath(".env")
+global dotenv, load_dotenv
+try:
+    from dotenv import load_dotenv
+except ModuleNotFoundError:
+    sh("pip install python-dotenv")
+    from dotenv import load_dotenv
+
 
 def gout(cmd, *cmds):
-    lines = list((cmd,) + cmds)
-    for line in lines:
-        output(line)
+    inline = " && ".join((cmd,) + cmds)
+    outline = getoutput(inline)
+    print(*[
+        f"Input: {inline}",
+        f"Output: {outline}"
+    ], sep="\n")
+    return outline
+
+
+def shrun(cmd, *cmds):
+    inline = " && ".join((cmd,) + cmds)
+    print(f"Input: {inline}")
+    sh(inline)
 
 
 def getdate():

@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 
-from os import system
+from os import system, environ
 from subprocess import getoutput as getout
 
 
-def get_input(*args):
-    command = " ".join(args)
-    out = getout(command).strip()
-    return out
+def runcmd(arg, *args):
+    command = " && ".join((arg,) + args)
+    output = getout(command).strip()
+    return output
 
 
-def run_command(*args):
-    command = " ".join(args)
+def shrun(arg, *args):
+    command = " && ".join((arg,) + args)
     return system(command)

@@ -1,17 +1,18 @@
-from settings import dataset, getout
+from settings import dataset
+from utils import runcmd
 from sys import argv
 
 
 def git_branch():
-    return getout("git branch").split()[-1]
+    return runcmd("git branch").split()[-1]
 
 
 def login():
-    return getout("echo $( head $HOME/login )")
+    return runcmd("echo $( head $HOME/login )")
 
 
 def secret():
-    return getout("echo $( head $HOME/secret )")
+    return runcmd("echo $( head $HOME/secret )")
 
 
 for arg in argv[1:]:
@@ -19,5 +20,7 @@ for arg in argv[1:]:
         print(login())
     elif arg == "secret":
         print(secret())
+    elif arg == "git-branch":
+        print(git_branch())
     else:
         print(dataset.get(arg))

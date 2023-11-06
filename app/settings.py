@@ -1,13 +1,17 @@
 # -*- coding: utf-8 -*-
 
-from subprocess import getoutput as getout
+from utils import runcmd
 from pathlib import Path
 apath = Path(__file__).parent
-host = getout("hostname -I").split()[-1]
+host = runcmd("hostname -I").split()[-1]
 port = 5050
+server_port = 5000
 url = f"http://{host}:{port}"
-import_name = "app"
-template_folder = "./templates"
+app_settings = dict(
+    import_name="app",
+    template_folder="./templates",
+    static_folder="./static"
+)
 config = dict(
     ENV="development",
     SECRET_KEY="alanmatzumiya",
