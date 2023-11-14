@@ -4,6 +4,7 @@ from time import ctime
 from pathlib import Path
 from subprocess import getoutput as gout
 from os import system as sh
+from pdf2image import convert_from_path
 path = Path(__file__).parent.parent
 host = gout("hostname -I").split()[-1]
 port = 5000
@@ -28,6 +29,8 @@ def getdate():
 def portfolio_update():
     fpath = path.parent.joinpath("assets/portfolio/resume")
     sh(f'cd {str(fpath)} && python3 build.py')
+    pdf = convert_from_path(str(path.parent.joinpath("assets/portfolio/cv.pdf")))
+    pdf[0].save(str(path.parent.joinpath("assets/portfolio/cv.png")), "PNG")
     print("resume updated successfully")
 
 

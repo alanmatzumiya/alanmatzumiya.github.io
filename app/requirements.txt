@@ -12,3 +12,4 @@ imageio-ffmpeg
 matplotlib
 bs4
 python-dotenv
+pdf2image
