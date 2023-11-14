@@ -5,7 +5,7 @@ from pathlib import Path
 from subprocess import getoutput as gout
 from os import system as sh
 path = Path(__file__).parent.parent
-host = gout("hostname - I").split()[-1]
+host = gout("hostname -I").split()[-1]
 port = 5000
 url = f"http://{host}:{port}"
 

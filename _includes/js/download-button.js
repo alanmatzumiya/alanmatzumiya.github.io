@@ -9,10 +9,10 @@ document.addEventListener( "DOMContentLoaded", function () {
                     cl.add( runClass );
                     setTimeout( function () {
                         cl.remove( runClass );
-                        window.location.href = "{{ site.url }}/{{ author.cv-pdf }}";
-                    }, 4e3 );
+                        window.open( "{{ site.url }}/{{ author.cv-pdf }}" );
+                    }, 1e3 );
                 }, 2e2 );
-            }, 1.8e3 );
+            }, 5e2 );
         };
     } );
 } );
