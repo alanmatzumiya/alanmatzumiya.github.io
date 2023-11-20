@@ -117,11 +117,11 @@
             "name": "Practicas Profesionales",
             "place": "CFE - Central Ciclo Combinado - Hermosillo",
             "period": "mayo - junio 2015",
-            "description": "Estancia de prácticas profesionales que se llevo acabo en la planta: Central Ciclo Combinado de Hermosillo.",
+            "description": "Capacitación en planta de tratamiento de agua participando como auxiliar del ingeniero químico encargado del area.",
             "href": ""
         },
         {
-            "name": "Investigacion",
+            "name": "Investigación",
             "place": "Instituto de Matemáticas, UNAM - Oaxaca de Juárez",
             "period": "junio 2018",
             "description": "Investigación dirigida por el Dr. Francisco Javier Delgado Vences para estudiar métodos de resolución de ecuaciones diferenciales parciales estocásticas, con la finalidad de publicar un artículo científico y desarrollar mi tesis de grado.",
@@ -131,15 +131,22 @@
             "name": "Cursos de Programación en Python",
             "place": "Universidad de Sonora",
             "period": "2017 - 2019",
-            "description": "Cursos introductorios al lenguaje mostrando el uso de las tecnologías para la resolución de problemas en la ingeniería.",
+            "description": "Talleres de introducción al lenguaje y su uso para la resolución de problemas en la ingeniería.",
             "href": "https://github.com/CircuitalMinds/jupyter/tree/main/nbs/"
             
+        },
+        {
+            "name": "Desarrollador Full-Stack",
+            "place": "Necodex",
+            "period": "2020 - 2021",
+            "description": "Desarrollador Frontend y Backend, DevOps, Quality Assurance, QA Automation.",
+            "href": ""
         },
         {
             "name": "Ingeniero de Operaciones de Planta",
             "place": "Windstar LPG, Hermosillo",
             "period": "2021 - 2023",
-            "description": "Control y gestión de inventarios con Excel y QlikView, elaboración y aprobación de balances de masa en productos refinados de petróleo (LPG, diésel y gasolinas), compra y venta de LPG con Microsoft Dynamics GP, gestión de personal, actividades en cadena de suministro para transporte por carretera y comercio minorista.",
+            "description": "Control y gestión de inventarios, elaboración y aprobación de balances de masa en productos refinados de petróleo, compra y venta de LPG, gestión de personal, actividades en cadena de suministro para transporte por carretera y comercio minorista.",
             "href": ""
 
         }

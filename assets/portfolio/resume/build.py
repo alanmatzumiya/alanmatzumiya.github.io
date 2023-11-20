@@ -11,33 +11,37 @@ class Main:
     outfile = path.joinpath("main.tex")
     birthday = date(1992, 9, 14)
     today = date.today()
+    files = (
+        "config",
+        "header",
+        "content",
+        "sidebar",
+        "records"
+    )
 
     @classmethod
     def current_age(cls):
         yeardays = 365.2425
-        age = int((cls.today - cls.birthday).days / yeardays)
+        days = (cls.today - cls.birthday).days
+        age = int(days / yeardays)
         return age
 
     @classmethod
     def textfile(cls, full=True):
-        tex = {            
-            name: cls.folder.joinpath(f"{name}.tex").open().read()
-            for name in (
-                "config", "header", "content", "sidebar", "records"
-            )
-        }
+        config, header, content, sidebar, records = (
+            cls.folder.joinpath(f"{name}.tex").open().read() for name in cls.files
+        )
         current_age = str(cls.current_age())
         current_year = str(cls.today.year)
-        tex["records"] = tex["records"].replace("<CURRENT-YEAR>", current_year)
-        tex["content"] = tex["content"].replace("<AGE>", current_age)
-        tex["content"] = tex["content"].replace("<CURRENT-YEAR>", current_year)
-        tex["content"] = tex["content"].replace("<HEADER>", tex["header"])
-        tex["content"] = tex["content"].replace("<SIDEBAR>", tex["sidebar"])
-        tex["content"] = tex["content"].replace(
-            "<PAGE-CONTENT>",
-            tex["records"] if full else ""
+        records = records.replace("<CURRENT-YEAR>", current_year)
+        content = content.replace("<AGE>", current_age)
+        content = content.replace("<CURRENT-YEAR>", current_year)
+        content = content.replace("<HEADER>", header)
+        content = content.replace("<SIDEBAR>", sidebar)
+        content = content.replace(
+            "<PAGE-CONTENT>", records if full else ""
         )
-        return "\n\n".join([tex["config"], tex["content"]])
+        return "\n\n".join([config, content])
 
     @classmethod    
     def build(cls):
