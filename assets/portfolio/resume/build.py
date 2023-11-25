@@ -27,10 +27,22 @@ class Main:
         return age
 
     @classmethod
-    def textfile(cls, full=True):
-        config, header, content, sidebar, records = (
-            cls.folder.joinpath(f"{name}.tex").open().read() for name in cls.files
-        )
+    def textfile(cls, full=False, english=False):
+        header, content, sidebar = "", "", ""
+        config = cls.folder.joinpath(f"config.tex").open().read()
+        if english:
+            header, content, sidebar = (
+                cls.folder.joinpath(f"{x}-english.tex").open().read() for x in (
+                    "header", "content", "sidebar"
+                )
+            )
+        else:
+            header, content, sidebar = (
+                cls.folder.joinpath(f"{x}.tex").open().read() for x in (
+                    "header", "content", "sidebar"
+                )
+            )
+        records = cls.folder.joinpath(f"config.tex").open().read()
         current_age = str(cls.current_age())
         current_year = str(cls.today.year)
         records = records.replace("<CURRENT-YEAR>", current_year)
@@ -45,11 +57,18 @@ class Main:
 
     @classmethod    
     def build(cls):
-        fulltext, text = cls.textfile(), cls.textfile(full=False)
+        fulltext, text, english = cls.textfile(full=True), cls.textfile(), cls.textfile(english=True)
+
         cls.outfile.open("w").write(fulltext)
         system("bash make cv")
         pdf = path.parent.joinpath("cv.pdf")
         pdf.rename(pdf.parent.joinpath("cv-full.pdf"))
+
+        cls.outfile.open("w").write(english)
+        system("bash make cv")
+        pdf = path.parent.joinpath("cv.pdf")
+        pdf.rename(pdf.parent.joinpath("cv-english.pdf"))
+
         cls.outfile.open("w").write(text)
         system("bash make cv")
 
