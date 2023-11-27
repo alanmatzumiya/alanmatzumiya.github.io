@@ -13,7 +13,6 @@ app_home = root.joinpath("app")
 envfile = root.joinpath(".env")
 url = f'http://{output("hostname -I").split()[-1]}'
 
-
 global dotenv, load_dotenv
 try:
     from dotenv import load_dotenv

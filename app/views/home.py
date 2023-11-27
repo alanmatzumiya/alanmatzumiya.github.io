@@ -22,11 +22,23 @@ def api_get(opt=None):
 @home.route("/api/post/", methods=["GET", "POST"])
 @home.route("/api/post/<opt>/", methods=["GET", "POST"])
 def api_post(opt=None):
+    req = Template.get_request()
     if opt == "update":
-        portfolio_update()
-        git_update()
-        return Template.send_json(dict(
-            message="all data has been updated successfully"
-        ))
+        data = req.get("data")
+        if not data:
+            return Template.send_json(dict(message="data not found in requests"))
+        if data == "portfolio":
+            portfolio_update()
+            return Template.send_json(dict(
+                message="portfolio data has been updated successfully"
+            ))
+        elif data == "all":
+            portfolio_update()
+            git_update()
+            return Template.send_json(dict(
+                message="all data has been updated successfully"
+            ))
+        else:
+            return Template.send_json(dict(message="data invalid"))
     else:
         return abort(404)

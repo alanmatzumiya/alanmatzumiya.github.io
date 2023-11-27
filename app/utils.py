@@ -2,6 +2,11 @@
 
 from os import system, environ
 from subprocess import getoutput as getout
+from time import sleep
+
+
+def timeout():
+    sleep(1)
 
 
 def runcmd(arg, *args):

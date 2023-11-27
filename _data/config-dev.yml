@@ -26,10 +26,11 @@ theme: minima
 plugins:
   - jekyll-feed
 
-exclude:
-  - app
-  - __pycache__
-  
+exclude: [
+  "app/",
+  "__pycache__/"
+]
+
 #
 # exclude:
 #   - .sass-cache/
