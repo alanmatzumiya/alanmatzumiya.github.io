@@ -136,17 +136,26 @@
             
         },
         {
-            "name": "Desarrollador Full-Stack",
-            "place": "Necodex",
-            "period": "2020 - 2021",
-            "description": "Desarrollador Frontend y Backend, DevOps, Quality Assurance, QA Automation.",
-            "href": ""
-        },
-        {
             "name": "Ingeniero de Operaciones de Planta",
             "place": "Windstar LPG, Hermosillo",
             "period": "2021 - 2023",
             "description": "Control y gestión de inventarios, elaboración y aprobación de balances de masa en productos refinados de petróleo, compra y venta de LPG, gestión de personal, actividades en cadena de suministro para transporte por carretera y comercio minorista.",
+            "href": ""
+
+        },
+        {
+            "name": "Soporte TI / Análisis de Sistemas",
+            "place": "SONDA, Hermosillo",
+            "period": "2023 - 2024",
+            "description": "Soporte técnico avanzado e inspección de logs en aplicaciones web e infraestructura sobre servidores Windows. Diagnóstico de fallas en integración de servicios web, conectividad de red y consumo de APIs.",
+            "href": ""
+
+        },
+        {
+            "name": "Analista de Soporte / Automatización de Procesos",
+            "place": "Grupo Coppel, Hermosillo",
+            "period": "2024 - 2025",
+            "description": "Desarrollo e implementación de scripts en Python y PowerShell para la automatización de procesos internos y generación de reportes web. Diagnóstico y resolución de incidencias en plataformas web y bases de datos SQL, garantizando la continuidad operativa y el cumplimiento de SLAs. Optimización de consultas a bases de datos relacionales para extracción y consumo eficiente de datos.",
             "href": ""
 
         }
